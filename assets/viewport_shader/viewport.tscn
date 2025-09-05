@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ii5mv7h5djw"]
+
+[ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/viewport_shader/edge_detection.gdshader" id="1_i1dgv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lndhg"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_vfhj8"]
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s4i6p"]
+render_priority = 0
+shader = ExtResource("1_i1dgv")
+shader_parameter/lightIntensity = 1.25
+shader_parameter/lineAlpha = 0.7
+shader_parameter/useLighting = true
+shader_parameter/lineHighlight = 0.2
+shader_parameter/lineShadow = 0.55
+
+[node name="Viewport" type="SubViewportContainer"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_lndhg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+stretch = true
+stretch_shrink = 8
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(240, 180)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport/Camera3D"]
+transform = Transform3D(0.999988, 0.00408909, -0.00253917, -0.00408341, 0.999989, 0.00223752, 0.00254828, -0.00222713, 0.999994, 0, 0, 0)
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_vfhj8")
+surface_material_override/0 = SubResource("ShaderMaterial_s4i6p")

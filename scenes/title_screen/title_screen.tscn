@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxrmpplsp8vbu"]
+
+[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/viewport_shader/viewport.tscn" id="1_5df70"]
+
+[sub_resource type="Environment" id="Environment_5df70"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vuv2h"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_5df70"]
+
+[node name="TitleScreen" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=["scene_manager_entity_nodes"]]
+environment = SubResource("Environment_5df70")
+camera_attributes = SubResource("CameraAttributesPractical_vuv2h")
+
+[node name="Viewport" parent="." instance=ExtResource("1_5df70")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Viewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = SubResource("PrismMesh_5df70")
