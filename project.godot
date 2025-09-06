@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="Action RPG Driving Game"
-run/main_scene="uid://ufanajdvxkt4"
+config/tags=PackedStringArray("thesis")
+run/main_scene="uid://cksrmoko6futo"
 config/features=PackedStringArray("4.4", "C#")
 config/icon="res://icon.svg"
 
 [autoload]
 
-CsgToolkitAutoload="*res://addons/csg_toolkit/scripts/csg_toolkit_config.gd"
 GGS="*res://addons/ggs/plugin/singleton/ggs.tscn"
+CsgToolkitAutoload="*res://addons/csg_toolkit/scripts/csg_toolkit_config.gd"
 WindowTiler="*res://addons/netfox.extras/window-tiler.gd"
 Noray="*res://addons/netfox.noray/noray.gd"
 PacketHandshake="*res://addons/netfox.noray/packet-handshake.gd"
@@ -28,9 +29,14 @@ NetworkRollback="*res://addons/netfox/rollback/network-rollback.gd"
 NetworkEvents="*res://addons/netfox/network-events.gd"
 NetworkPerformance="*res://addons/netfox/network-performance.gd"
 QuestSystem="*res://addons/quest_system/quest_manager.gd"
-Shaker="*res://addons/shaker/src/Shaker.gd"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
+Shaker="*res://addons/shaker/src/Shaker.gd"
 SignalLens="*res://addons/signal_lens/autoload/signal_lens_autoload.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [dotnet]
 
