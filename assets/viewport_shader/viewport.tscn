@@ -1,16 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://5ii5mv7h5djw"]
+[gd_scene load_steps=6 format=3 uid="uid://5ii5mv7h5djw"]
 
-[ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/viewport_shader/edge_detection.gdshader" id="1_i1dgv"]
+[ext_resource type="Script" uid="uid://dd7ndea633gug" path="res://assets/viewport_shader/viewport.gd" id="1_7fnp6"]
+[ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/viewport_shader/edge_detection.gdshader" id="2_3fgmg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lndhg"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_vfhj8"]
+[sub_resource type="QuadMesh" id="QuadMesh_o7owe"]
 flip_faces = true
 size = Vector2(2, 2)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s4i6p"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0x13"]
 render_priority = 0
-shader = ExtResource("1_i1dgv")
+shader = ExtResource("2_3fgmg")
 shader_parameter/lightIntensity = 1.25
 shader_parameter/lineAlpha = 0.7
 shader_parameter/useLighting = true
@@ -28,18 +29,21 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 stretch = true
-stretch_shrink = 8
+stretch_shrink = 4
+script = ExtResource("1_7fnp6")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
-size = Vector2i(240, 180)
+size = Vector2i(288, 162)
 render_target_update_mode = 4
 
-[node name="Camera3D" type="Camera3D" parent="SubViewport"]
-current = true
+[node name="ViewportCamera" type="Camera3D" parent="SubViewport"]
+unique_name_in_owner = true
+top_level = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport/Camera3D"]
+[node name="EdgeDetectionShader" type="MeshInstance3D" parent="SubViewport/ViewportCamera"]
 transform = Transform3D(0.999988, 0.00408909, -0.00253917, -0.00408341, 0.999989, 0.00223752, 0.00254828, -0.00222713, 0.999994, 0, 0, 0)
 extra_cull_margin = 16384.0
-mesh = SubResource("QuadMesh_vfhj8")
-surface_material_override/0 = SubResource("ShaderMaterial_s4i6p")
+mesh = SubResource("QuadMesh_o7owe")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_q0x13")
