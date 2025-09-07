@@ -54,6 +54,9 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
+#? Node.js
+node_modules
+
 #? Godot
 # Godot 4+ specific ignores
 .godot/
@@ -72,3 +75,9 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Godot addons
+addons/*
+!addons/.editorconfig
+.addons/*
+!addons/shaderV
