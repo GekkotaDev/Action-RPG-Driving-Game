@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GGS="*res://addons/ggs/plugin/singleton/ggs.tscn"
-CsgToolkitAutoload="*res://addons/csg_toolkit/scripts/csg_toolkit_config.gd"
 WindowTiler="*res://addons/netfox.extras/window-tiler.gd"
 Noray="*res://addons/netfox.noray/noray.gd"
 PacketHandshake="*res://addons/netfox.noray/packet-handshake.gd"
@@ -32,6 +31,7 @@ QuestSystem="*res://addons/quest_system/quest_manager.gd"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Shaker="*res://addons/shaker/src/Shaker.gd"
 SignalLens="*res://addons/signal_lens/autoload/signal_lens_autoload.gd"
+CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
 
 [display]
 
@@ -44,7 +44,7 @@ project/assembly_name="Action RPG Driving Game"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csg_toolkit/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/netfox.extras/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/netfox.extras/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [file_customization]
 
