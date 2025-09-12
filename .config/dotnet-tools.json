@@ -8,6 +8,13 @@
         "roslynator"
       ],
       "rollForward": false
+    },
+    "chickensoft.godotenv": {
+      "version": "2.15.0",
+      "commands": [
+        "godotenv"
+      ],
+      "rollForward": false
     }
   }
 }
