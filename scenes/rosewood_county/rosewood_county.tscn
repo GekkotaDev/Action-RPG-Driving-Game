@@ -1,17 +1,16 @@
-[gd_scene load_steps=30 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=28 format=3 uid="uid://b37fnqq4a4l2r"]
 
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
 [ext_resource type="Texture2D" uid="uid://bbk55bfymh7m8" path="res://scenes/rosewood_county/RosewoodCounty/Heightmap_0_0.res" id="3_vm3mq"]
 [ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="4_3gwlq"]
 [ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="5_mhw3e"]
-[ext_resource type="Script" uid="uid://sts7255qqg71" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
+[ext_resource type="Script" uid="uid://d00n2urebki1i" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
 [ext_resource type="Shader" uid="uid://cvd0x7lon1ur6" path="res://addons/sky_3d/shaders/SkyMaterial.gdshader" id="7_joefe"]
 [ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="7_wvtwl"]
 [ext_resource type="Texture2D" uid="uid://cfqk60lpl5ljv" path="res://addons/sky_3d/assets/resources/SNoise.tres" id="8_rpx2b"]
-[ext_resource type="Script" uid="uid://dipr28fhn8dmj" path="res://addons/road-generator/nodes/road_container.gd" id="8_tcnw4"]
-[ext_resource type="Texture2D" uid="uid://blce12ldcwk1f" path="res://assets/placeholders/textures/light/texture_08.png" id="9_4sd1a"]
+[ext_resource type="Script" uid="uid://dynn3cft6b107" path="res://addons/road-generator/nodes/road_container.gd" id="8_tcnw4"]
 [ext_resource type="Texture2D" uid="uid://cecwdqjol0ckd" path="res://addons/sky_3d/assets/textures/noiseClouds.png" id="9_22ta8"]
-[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/viewport_shader/viewport.tscn" id="10_mhw3e"]
+[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://viewport.tscn" id="10_mhw3e"]
 [ext_resource type="Texture2D" uid="uid://2r8ylu6rg5dp" path="res://addons/sky_3d/assets/thirdparty/textures/moon/MoonMap.png" id="10_wvtwl"]
 [ext_resource type="Texture2D" uid="uid://djpfuyxkryegn" path="res://addons/sky_3d/assets/textures/noise.jpg" id="11_tcnw4"]
 [ext_resource type="Texture2D" uid="uid://bm7dot7t7u1q4" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/StarField.jpg" id="12_0o7b5"]
@@ -19,9 +18,9 @@
 [ext_resource type="Script" uid="uid://deo0gxkmk2ahd" path="res://addons/sky_3d/src/Sky3D.gd" id="14_nk60t"]
 [ext_resource type="Script" uid="uid://b4tkplvh7fq40" path="res://addons/sky_3d/src/SkyDome.gd" id="15_3see1"]
 [ext_resource type="Script" uid="uid://cjmkcj8hwm7ts" path="res://addons/sky_3d/src/TimeOfDay.gd" id="16_u0wwe"]
-[ext_resource type="Script" uid="uid://drg7fi52qt6kx" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
+[ext_resource type="Script" uid="uid://cr2tju0a4djq3" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
 [ext_resource type="PackedScene" uid="uid://jvn17rutxpfg" path="res://assets/vehicles/cars/van/van.tscn" id="26_vn167"]
-[ext_resource type="Script" uid="uid://ceokfjn2bxsuf" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
+[ext_resource type="Script" uid="uid://se64jpw3clkd" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
 
 [sub_resource type="Resource" id="Resource_imbju"]
 script = ExtResource("4_3gwlq")
@@ -34,11 +33,6 @@ ObjectsTexture = []
 [sub_resource type="Resource" id="Resource_yu5fy"]
 script = ExtResource("5_mhw3e")
 Zones = [SubResource("Resource_imbju")]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nk60t"]
-albedo_texture = ExtResource("9_4sd1a")
-uv1_triplanar = true
-uv2_world_triplanar = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cpl0s"]
 shader = ExtResource("7_joefe")
@@ -91,8 +85,8 @@ shader_parameter/cirrus_sky_tint_fade = 0.5
 shader_parameter/cirrus_intensity = 10.0
 shader_parameter/cirrus_size = 1.0
 shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.693088, 0.693088)
-shader_parameter/cirrus_position2 = Vector2(0.693088, 0.693088)
+shader_parameter/cirrus_position1 = Vector2(0.0611299, 0.0611294)
+shader_parameter/cirrus_position2 = Vector2(0.0611299, 0.0611294)
 shader_parameter/cirrus_day_color = Color(0.824, 0.875, 1, 1)
 shader_parameter/cirrus_horizon_light_color = Color(0.98, 0.43, 0.15, 1)
 shader_parameter/cirrus_night_color = Color(0.09, 0.094, 0.129, 1)
@@ -105,7 +99,7 @@ shader_parameter/cumulus_noise_freq = 2.7
 shader_parameter/cumulus_sky_tint_fade = 0.0
 shader_parameter/cumulus_intensity = 0.6
 shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(8.46598, 8.46596)
+shader_parameter/cumulus_position = Vector2(0.305649, 0.305645)
 shader_parameter/cumulus_texture = ExtResource("9_22ta8")
 shader_parameter/cumulus_day_color = Color(0.823529, 0.87451, 1, 1)
 shader_parameter/cumulus_horizon_light_color = Color(0.98, 0.43, 0.15, 1)
@@ -157,12 +151,11 @@ Objects = []
 MetaInfoLayers = []
 TerrainZones = SubResource("Resource_yu5fy")
 metadata/_custom_type_script = "uid://i5jcj7ukvoen"
-metadata/_edit_lock_ = false
+metadata/_edit_lock_ = true
 
 [node name="RoadManager" type="Node3D" parent="Viewport"]
 script = ExtResource("6_22ta8")
 material_resource = ExtResource("7_wvtwl")
-metadata/_custom_type_script = "uid://sts7255qqg71"
 
 [node name="Road_001" type="Node3D" parent="Viewport/RoadManager"]
 script = ExtResource("8_tcnw4")
@@ -172,16 +165,76 @@ use_lowpoly_preview = true
 script = ExtResource("8_tcnw4")
 use_lowpoly_preview = true
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Viewport"]
+[node name="Blockout" type="Node3D" parent="Viewport"]
+
+[node name="Fountain" type="CSGCombiner3D" parent="Viewport/Blockout"]
 use_collision = true
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Viewport/CSGCombiner3D"]
+[node name="FountainBowl" type="CSGCylinder3D" parent="Viewport/Blockout/Fountain"]
 transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 14, 0, 0, 0)
-material = SubResource("StandardMaterial3D_nk60t")
 
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Viewport/CSGCombiner3D"]
+[node name="FountainStem" type="CSGCylinder3D" parent="Viewport/Blockout/Fountain"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
-material = SubResource("StandardMaterial3D_nk60t")
+
+[node name="GardenCorner" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, -23)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner"]
+size = Vector3(10, 1, 26)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+size = Vector3(26, 1, 10)
+
+[node name="GardenCorner2" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23, 0, -31)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner2"]
+size = Vector3(10, 1, 26)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+size = Vector3(26, 1, 10)
+
+[node name="GardenCorner3" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -31, 0, 23)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner3"]
+size = Vector3(10, 1, 26)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+size = Vector3(26, 1, 10)
+
+[node name="GardenCorner4" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 23, 0, 31)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner4"]
+size = Vector3(10, 1, 26)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Viewport/Blockout/GardenCorner4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+size = Vector3(26, 1, 10)
+
+[node name="Bridge" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 0)
+use_collision = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Viewport/Blockout/Bridge"]
+transform = Transform3D(20, 0, 0, 0, -1.74846e-07, -2, 0, 4, -8.74228e-08, 0, 0, 0)
+sides = 4
+
+[node name="Bridge2" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 0)
+use_collision = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Viewport/Blockout/Bridge2"]
+transform = Transform3D(20, 0, 0, 0, -1.74846e-07, -2, 0, 4, -8.74228e-08, 0, 0, 0)
+sides = 4
 
 [node name="Sky3D" type="WorldEnvironment" parent="Viewport"]
 environment = SubResource("Environment_f2gk3")
