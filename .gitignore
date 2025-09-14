@@ -57,6 +57,10 @@ nunit-*.xml
 #? Node.js
 node_modules
 
+#? Python
+.copier
+.venv
+
 #? Godot
 # Godot 4+ specific ignores
 .godot/
