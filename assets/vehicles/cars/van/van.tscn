@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=4 uid="uid://jvn17rutxpfg"]
 
-[ext_resource type="Script" uid="uid://c3sf7g63vjyfp" path="res://addons/gevp/scripts/vehicle.gd" id="1_a58vu"]
+[ext_resource type="Script" uid="uid://dem3s6duq80on" path="res://addons/gevp/scripts/vehicle.gd" id="1_a58vu"]
 [ext_resource type="Texture2D" uid="uid://btva6etfxbg32" path="res://assets/vehicles/cars/van/models/van_colormap.png" id="1_lriri"]
-[ext_resource type="Script" uid="uid://dyee3h0pp1hr" path="res://addons/gevp/scripts/wheel.gd" id="2_whvx4"]
+[ext_resource type="Script" uid="uid://dfybd0rp4nuao" path="res://addons/gevp/scripts/wheel.gd" id="2_whvx4"]
 
 [sub_resource type="Curve" id="Curve_a58vu"]
 _data = [Vector2(0, 0.247191), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -10,9 +10,12 @@ point_count = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5s6g"]
 resource_name = "ColorMap"
-cull_mode = 2
+specular_mode = 1
 albedo_texture = ExtResource("1_lriri")
+roughness = 0.0
+clearcoat_enabled = true
 texture_filter = 2
+grow_amount = 16.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5hqrw"]
 _surfaces = [{
