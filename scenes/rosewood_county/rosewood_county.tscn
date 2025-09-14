@@ -1,26 +1,75 @@
-[gd_scene load_steps=28 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=37 format=4 uid="uid://b37fnqq4a4l2r"]
 
+[ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
 [ext_resource type="Texture2D" uid="uid://bbk55bfymh7m8" path="res://scenes/rosewood_county/RosewoodCounty/Heightmap_0_0.res" id="3_vm3mq"]
 [ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="4_3gwlq"]
+[ext_resource type="Texture2D" uid="uid://ccldgffiopq2n" path="res://scenes/rosewood_county/RosewoodCounty/Water_0_0.res" id="5_3see1"]
 [ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="5_mhw3e"]
-[ext_resource type="Script" uid="uid://d00n2urebki1i" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
-[ext_resource type="Shader" uid="uid://cvd0x7lon1ur6" path="res://addons/sky_3d/shaders/SkyMaterial.gdshader" id="7_joefe"]
+[ext_resource type="Script" uid="uid://sts7255qqg71" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
+[ext_resource type="Texture2D" uid="uid://wfpgk0bk1ksm" path="res://scenes/rosewood_county/RosewoodCounty/Snow_0_0.res" id="7_f2gk3"]
 [ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="7_wvtwl"]
-[ext_resource type="Texture2D" uid="uid://cfqk60lpl5ljv" path="res://addons/sky_3d/assets/resources/SNoise.tres" id="8_rpx2b"]
-[ext_resource type="Script" uid="uid://dynn3cft6b107" path="res://addons/road-generator/nodes/road_container.gd" id="8_tcnw4"]
-[ext_resource type="Texture2D" uid="uid://cecwdqjol0ckd" path="res://addons/sky_3d/assets/textures/noiseClouds.png" id="9_22ta8"]
-[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://viewport.tscn" id="10_mhw3e"]
-[ext_resource type="Texture2D" uid="uid://2r8ylu6rg5dp" path="res://addons/sky_3d/assets/thirdparty/textures/moon/MoonMap.png" id="10_wvtwl"]
-[ext_resource type="Texture2D" uid="uid://djpfuyxkryegn" path="res://addons/sky_3d/assets/textures/noise.jpg" id="11_tcnw4"]
-[ext_resource type="Texture2D" uid="uid://bm7dot7t7u1q4" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/StarField.jpg" id="12_0o7b5"]
-[ext_resource type="Texture2D" uid="uid://c1vwcdcdvb74a" path="res://addons/sky_3d/assets/thirdparty/textures/milkyway/Milkyway.jpg" id="13_4sd1a"]
-[ext_resource type="Script" uid="uid://deo0gxkmk2ahd" path="res://addons/sky_3d/src/Sky3D.gd" id="14_nk60t"]
-[ext_resource type="Script" uid="uid://b4tkplvh7fq40" path="res://addons/sky_3d/src/SkyDome.gd" id="15_3see1"]
-[ext_resource type="Script" uid="uid://cjmkcj8hwm7ts" path="res://addons/sky_3d/src/TimeOfDay.gd" id="16_u0wwe"]
-[ext_resource type="Script" uid="uid://cr2tju0a4djq3" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
+[ext_resource type="Shader" uid="uid://t4uxfj3oopik" path="res://assets/shaders/transparency_dither.gdshader" id="9_4sd1a"]
+[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/viewport_shader/viewport.tscn" id="10_mhw3e"]
+[ext_resource type="Script" uid="uid://b2v2tfeq8ufsl" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
+[ext_resource type="Texture2D" uid="uid://b85tlq8wcklbo" path="res://addons/waterways_net/Textures/water_normal_bump.png" id="13_wvtwl"]
+[ext_resource type="Script" uid="uid://b5ftfyp5hqomv" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
+[ext_resource type="Script" uid="uid://cr7q6lbhrmdje" path="res://addons/waterways_net/RiverFloatSystem.cs" id="15_tcnw4"]
+[ext_resource type="Shader" uid="uid://bh8c720t5u7hd" path="res://addons/waterways_net/Shaders/river.gdshader" id="15_wvtwl"]
+[ext_resource type="Script" uid="uid://c2jkpsuouxtbo" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
 [ext_resource type="PackedScene" uid="uid://jvn17rutxpfg" path="res://assets/vehicles/cars/van/van.tscn" id="26_vn167"]
-[ext_resource type="Script" uid="uid://se64jpw3clkd" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
+[ext_resource type="Script" uid="uid://byl7vs5o8oaca" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
+
+[sub_resource type="Curve" id="Curve_22ta8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.124352, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.752809), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wvtwl"]
+curve = SubResource("Curve_22ta8")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tcnw4"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0o7b5"]
+seamless = true
+noise = SubResource("FastNoiseLite_tcnw4")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sd1a"]
+seamless = true
+noise = SubResource("FastNoiseLite_tcnw4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nk60t"]
+shader = ExtResource("1_rpx2b")
+shader_parameter/cloud_shape_sampler = SubResource("NoiseTexture2D_4sd1a")
+shader_parameter/cloud_noise_sampler = SubResource("NoiseTexture2D_0o7b5")
+shader_parameter/cloud_curves = SubResource("CurveTexture_wvtwl")
+shader_parameter/clouds_samples = 32
+shader_parameter/shadow_sample = 4
+shader_parameter/clouds_density = 0.4
+shader_parameter/clouds_scale = 1.0
+shader_parameter/clouds_smoothness = 0.03
+shader_parameter/clouds_light_color = Color(1, 1, 1, 1)
+shader_parameter/clouds_shadow_intensity = 1.0
+shader_parameter/high_clouds_sampler = SubResource("NoiseTexture2D_4sd1a")
+shader_parameter/high_clouds_density = 0.2
+shader_parameter/top_color = Color(0.34902, 0.588235, 1, 1)
+shader_parameter/bottom_color = Color(0, 0.329412, 0.968627, 1)
+shader_parameter/sun_scatter = Color(0.298039, 0.298039, 0.298039, 1)
+shader_parameter/astro_tint = Color(0.905882, 0.788235, 0.627451, 1)
+shader_parameter/astro_scale = 9.0
+shader_parameter/astro_intensity = 3.0
+shader_parameter/stars_intensity = 0.0
+shader_parameter/shooting_stars_intensity = 0.0
+shader_parameter/shooting_star_tint = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_3see1"]
+sky_material = SubResource("ShaderMaterial_nk60t")
+
+[sub_resource type="Environment" id="Environment_u0wwe"]
+background_mode = 2
+sky = SubResource("Sky_3see1")
+tonemap_mode = 2
+glow_enabled = true
+adjustment_enabled = true
 
 [sub_resource type="Resource" id="Resource_imbju"]
 script = ExtResource("4_3gwlq")
@@ -29,119 +78,110 @@ HeightMapTexture = ExtResource("3_vm3mq")
 SplatmapsTexture = []
 FoliagesTexture = []
 ObjectsTexture = []
+WaterTexture = ExtResource("5_3see1")
+SnowTexture = ExtResource("7_f2gk3")
 
 [sub_resource type="Resource" id="Resource_yu5fy"]
 script = ExtResource("5_mhw3e")
 Zones = [SubResource("Resource_imbju")]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpl0s"]
-shader = ExtResource("7_joefe")
-shader_parameter/sky_visible = true
-shader_parameter/color_correction = Vector2(0, 1)
-shader_parameter/ground_color = Color(0.3, 0.3, 0.3, 1)
-shader_parameter/horizon_offset = 0.0
-shader_parameter/atm_darkness = 0.5
-shader_parameter/atm_sun_intensity = 18.0
-shader_parameter/atm_day_tint = Color(0.807843, 0.909804, 1, 1)
-shader_parameter/atm_horizon_light_tint = Color(0.980392, 0.635294, 0.462745, 1)
-shader_parameter/atm_night_tint = Color(0, 0, 0, 0)
-shader_parameter/atm_level_params = Vector3(1, 0, 0)
-shader_parameter/atm_thickness = 0.7
-shader_parameter/atm_beta_ray = Vector3(5.80454e-06, 1.35629e-05, 3.31126e-05)
-shader_parameter/atm_beta_mie = Vector3(3.038e-08, 3.038e-08, 3.038e-08)
-shader_parameter/sun_disk_color = Color(0.996094, 0.541334, 0.140076, 1)
-shader_parameter/sun_disk_intensity = 30.0
-shader_parameter/sun_disk_size = 0.02
-shader_parameter/atm_sun_mie_tint = Color(1, 1, 1, 1)
-shader_parameter/atm_sun_mie_intensity = 1.0
-shader_parameter/atm_sun_partial_mie_phase = Vector3(0.36, 1.64, 1.6)
-shader_parameter/moon_color = Color(1, 1, 1, 1)
-shader_parameter/moon_texture = ExtResource("10_wvtwl")
-shader_parameter/moon_texture_alignment = Vector3(7, 1.4, 4.8)
-shader_parameter/moon_texture_flip_u = false
-shader_parameter/moon_texture_flip_v = false
-shader_parameter/moon_size = 0.07
-shader_parameter/atm_moon_mie_tint = Color(0.137255, 0.184314, 0.292196, 1)
-shader_parameter/atm_moon_mie_intensity = 0.0
-shader_parameter/atm_moon_partial_mie_phase = Vector3(0.36, 1.64, 1.6)
-shader_parameter/starmap_color = Color(0.709804, 0.709804, 0.709804, 0.854902)
-shader_parameter/starmap_texture = ExtResource("13_4sd1a")
-shader_parameter/starmap_flip_u = false
-shader_parameter/starmap_flip_v = false
-shader_parameter/starmap_alignment = Vector3(2.68288, -0.25891, 0.40101)
-shader_parameter/star_rotation_offset = 9.38899
-shader_parameter/star_rotation = -11.4421
-shader_parameter/star_tilt = -1.29154
-shader_parameter/star_field_color = Color(1, 1, 1, 1)
-shader_parameter/star_field_texture = ExtResource("12_0o7b5")
-shader_parameter/star_scintillation = 0.75
-shader_parameter/star_scintillation_speed = 0.01
-shader_parameter/noise_tex = ExtResource("11_tcnw4")
-shader_parameter/cirrus_visible = true
-shader_parameter/cirrus_coverage = 0.5
-shader_parameter/cirrus_thickness = 1.7
-shader_parameter/cirrus_absorption = 2.0
-shader_parameter/cirrus_sky_tint_fade = 0.5
-shader_parameter/cirrus_intensity = 10.0
-shader_parameter/cirrus_size = 1.0
-shader_parameter/cirrus_uv = Vector2(0.16, 0.11)
-shader_parameter/cirrus_position1 = Vector2(0.0611299, 0.0611294)
-shader_parameter/cirrus_position2 = Vector2(0.0611299, 0.0611294)
-shader_parameter/cirrus_day_color = Color(0.824, 0.875, 1, 1)
-shader_parameter/cirrus_horizon_light_color = Color(0.98, 0.43, 0.15, 1)
-shader_parameter/cirrus_night_color = Color(0.09, 0.094, 0.129, 1)
-shader_parameter/cirrus_texture = ExtResource("8_rpx2b")
-shader_parameter/cumulus_visible = true
-shader_parameter/cumulus_coverage = 0.55
-shader_parameter/cumulus_thickness = 0.0243
-shader_parameter/cumulus_absorption = 2.0
-shader_parameter/cumulus_noise_freq = 2.7
-shader_parameter/cumulus_sky_tint_fade = 0.0
-shader_parameter/cumulus_intensity = 0.6
-shader_parameter/cumulus_size = 0.5
-shader_parameter/cumulus_position = Vector2(0.305649, 0.305645)
-shader_parameter/cumulus_texture = ExtResource("9_22ta8")
-shader_parameter/cumulus_day_color = Color(0.823529, 0.87451, 1, 1)
-shader_parameter/cumulus_horizon_light_color = Color(0.98, 0.43, 0.15, 1)
-shader_parameter/cumulus_night_color = Color(0.090196, 0.094118, 0.129412, 1)
-shader_parameter/cumulus_partial_mie_phase = Vector3(0.957564, 1.04244, 0.412)
-shader_parameter/cumulus_mie_intensity = 1.0
-shader_parameter/show_azimuthal_grid = false
-shader_parameter/azimuthal_grid_color = Color(0.871, 0.722, 0.529, 1)
-shader_parameter/azimuthal_grid_rotation_offset = 0.03
-shader_parameter/show_equatorial_grid = false
-shader_parameter/equatorial_grid_color = Color(0, 0.75, 1, 1)
-shader_parameter/equatorial_grid_rotation_offset = 0.03
-shader_parameter/moon_matrix = Basis(0, 0.936944, 0.349479, -0.220349, 0.340889, -0.913915, -0.975421, -0.0770074, 0.206455)
+[sub_resource type="Resource" id="Resource_tcnw4"]
+script = ExtResource("14_tcnw4")
+MatShaderType = 1
+mat_albedo_color_first = Color(0.6, 0.7, 0.65, 1)
+mat_albedo_color_second = Color(0.25, 0.35, 0.35, 1)
+mat_albedo_depth = 10.0
+mat_albedo_depth_curve = 0.25
+mat_transparency_clarity = 10.0
+mat_transparency_depth_curve = 0.25
+mat_transparency_refraction = 0.05
+mat_normal_scale = 1.0
+mat_normal_bump_texture = ExtResource("13_wvtwl")
+mat_flow_speed = 1.0
+mat_flow_base = 0.0
+mat_flow_steepness = 2.0
+mat_flow_distance = 1.0
+mat_flow_pressure = 1.0
+mat_flow_max = 4.0
+mat_foam_color = Color(0.9, 0.9, 0.9, 1)
+mat_foam_amount = 2.0
+mat_foam_steepness = 2.0
+mat_foam_smoothness = 0.3
+mat_uv_scale = Vector3(1, 1, 1)
+mat_roughness = 0.2
+mat_edge_fade = 0.25
+LodLod0Distance = 50.0
+_selectedShader = 1
 
-[sub_resource type="Sky" id="Sky_00aux"]
-sky_material = SubResource("ShaderMaterial_cpl0s")
+[sub_resource type="Curve3D" id="Curve3D_0o7b5"]
+resource_local_to_scene = true
+bake_interval = 0.05
+_data = {
+"points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0.177967, -6.00155e-08, -9.1259, -0.177967, 6.00155e-08, 9.1259, -0.706993, 2.38419e-07, 37.5037),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
 
-[sub_resource type="Environment" id="Environment_f2gk3"]
-background_mode = 2
-sky = SubResource("Sky_00aux")
-ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
-reflected_light_source = 2
-tonemap_mode = 2
-tonemap_exposure = 0.5
-tonemap_white = 6.0
-fog_enabled = true
-fog_aerial_perspective = 1.0
-fog_sky_affect = 0.0
-adjustment_enabled = true
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3see1"]
+render_priority = 0
+shader = ExtResource("15_wvtwl")
+shader_parameter/normal_scale = 1.0
+shader_parameter/normal_bump_texture = ExtResource("13_wvtwl")
+shader_parameter/uv_scale = Vector3(1, 1, 1)
+shader_parameter/roughness = 0.2
+shader_parameter/edge_fade = 0.25
+shader_parameter/albedo_color = Projection(0.6, 0.7, 0.65, 1, 0.25, 0.35, 0.35, 1, 0, 0, 1, 0, 0, 0, 0, 1)
+shader_parameter/albedo_depth = 10.0
+shader_parameter/albedo_depth_curve = 0.25
+shader_parameter/transparency_clarity = 10.0
+shader_parameter/transparency_depth_curve = 0.25
+shader_parameter/transparency_refraction = 0.05
+shader_parameter/flow_speed = 1.0
+shader_parameter/flow_base = 0.0
+shader_parameter/flow_steepness = 2.0
+shader_parameter/flow_distance = 1.0
+shader_parameter/flow_pressure = 1.0
+shader_parameter/flow_max = 4.0
+shader_parameter/foam_color = Color(0.9, 0.9, 0.9, 1)
+shader_parameter/foam_amount = 2.0
+shader_parameter/foam_steepness = 2.0
+shader_parameter/foam_smoothness = 0.3
+shader_parameter/i_lod0_distance = 50.0
+shader_parameter/i_valid_flowmap = false
+shader_parameter/i_uv2_sides = 2
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ne4sa"]
-auto_exposure_scale = 1.0
-dof_blur_far_enabled = true
-dof_blur_far_distance = 100.0
-dof_blur_far_transition = 50.0
+[sub_resource type="ArrayMesh" id="ArrayMesh_tcnw4"]
+resource_local_to_scene = true
+_surfaces = [{
+"aabb": AABB(-10.7051, 0, -0.0632682, 20.7049, 1e-05, 37.7619),
+"attribute_data": PackedByteArray("AAAAAAAAAAAAAAAAAAAAAM3MTD4AAAAAzczMPQAAAAAAAAAAq6qqPgAAAACrqio+zcxMPgAAAADNzMw9AAAAAM3MTD6rqqo+zczMPauqKj4AAAAAq6qqPgAAAACrqio+zcxMPgAAAADNzMw9AAAAAM3MzD4AAAAAzcxMPgAAAADNzEw+q6qqPs3MzD2rqio+zczMPgAAAADNzEw+AAAAAM3MzD6rqqo+zcxMPquqKj7NzEw+q6qqPs3MzD2rqio+zczMPgAAAADNzEw+AAAAAJqZGT8AAAAAmpmZPgAAAADNzMw+q6qqPs3MTD6rqio+mpkZPwAAAACamZk+AAAAAJqZGT+rqqo+mpmZPquqKj7NzMw+q6qqPs3MTD6rqio+mpkZPwAAAACamZk+AAAAAM3MTD8AAAAAzczMPgAAAACamRk/q6qqPpqZmT6rqio+zcxMPwAAAADNzMw+AAAAAM3MTD+rqqo+zczMPquqKj6amRk/q6qqPpqZmT6rqio+zcxMPwAAAADNzMw+AAAAAAAAgD8AAAAAAAAAPwAAAADNzEw/q6qqPs3MzD6rqio+AACAPwAAAAAAAAA/AAAAAAAAgD+rqqo+AAAAP6uqKj7NzEw/q6qqPs3MzD6rqio+AAAAAKuqqj4AAAAAq6oqPs3MTD6rqqo+zczMPauqKj4AAAAAq6oqPwAAAACrqqo+zcxMPquqqj7NzMw9q6oqPs3MTD6rqio/zczMPauqqj4AAAAAq6oqPwAAAACrqqo+zcxMPquqqj7NzMw9q6oqPs3MzD6rqqo+zcxMPquqKj7NzEw+q6oqP83MzD2rqqo+zczMPquqqj7NzEw+q6oqPs3MzD6rqio/zcxMPquqqj7NzEw+q6oqP83MzD2rqqo+zczMPquqqj7NzEw+q6oqPpqZGT+rqqo+mpmZPquqKj7NzMw+q6oqP83MTD6rqqo+mpkZP6uqqj6amZk+q6oqPpqZGT+rqio/mpmZPquqqj7NzMw+q6oqP83MTD6rqqo+mpkZP6uqqj6amZk+q6oqPs3MTD+rqqo+zczMPquqKj6amRk/q6oqP5qZmT6rqqo+zcxMP6uqqj7NzMw+q6oqPs3MTD+rqio/zczMPquqqj6amRk/q6oqP5qZmT6rqqo+zcxMP6uqqj7NzMw+q6oqPgAAgD+rqqo+AAAAP6uqKj7NzEw/q6oqP83MzD6rqqo+AACAP6uqqj4AAAA/q6oqPgAAgD+rqio/AAAAP6uqqj7NzEw/q6oqP83MzD6rqqo+AAAAAKuqKj8AAAAAq6qqPs3MTD6rqio/zczMPauqqj4AAAAAAACAPwAAAAAAAAA/zcxMPquqKj/NzMw9q6qqPs3MTD4AAIA/zczMPQAAAD8AAAAAAACAPwAAAAAAAAA/zcxMPquqKj/NzMw9q6qqPs3MzD6rqio/zcxMPquqqj7NzEw+AACAP83MzD0AAAA/zczMPquqKj/NzEw+q6qqPs3MzD4AAIA/zcxMPgAAAD/NzEw+AACAP83MzD0AAAA/zczMPquqKj/NzEw+q6qqPpqZGT+rqio/mpmZPquqqj7NzMw+AACAP83MTD4AAAA/mpkZP6uqKj+amZk+q6qqPpqZGT8AAIA/mpmZPgAAAD/NzMw+AACAP83MTD4AAAA/mpkZP6uqKj+amZk+q6qqPs3MTD+rqio/zczMPquqqj6amRk/AACAP5qZmT4AAAA/zcxMP6uqKj/NzMw+q6qqPs3MTD8AAIA/zczMPgAAAD+amRk/AACAP5qZmT4AAAA/zcxMP6uqKj/NzMw+q6qqPgAAgD+rqio/AAAAP6uqqj7NzEw/AACAP83MzD4AAAA/AACAP6uqKj8AAAA/q6qqPgAAgD8AAIA/AAAAPwAAAD/NzEw/AACAP83MzD4AAAA/AAAAAAAAgD8AAAAAAAAAP83MTD4AAIA/zczMPQAAAD8AAAAAq6qqPwAAAACrqio/zcxMPgAAgD/NzMw9AAAAP83MTD6rqqo/zczMPauqKj8AAAAAq6qqPwAAAACrqio/zcxMPgAAgD/NzMw9AAAAP83MzD4AAIA/zcxMPgAAAD/NzEw+q6qqP83MzD2rqio/zczMPgAAgD/NzEw+AAAAP83MzD6rqqo/zcxMPquqKj/NzEw+q6qqP83MzD2rqio/zczMPgAAgD/NzEw+AAAAP5qZGT8AAIA/mpmZPgAAAD/NzMw+q6qqP83MTD6rqio/mpkZPwAAgD+amZk+AAAAP5qZGT+rqqo/mpmZPquqKj/NzMw+q6qqP83MTD6rqio/mpkZPwAAgD+amZk+AAAAP83MTD8AAIA/zczMPgAAAD+amRk/q6qqP5qZmT6rqio/zcxMPwAAgD/NzMw+AAAAP83MTD+rqqo/zczMPquqKj+amRk/q6qqP5qZmT6rqio/zcxMPwAAgD/NzMw+AAAAPwAAgD8AAIA/AAAAPwAAAD/NzEw/q6qqP83MzD6rqio/AACAPwAAgD8AAAA/AAAAPwAAgD+rqqo/AAAAP6uqKj/NzEw/q6qqP83MzD6rqio/AAAAAKuqqj8AAAAAq6oqP83MTD6rqqo/zczMPauqKj8AAAAAVVXVPwAAAABWVVU/zcxMPquqqj/NzMw9q6oqP83MTD5VVdU/zczMPVZVVT8AAAAAVVXVPwAAAABWVVU/zcxMPquqqj/NzMw9q6oqP83MzD6rqqo/zcxMPquqKj/NzEw+VVXVP83MzD1WVVU/zczMPquqqj/NzEw+q6oqP83MzD5VVdU/zcxMPlZVVT/NzEw+VVXVP83MzD1WVVU/zczMPquqqj/NzEw+q6oqP5qZGT+rqqo/mpmZPquqKj/NzMw+VVXVP83MTD5WVVU/mpkZP6uqqj+amZk+q6oqP5qZGT9VVdU/mpmZPlZVVT/NzMw+VVXVP83MTD5WVVU/mpkZP6uqqj+amZk+q6oqP83MTD+rqqo/zczMPquqKj+amRk/VVXVP5qZmT5WVVU/zcxMP6uqqj/NzMw+q6oqP83MTD9VVdU/zczMPlZVVT+amRk/VVXVP5qZmT5WVVU/zcxMP6uqqj/NzMw+q6oqPwAAgD+rqqo/AAAAP6uqKj/NzEw/VVXVP83MzD5WVVU/AACAP6uqqj8AAAA/q6oqPwAAgD9VVdU/AAAAP1ZVVT/NzEw/VVXVP83MzD5WVVU/AAAAAFVV1T8AAAAAVlVVP83MTD5VVdU/zczMPVZVVT8AAAAAAAAAQAAAAAAAAIA/zcxMPlVV1T/NzMw9VlVVP83MTD4AAABAzczMPQAAgD8AAAAAAAAAQAAAAAAAAIA/zcxMPlVV1T/NzMw9VlVVP83MzD5VVdU/zcxMPlZVVT/NzEw+AAAAQM3MzD0AAIA/zczMPlVV1T/NzEw+VlVVP83MzD4AAABAzcxMPgAAgD/NzEw+AAAAQM3MzD0AAIA/zczMPlVV1T/NzEw+VlVVP5qZGT9VVdU/mpmZPlZVVT/NzMw+AAAAQM3MTD4AAIA/mpkZP1VV1T+amZk+VlVVP5qZGT8AAABAmpmZPgAAgD/NzMw+AAAAQM3MTD4AAIA/mpkZP1VV1T+amZk+VlVVP83MTD9VVdU/zczMPlZVVT+amRk/AAAAQJqZmT4AAIA/zcxMP1VV1T/NzMw+VlVVP83MTD8AAABAzczMPgAAgD+amRk/AAAAQJqZmT4AAIA/zcxMP1VV1T/NzMw+VlVVPwAAgD9VVdU/AAAAP1ZVVT/NzEw/AAAAQM3MzD4AAIA/AACAP1VV1T8AAAA/VlVVPwAAgD8AAABAAAAAPwAAgD/NzEw/AAAAQM3MzD4AAIA/AAAAAAAAAEAAAAA/AAAAAM3MTD4AAABAmpkZPwAAAAAAAAAAVVUVQAAAAD+rqio+zcxMPgAAAECamRk/AAAAAM3MTD5VVRVAmpkZP6uqKj4AAAAAVVUVQAAAAD+rqio+zcxMPgAAAECamRk/AAAAAM3MzD4AAABANDMzPwAAAADNzEw+VVUVQJqZGT+rqio+zczMPgAAAEA0MzM/AAAAAM3MzD5VVRVANDMzP6uqKj7NzEw+VVUVQJqZGT+rqio+zczMPgAAAEAzMzM/AAAAAJqZGT8AAABAzcxMPwAAAADNzMw+VVUVQDMzMz+rqio+mpkZPwAAAEDNzEw/AAAAAJqZGT9VVRVAzcxMP6uqKj7NzMw+VVUVQDMzMz+rqio+mpkZPwAAAEDNzEw/AAAAAM3MTD8AAABAZ2ZmPwAAAACamRk/VVUVQM3MTD+rqio+zcxMPwAAAEBnZmY/AAAAAM3MTD9VVRVAZ2ZmP6uqKj6amRk/VVUVQM3MTD+rqio+zcxMPwAAAEBmZmY/AAAAAAAAgD8AAABAAACAPwAAAADNzEw/VVUVQGZmZj+rqio+AACAPwAAAEAAAIA/AAAAAAAAgD9VVRVAAACAP6uqKj7NzEw/VVUVQGZmZj+rqio+AAAAAFVVFUAAAAA/q6oqPs3MTD5VVRVAmpkZP6uqKj4AAAAAq6oqQAAAAD+rqqo+zcxMPlVVFUCamRk/q6oqPs3MTD6rqipAmpkZP6uqqj4AAAAAq6oqQAAAAD+rqqo+zcxMPlVVFUCamRk/q6oqPs3MzD5VVRVANDMzP6uqKj7NzEw+q6oqQJqZGT+rqqo+zczMPlVVFUA0MzM/q6oqPs3MzD6rqipANDMzP6uqqj7NzEw+q6oqQJqZGT+rqqo+zczMPlVVFUAzMzM/q6oqPpqZGT9VVRVAzcxMP6uqKj7NzMw+q6oqQDMzMz+rqqo+mpkZP1VVFUDNzEw/q6oqPpqZGT+rqipAzcxMP6uqqj7NzMw+q6oqQDMzMz+rqqo+mpkZP1VVFUDNzEw/q6oqPs3MTD9VVRVAZ2ZmP6uqKj6amRk/q6oqQM3MTD+rqqo+zcxMP1VVFUBnZmY/q6oqPs3MTD+rqipAZ2ZmP6uqqj6amRk/q6oqQM3MTD+rqqo+zcxMP1VVFUBmZmY/q6oqPgAAgD9VVRVAAACAP6uqKj7NzEw/q6oqQGZmZj+rqqo+AACAP1VVFUAAAIA/q6oqPgAAgD+rqipAAACAP6uqqj7NzEw/q6oqQGZmZj+rqqo+AAAAAKuqKkAAAAA/q6qqPs3MTD6rqipAmpkZP6uqqj4AAAAAAABAQAAAAD8AAAA/zcxMPquqKkCamRk/q6qqPs3MTD4AAEBAmpkZPwAAAD8AAAAAAABAQAAAAD8AAAA/zcxMPquqKkCamRk/q6qqPs3MzD6rqipANDMzP6uqqj7NzEw+AABAQJqZGT8AAAA/zczMPquqKkA0MzM/q6qqPs3MzD4AAEBANDMzPwAAAD/NzEw+AABAQJqZGT8AAAA/zczMPquqKkAzMzM/q6qqPpqZGT+rqipAzcxMP6uqqj7NzMw+AABAQDMzMz8AAAA/mpkZP6uqKkDNzEw/q6qqPpqZGT8AAEBAzcxMPwAAAD/NzMw+AABAQDMzMz8AAAA/mpkZP6uqKkDNzEw/q6qqPs3MTD+rqipAZ2ZmP6uqqj6amRk/AABAQM3MTD8AAAA/zcxMP6uqKkBnZmY/q6qqPs3MTD8AAEBAZ2ZmPwAAAD+amRk/AABAQM3MTD8AAAA/zcxMP6uqKkBmZmY/q6qqPgAAgD+rqipAAACAP6uqqj7NzEw/AABAQGZmZj8AAAA/AACAP6uqKkAAAIA/q6qqPgAAgD8AAEBAAACAPwAAAD/NzEw/AABAQGZmZj8AAAA/AAAAAAAAQEAAAAA/AAAAP83MTD4AAEBAmpkZPwAAAD8AAAAAVVVVQAAAAD+rqio/zcxMPgAAQECamRk/AAAAP83MTD5VVVVAmpkZP6uqKj8AAAAAVVVVQAAAAD+rqio/zcxMPgAAQECamRk/AAAAP83MzD4AAEBANDMzPwAAAD/NzEw+VVVVQJqZGT+rqio/zczMPgAAQEA0MzM/AAAAP83MzD5VVVVANDMzP6uqKj/NzEw+VVVVQJqZGT+rqio/zczMPgAAQEAzMzM/AAAAP5qZGT8AAEBAzcxMPwAAAD/NzMw+VVVVQDMzMz+rqio/mpkZPwAAQEDNzEw/AAAAP5qZGT9VVVVAzcxMP6uqKj/NzMw+VVVVQDMzMz+rqio/mpkZPwAAQEDNzEw/AAAAP83MTD8AAEBAZ2ZmPwAAAD+amRk/VVVVQM3MTD+rqio/zcxMPwAAQEBnZmY/AAAAP83MTD9VVVVAZ2ZmP6uqKj+amRk/VVVVQM3MTD+rqio/zcxMPwAAQEBmZmY/AAAAPwAAgD8AAEBAAACAPwAAAD/NzEw/VVVVQGZmZj+rqio/AACAPwAAQEAAAIA/AAAAPwAAgD9VVVVAAACAP6uqKj/NzEw/VVVVQGZmZj+rqio/AAAAAFVVVUAAAAA/q6oqP83MTD5VVVVAmpkZP6uqKj8AAAAAq6pqQAAAAD9WVVU/zcxMPlVVVUCamRk/q6oqP83MTD6rqmpAmpkZP1ZVVT8AAAAAq6pqQAAAAD9WVVU/zcxMPlVVVUCamRk/q6oqP83MzD5VVVVANDMzP6uqKj/NzEw+q6pqQJqZGT9WVVU/zczMPlVVVUA0MzM/q6oqP83MzD6rqmpANDMzP1ZVVT/NzEw+q6pqQJqZGT9WVVU/zczMPlVVVUAzMzM/q6oqP5qZGT9VVVVAzcxMP6uqKj/NzMw+q6pqQDMzMz9WVVU/mpkZP1VVVUDNzEw/q6oqP5qZGT+rqmpAzcxMP1ZVVT/NzMw+q6pqQDMzMz9WVVU/mpkZP1VVVUDNzEw/q6oqP83MTD9VVVVAZ2ZmP6uqKj+amRk/q6pqQM3MTD9WVVU/zcxMP1VVVUBnZmY/q6oqP83MTD+rqmpAZ2ZmP1ZVVT+amRk/q6pqQM3MTD9WVVU/zcxMP1VVVUBmZmY/q6oqPwAAgD9VVVVAAACAP6uqKj/NzEw/q6pqQGZmZj9WVVU/AACAP1VVVUAAAIA/q6oqPwAAgD+rqmpAAACAP1ZVVT/NzEw/q6pqQGZmZj9WVVU/AAAAAKuqakAAAAA/VlVVP83MTD6rqmpAmpkZP1ZVVT8AAAAAAACAQAAAAD8AAIA/zcxMPquqakCamRk/VlVVP83MTD4AAIBAmpkZPwAAgD8AAAAAAACAQAAAAD8AAIA/zcxMPquqakCamRk/VlVVP83MzD6rqmpANDMzP1ZVVT/NzEw+AACAQJqZGT8AAIA/zczMPquqakA0MzM/VlVVP83MzD4AAIBANDMzPwAAgD/NzEw+AACAQJqZGT8AAIA/zczMPquqakAzMzM/VlVVP5qZGT+rqmpAzcxMP1ZVVT/NzMw+AACAQDMzMz8AAIA/mpkZP6uqakDNzEw/VlVVP5qZGT8AAIBAzcxMPwAAgD/NzMw+AACAQDMzMz8AAIA/mpkZP6uqakDNzEw/VlVVP83MTD+rqmpAZ2ZmP1ZVVT+amRk/AACAQM3MTD8AAIA/zcxMP6uqakBnZmY/VlVVP83MTD8AAIBAZ2ZmPwAAgD+amRk/AACAQM3MTD8AAIA/zcxMP6uqakBmZmY/VlVVPwAAgD+rqmpAAACAP1ZVVT/NzEw/AACAQGZmZj8AAIA/AACAP6uqakAAAIA/VlVVPwAAgD8AAIBAAACAPwAAgD/NzEw/AACAQGZmZj8AAIA/"),
+"format": 34359742519,
+"index_count": 360,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsAPAA9AD4APwBAAEEAQgBDAEQARQBGAEcASABJAEoASwBMAE0ATgBPAFAAUQBSAFMAVABVAFYAVwBYAFkAWgBbAFwAXQBeAF8AYABhAGIAYwBkAGUAZgBnAGgAaQBqAGsAbABtAG4AbwBwAHEAcgBzAHQAdQB2AHcAeAB5AHoAewB8AH0AfgB/AIAAgQCCAIMAhACFAIYAhwCIAIkAigCLAIwAjQCOAI8AkACRAJIAkwCUAJUAlgCXAJgAmQCaAJsAnACdAJ4AnwCgAKEAogCjAKQApQCmAKcAqACpAKoAqwCsAK0ArgCvALAAsQCyALMAtAC1ALYAtwC4ALkAugC7ALwAvQC+AL8AwADBAMIAwwDEAMUAxgDHAMgAyQDKAMsAzADNAM4AzwDQANEA0gDTANQA1QDWANcA2ADZANoA2wDcAN0A3gDfAOAA4QDiAOMA5ADlAOYA5wDoAOkA6gDrAOwA7QDuAO8A8ADxAPIA8wD0APUA9gD3APgA+QD6APsA/AD9AP4A/wAAAQEBAgEDAQQBBQEGAQcBCAEJAQoBCwEMAQ0BDgEPARABEQESARMBFAEVARYBFwEYARkBGgEbARwBHQEeAR8BIAEhASIBIwEkASUBJgEnASgBKQEqASsBLAEtAS4BLwEwATEBMgEzATQBNQE2ATcBOAE5AToBOwE8AT0BPgE/AUABQQFCAUMBRAFFAUYBRwFIAUkBSgFLAUwBTQFOAU8BUAFRAVIBUwFUAVUBVgFXAVgBWQFaAVsBXAFdAV4BXwFgAWEBYgFjAWQBZQFmAWcB"),
+"material": SubResource("ShaderMaterial_3see1"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 360,
+"vertex_data": PackedByteArray("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0/3/vwCA///T/f+/AID//7r+/78AgP//SP7/vwCA///T/f+/AID//0j+/78AgP//mf3/vwCA///T/f+/AID//xH+/78AgP//1P3/vwCA//+V/f+/AID//9T9/78AgP//lP3/vwCA//+V/f+/AID//9T9/78AgP//1P3/vwCA//+U/f+/AID//9T9/78AgP//lP3/vwCA//+U/f+/AID//9T9/78AgP//0/3/vwCA//+U/f+/AID//9P9/78AgP//lP3/vwCA//+U/f+/AID//9P9/78AgP//0/3/vwCA//+U/f+/AID//9P9/78AgP//lP3/vwCA//+U/f+/AID//9P9/78AgP//mf3/vwCA//+U/f+/AID//5n9/78AgP//kv3/vwCA//+U/f+/AID//5X9/78AgP//lP3/vwCA//+R/f+/AID//5T9/78AgP//kf3/vwCA//+R/f+/AID//5T9/78AgP//lP3/vwCA//+R/f+/AID//5T9/78AgP//kf3/vwCA//+R/f+/AID//5T9/78AgP//lP3/vwCA//+R/f+/AID//5T9/78AgP//kf3/vwCA//+R/f+/AID//5T9/78AgP//lP3/vwCA//+R/f+/AID//5T9/78AgP//kf3/vwCA//+R/f+/AID//5T9/78AgP//kv3/vwCA//+R/f+/AID//5L9/78AgP//kP3/vwCA//+R/f+/AID//5H9/78AgP//kf3/vwCA//+P/f+/AID//5H9/78AgP//j/3/vwCA//+P/f+/AID//5H9/78AgP//kf3/vwCA//+P/f+/AID//5H9/78AgP//j/3/vwCA//+P/f+/AID//5H9/78AgP//kf3/vwCA//+P/f+/AID//5H9/78AgP//j/3/vwCA//+P/f+/AID//5H9/78AgP//kf3/vwCA//+P/f+/AID//5H9/78AgP//j/3/vwCA//+P/f+/AID//5H9/78AgP//kP3/vwCA//+P/f+/AID//5D9/78AgP//j/3/vwCA//+P/f+/AID//4/9/78AgP//j/3/vwCA//+O/f+/AID//4/9/78AgP//jv3/vwCA//+O/f+/AID//4/9/78AgP//j/3/vwCA//+O/f+/AID//4/9/78AgP//jv3/vwCA//+O/f+/AID//4/9/78AgP//j/3/vwCA//+O/f+/AID//4/9/78AgP//jv3/vwCA//+O/f+/AID//4/9/78AgP//j/3/vwCA//+O/f+/AID//4/9/78AgP//jv3/vwCA//+O/f+/AID//4/9/78AgP//j/3/vwCA//+O/f+/AID//4/9/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+O/f+/AID//479/78AgP//jf3/vwCA//+O/f+/AID//479/78AgP//jv3/vwCA//+N/f+/AID//479/78AgP//jf3/vwCA//+N/f+/AID//479/78AgP//jv3/vwCA//+N/f+/AID//479/78AgP//jf3/vwCA//+N/f+/AID//479/78AgP//jv3/vwCA//+N/f+/AID//479/78AgP//jf3/vwCA//+N/f+/AID//479/78AgP//jv3/vwCA//+N/f+/AID//479/78AgP//jf3/vwCA//+N/f+/AID//479/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+N/f+/AID//439/78AgP//jf3/vwCA//+M/f+/AID//439/78AgP//jP3/vwCA//+M/f+/AID//439/78AgP//jf3/vwCA//+M/f+/AID//439/78AgP//jP3/vwCA//+M/f+/AID//439/78AgP//jf3/vwCA//+M/f+/AID//439/78AgP//jP3/vwCA//+M/f+/AID//439/78AgP//jf3/vwCA//+M/f+/AID//439/78AgP//jP3/vwCA//+M/f+/AID//439/78AgP//jf3/vwCA//+M/f+/AID//439/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/AID//4z9/78AgP//jP3/vwCA//+M/f+/")
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4sd1a"]
+render_priority = 0
+shader = ExtResource("9_4sd1a")
+shader_parameter/color = Color(0, 0.450625, 0.899951, 0.501961)
+
+[sub_resource type="TorusMesh" id="TorusMesh_wvtwl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcnw4"]
+albedo_color = Color(0.892571, 0.695265, 0, 1)
 
 [node name="RosewoodCounty" type="Node3D"]
 
 [node name="Viewport" parent="." instance=ExtResource("10_mhw3e")]
 REFERENCE_CAMERA = NodePath("VehicleController/Camera3D")
-POSITION = Vector3(0, 1, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport"]
+environment = SubResource("Environment_u0wwe")
 
 [node name="Terrain" type="Node3D" parent="Viewport"]
 script = ExtResource("2_f1jmu")
@@ -151,19 +191,28 @@ Objects = []
 MetaInfoLayers = []
 TerrainZones = SubResource("Resource_yu5fy")
 metadata/_custom_type_script = "uid://i5jcj7ukvoen"
-metadata/_edit_lock_ = true
+metadata/_edit_lock_ = false
 
 [node name="RoadManager" type="Node3D" parent="Viewport"]
 script = ExtResource("6_22ta8")
 material_resource = ExtResource("7_wvtwl")
 
-[node name="Road_001" type="Node3D" parent="Viewport/RoadManager"]
-script = ExtResource("8_tcnw4")
-use_lowpoly_preview = true
+[node name="RiverManager" type="Node3D" parent="Viewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, 0)
+script = ExtResource("12_22ta8")
+ShaderSettings = SubResource("Resource_tcnw4")
+PointWidths = Array[float]([10.0, 10.0, 10.0])
+Curve = SubResource("Curve3D_0o7b5")
+metadata/_custom_type_script = "uid://b2v2tfeq8ufsl"
 
-[node name="Road_002" type="Node3D" parent="Viewport/RoadManager"]
-script = ExtResource("8_tcnw4")
-use_lowpoly_preview = true
+[node name="RiverFloatSystem" type="Node3D" parent="Viewport/RiverManager"]
+script = ExtResource("15_tcnw4")
+metadata/_custom_type_script = "uid://cr7q6lbhrmdje"
+
+[node name="RiverManagerMesh" type="MeshInstance3D" parent="Viewport/RiverManager"]
+mesh = SubResource("ArrayMesh_tcnw4")
+skeleton = NodePath("")
+metadata/BaseMeshGenerator = true
 
 [node name="Blockout" type="Node3D" parent="Viewport"]
 
@@ -175,6 +224,7 @@ transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 14, 0, 0, 0)
 
 [node name="FountainStem" type="CSGCylinder3D" parent="Viewport/Blockout/Fountain"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+material = SubResource("ShaderMaterial_4sd1a")
 
 [node name="GardenCorner" type="CSGCombiner3D" parent="Viewport/Blockout"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 0, -23)
@@ -236,42 +286,15 @@ use_collision = true
 transform = Transform3D(20, 0, 0, 0, -1.74846e-07, -2, 0, 4, -8.74228e-08, 0, 0, 0)
 sides = 4
 
-[node name="Sky3D" type="WorldEnvironment" parent="Viewport"]
-environment = SubResource("Environment_f2gk3")
-camera_attributes = SubResource("CameraAttributesPractical_ne4sa")
-script = ExtResource("14_nk60t")
-editor_time_enabled = false
-current_time = 12.0
-tonemap_exposure = 0.5
-auto_exposure_scale = 1.0
-wind_speed = 7.0
-wind_direction = 2.35619
-metadata/_custom_type_script = "uid://deo0gxkmk2ahd"
+[node name="CSGBox3D" type="CSGBox3D" parent="Viewport/Blockout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 57.5)
+size = Vector3(19, 1, 42)
 
-[node name="SunLight" type="DirectionalLight3D" parent="Viewport/Sky3D"]
-transform = Transform3D(0, -0.999901, -0.0140674, 0.608712, -0.011161, 0.793313, -0.793391, -0.00856301, 0.608652, -0.0140674, 0.793313, 0.608652)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Viewport"]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
+light_color = Color(0.856067, 0.856067, 0.856067, 1)
+light_energy = 0.5
 shadow_enabled = true
-
-[node name="MoonLight" type="DirectionalLight3D" parent="Viewport/Sky3D"]
-transform = Transform3D(0, -0.220349, -0.975421, 0.936944, 0.340889, -0.0770074, 0.349479, -0.913915, 0.206455, -0.975421, -0.0770074, 0.206455)
-light_color = Color(0.572549, 0.776471, 0.956863, 1)
-light_energy = 0.0
-
-[node name="SkyDome" type="Node" parent="Viewport/Sky3D"]
-script = ExtResource("15_3see1")
-sun_azimuth = -3.1647
-sun_altitude = -0.654565
-moon_azimuth = -4.50381
-moon_altitude = -1.64788
-wind_speed = 7.0
-wind_direction = 2.35619
-
-[node name="TimeOfDay" type="Node" parent="Viewport/Sky3D"]
-script = ExtResource("16_u0wwe")
-editor_time_enabled = false
-dome_path = NodePath("../SkyDome")
-current_time = 12.0
-day = 14
 
 [node name="VehicleController" type="Node3D" parent="Viewport" node_paths=PackedStringArray("vehicle_node")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10, 0, 0)
@@ -288,3 +311,8 @@ follow_this = NodePath("../Van")
 
 [node name="Van" parent="Viewport/VehicleController" instance=ExtResource("26_vn167")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="ParkExtension" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 89)
+mesh = SubResource("TorusMesh_wvtwl")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcnw4")
