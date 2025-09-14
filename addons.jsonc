@@ -91,6 +91,11 @@
       "url": "https://github.com/TokisanGames/Terrain3D/releases/download/v1.0.1/Terrain3D_v1.0.1.zip",
       "source": "zip",
       "subfolder": "addons/terrain_3d"
+    },
+    "waterways_net": {
+        "url": "https://github.com/Tshmofen/waterways-net/archive/refs/tags/v1.0.1.zip",
+        "source": "zip",
+        "subfolder": "waterways-net-1.0.1/addons/waterways_net"
     }
   }
 }
