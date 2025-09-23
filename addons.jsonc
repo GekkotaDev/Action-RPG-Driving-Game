@@ -32,6 +32,11 @@
       "source": "zip",
       "subfolder": "addons/limboai"
     },
+    "M.A.V.S": {
+      "url": "https://github.com/Dente222/MAdvanced-Vehicle-Controller/releases/download/V1.2Addon/MAdvanced.Vehicle.System.v1.2.zip",
+      "source": "zip",
+      "subfolder": "addons/M.A.V.S"
+    },
     "netfox": {
       "url": "https://github.com/foxssake/netfox/releases/download/v1.25.3/netfox.extras.v1.25.3.zip",
       "source": "zip",

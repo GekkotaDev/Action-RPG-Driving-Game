@@ -54,11 +54,7 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
-#? Node.js
-node_modules
-
 #? Python
-.copier
 .venv
 
 #? Godot
@@ -81,7 +77,7 @@ data_*/
 mono_crash.*.json
 
 # Godot addons
+AmbientCG
 addons/*
 !addons/.editorconfig
-.addons/*
-!addons/shaderV
+!addons/editor_layout_hotkeys

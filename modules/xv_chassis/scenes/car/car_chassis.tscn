@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://jg0n45sbmx1r"]
+
+[node name="CarChassis" type="Node3D"]
+
+[node name="VehicleBody3D" type="VehicleBody3D" parent="."]

@@ -1,0 +1,208 @@
+{
+	"connections": [
+		{
+			"from": "scratches",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 0
+		},
+		{
+			"from": "fbm2",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		},
+		{
+			"from": "scratches",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 0
+		},
+		{
+			"from": "fbm2",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 1
+		},
+		{
+			"from": "blend2_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "blend2_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		},
+		{
+			"from": "blend2_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 8
+		},
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "blend2_3",
+			"to_port": 0
+		},
+		{
+			"from": "uniform",
+			"from_port": 0,
+			"to": "blend2_3",
+			"to_port": 1
+		},
+		{
+			"from": "blend2_3",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@@322",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_last_target": "Godot/Godot 4 ORM",
+			"export_paths": {
+				"Blender": "D:/jerem/Code/Games/Godot/Projects/Action RPG Driving Game/assets/materials/dirt/dirt",
+				"Godot/Godot 4 ORM": "D:/jerem/Code/Games/Godot/Projects/Action RPG Driving Game/assets/materials/grass/grass",
+				"Godot/Godot 4 Standard": "D:/jerem/Code/Games/Godot/Projects/Action RPG Driving Game/assets/materials/dirt/dirt",
+				"Unreal/Unreal Engine 5": "D:/jerem/Code/Games/Godot/Projects/Action RPG Driving Game/assets/materials/dirt/"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 108,
+				"y": -144
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 0.298039,
+					"g": 0.603922,
+					"r": 0.266667,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": -0.5,
+				"emission_energy": 0.1,
+				"flags_transparent": true,
+				"metallic": 0,
+				"normal": 1,
+				"roughness": 1,
+				"size": 6,
+				"sss": 1
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "scratches",
+			"node_position": {
+				"x": -1127.433594,
+				"y": -341.807343
+			},
+			"parameters": {
+				"angle": -1,
+				"layers": 32,
+				"length": 0.25,
+				"randomness": 0.44,
+				"waviness": 0.51,
+				"width": 0.4
+			},
+			"seed_int": 0,
+			"type": "scratches"
+		},
+		{
+			"name": "fbm2",
+			"node_position": {
+				"x": -1176.433594,
+				"y": 81.192657
+			},
+			"parameters": {
+				"folds": 0,
+				"iterations": 5,
+				"noise": 9,
+				"offset": 0,
+				"persistence": 0.5,
+				"scale_x": 2,
+				"scale_y": 2
+			},
+			"seed_int": 0,
+			"type": "fbm2"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2",
+			"node_position": {
+				"x": -717.433533,
+				"y": -213.807343
+			},
+			"parameters": {
+				"amount1": 0.75,
+				"blend_type1": 0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2_2",
+			"node_position": {
+				"x": -742.433533,
+				"y": 169.192657
+			},
+			"parameters": {
+				"amount1": 1,
+				"blend_type1": 0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"generic_size": 1,
+			"name": "blend2_3",
+			"node_position": {
+				"x": -319.433533,
+				"y": -151.807343
+			},
+			"parameters": {
+				"amount1": 0.5,
+				"blend_type1": 0
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "uniform",
+			"node_position": {
+				"x": -650.433533,
+				"y": -13.807343
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0.298039,
+					"g": 0.603922,
+					"r": 0.266667,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
