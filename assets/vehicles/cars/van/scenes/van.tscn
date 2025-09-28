@@ -1,13 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://ba8loxlgco2je"]
+[gd_scene load_steps=18 format=4 uid="uid://ba8loxlgco2je"]
 
 [ext_resource type="Script" uid="uid://dugj1wi8ht8j2" path="res://assets/vehicles/cars/van/scripts/vehicle_controller.gd" id="1_8t6ww"]
 [ext_resource type="Texture2D" uid="uid://u4tsgf7tjigq" path="res://assets/vehicles/cars/van/models/van_colormap.png" id="2_njqma"]
-
-[sub_resource type="Curve" id="Curve_8t6ww"]
-_limits = [0.0, 20.0, 0.0, 10.0]
-_data = [Vector2(0, 2), 0.0, 0.0, 0, 0, Vector2(5, 10), 0.0, 0.0, 0, 0, Vector2(10, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-metadata/_snap_enabled = true
+[ext_resource type="PackedScene" uid="uid://bsed4tmlifbcf" path="res://modules/xv_chassis/car/parts/axle/connected_axle.tscn" id="3_njqma"]
+[ext_resource type="PackedScene" uid="uid://crsqbho5fxrfk" path="res://modules/xv_chassis/car/parts/drivetrain/vehicle_drivetrain.tscn" id="4_r78ly"]
+[ext_resource type="Script" uid="uid://f81x5tr8suf8" path="res://modules/xv_chassis/car/parts/transmission/vehicle_transmission.gd" id="5_5h1ep"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5s6g"]
 resource_name = "ColorMap"
@@ -107,9 +104,27 @@ detail_mask = ExtResource("2_njqma")
 detail_albedo = ExtResource("2_njqma")
 texture_filter = 2
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r78ly"]
+height = 0.337158
+radius = 0.520996
+
+[sub_resource type="Curve" id="Curve_kao6n"]
+_limits = [0.0, 20.0, 0.0, 100.0]
+_data = [Vector2(0, 2), 0.0, 0.0, 0, 0, Vector2(90, 20), 0.0, 0.0, 0, 0, Vector2(100, 20), 0.0, 0.0, 0, 0]
+point_count = 3
+metadata/_snap_enabled = true
+
+[sub_resource type="Resource" id="Resource_yp0dt"]
+script = ExtResource("5_5h1ep")
+final_drive_ratio = 3.38
+reverse_ratio = -2.5
+gear_ratios = Array[float]([2.69, 2.01, 1.59, 1.32, 1.13, 1.0])
+current_gear = 1
+metadata/_custom_type_script = "uid://f81x5tr8suf8"
+
 [node name="Van" type="VehicleBody3D"]
+mass = 1000.0
 script = ExtResource("1_8t6ww")
-TORQUE_CURVE = SubResource("Curve_8t6ww")
 
 [node name="BodyMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
@@ -127,13 +142,18 @@ use_as_traction = true
 use_as_steering = true
 
 [node name="TractionRayCast" type="RayCast3D" parent="FrontLeftWheel"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="WheelMesh" type="MeshInstance3D" parent="FrontLeftWheel"]
 transform = Transform3D(0.833333, 0, 0, 0, 1.66667, 0, 0, 0, 1.66667, 0, 0, 0)
 mesh = SubResource("ArrayMesh_858dk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ORMMaterial3D_r78ly")
+
+[node name="Area3D" type="Area3D" parent="FrontLeftWheel"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontLeftWheel/Area3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.00158679, 2.98023e-08, 0)
+shape = SubResource("CylinderShape3D_r78ly")
 
 [node name="FrontRightWheel" type="VehicleWheel3D" parent="." groups=["Wheel"]]
 transform = Transform3D(-0.6, 0, 0, 0, -0.6, 0, 0, 0, -0.6, -0.55, 0.25, 0.76)
@@ -149,12 +169,17 @@ mesh = SubResource("ArrayMesh_858dk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ORMMaterial3D_r78ly")
 
+[node name="Area3D" type="Area3D" parent="FrontRightWheel"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontRightWheel/Area3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.00158679, 2.98023e-08, 0)
+shape = SubResource("CylinderShape3D_r78ly")
+
 [node name="BackLeftWheel" type="VehicleWheel3D" parent="." groups=["Wheel"]]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.55, 0.25, -0.76)
 use_as_traction = true
 
 [node name="TractionRayCast" type="RayCast3D" parent="BackLeftWheel"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="WheelMesh" type="MeshInstance3D" parent="BackLeftWheel"]
 transform = Transform3D(0.833333, 0, 0, 0, 1.66667, 0, 0, 0, 1.66667, 0, 0, 0)
@@ -162,15 +187,44 @@ mesh = SubResource("ArrayMesh_858dk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ORMMaterial3D_r78ly")
 
+[node name="Area3D" type="Area3D" parent="BackLeftWheel"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackLeftWheel/Area3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.00158679, 2.98023e-08, 0)
+shape = SubResource("CylinderShape3D_r78ly")
+
 [node name="BackRightWheel" type="VehicleWheel3D" parent="." groups=["Wheel"]]
 transform = Transform3D(-0.6, 0, 0, 0, -0.6, 0, 0, 0, -0.6, -0.55, 0.25, -0.76)
 use_as_traction = true
+wheel_rest_length = 1.0
+
+[node name="Area3D" type="Area3D" parent="BackRightWheel"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackRightWheel/Area3D"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.00158679, 2.98023e-08, 0)
+shape = SubResource("CylinderShape3D_r78ly")
 
 [node name="TractionRayCast" type="RayCast3D" parent="BackRightWheel"]
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="WheelMesh" type="MeshInstance3D" parent="BackRightWheel"]
-transform = Transform3D(0.833333, 0, 0, 0, 1.66667, 0, 0, 0, 1.66667, 0, 0, 0)
+transform = Transform3D(0.833, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_858dk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ORMMaterial3D_r78ly")
+
+[node name="DrivenAxles" type="Node3D" parent="."]
+
+[node name="FrontAxle" parent="DrivenAxles" instance=ExtResource("3_njqma")]
+left_wheel_path = NodePath("../../FrontLeftWheel")
+right_wheel_path = NodePath("../../FrontRightWheel")
+
+[node name="BackAxle" parent="DrivenAxles" instance=ExtResource("3_njqma")]
+left_wheel_path = NodePath("../../BackLeftWheel")
+right_wheel_path = NodePath("../../BackRightWheel")
+
+[node name="VehicleDrivetrain" parent="." instance=ExtResource("4_r78ly")]
+torque_curve = SubResource("Curve_kao6n")
+chassis_path = NodePath("..")
+driving_axles_path = Array[NodePath]([NodePath("../DrivenAxles/FrontAxle"), NodePath("../DrivenAxles/BackAxle")])
+transmission = SubResource("Resource_yp0dt")

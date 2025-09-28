@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b7ejtpnvo1pbq"]
+
+[ext_resource type="Script" uid="uid://bhnpdw7x6ix2h" path="res://modules/xv_chassis/car/state/chassis_state.gd" id="1_nq8wv"]
+
+[resource]
+script = ExtResource("1_nq8wv")

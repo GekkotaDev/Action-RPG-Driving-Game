@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="VehicleTransmission" load_steps=2 format=3 uid="uid://gjswl5ht2v40"]
+
+[ext_resource type="Script" uid="uid://f81x5tr8suf8" path="res://modules/xv_chassis/car/parts/transmission/vehicle_transmission.gd" id="1_o0vlt"]
+
+[resource]
+script = ExtResource("1_o0vlt")
+final_drive_ratio = 0.0
+reverse_ratio = 0.0
+gear_ratios = Array[float]([])
+current_gear = 0

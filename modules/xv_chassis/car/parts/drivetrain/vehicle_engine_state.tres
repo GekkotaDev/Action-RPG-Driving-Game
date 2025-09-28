@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="VehicleEngineState" load_steps=2 format=3 uid="uid://e1moes1lf6bu"]
+
+[ext_resource type="Script" uid="uid://bav7ek7utyqlb" path="res://modules/xv_chassis/car/parts/engine/vehicle_engine_state.gd" id="1_t5vuy"]
+
+[resource]
+script = ExtResource("1_t5vuy")
+rpm = 0

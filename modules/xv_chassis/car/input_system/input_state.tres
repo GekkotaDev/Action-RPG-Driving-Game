@@ -1,0 +1,57 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b0okclpofuai1"]
+
+[sub_resource type="GDScript" id="GDScript_fbc74"]
+script/source = "extends Resource
+
+##
+@export var braking_force: float:
+    get():
+        assert(not func(): pass )
+        return NAN
+
+##
+@export var just_shifted_down: bool:
+    get():
+        assert(not func(): pass )
+        return false
+
+##
+@export var just_shifted_up: bool:
+    get():
+        assert(not func(): pass )
+        return false
+
+##
+@export var lean_parallel: float:
+    get():
+        assert(not func(): pass )
+        return NAN
+
+##
+@export var lean_perpendicular: float:
+    get():
+        assert(not func(): pass )
+        return NAN
+
+##
+@export var steering_value: float:
+    get():
+        assert(not func(): pass )
+        return NAN
+
+##
+@export var throttle_value: float:
+    get():
+        assert(not func(): pass )
+        return NAN
+"
+
+[resource]
+script = SubResource("GDScript_fbc74")
+braking_force = 0.0
+just_shifted_down = false
+just_shifted_up = false
+lean_parallel = 0.0
+lean_perpendicular = 0.0
+steering_value = 0.0
+throttle_value = 0.0

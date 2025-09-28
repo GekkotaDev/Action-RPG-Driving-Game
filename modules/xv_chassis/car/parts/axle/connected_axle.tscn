@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsed4tmlifbcf"]
+
+[ext_resource type="Script" uid="uid://dv8nve0dc3gij" path="res://modules/xv_chassis/car/parts/axle/connected_axle.gd" id="1_kfalu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfalu"]
+
+[node name="Axle" type="Node3D"]
+script = ExtResource("1_kfalu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_kfalu")
+disabled = true

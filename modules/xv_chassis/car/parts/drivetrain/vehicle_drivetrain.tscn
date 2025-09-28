@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crsqbho5fxrfk"]
+
+[ext_resource type="Script" uid="uid://vl5nqad7vvo4" path="res://modules/xv_chassis/car/parts/drivetrain/vehicle_drivetrain.gd" id="1_wrcy6"]
+
+[node name="VehicleDrivetrain" type="Node3D"]
+script = ExtResource("1_wrcy6")

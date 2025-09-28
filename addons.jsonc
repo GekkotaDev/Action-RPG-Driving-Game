@@ -32,11 +32,6 @@
       "source": "zip",
       "subfolder": "addons/limboai"
     },
-    "M.A.V.S": {
-      "url": "https://github.com/Dente222/MAdvanced-Vehicle-Controller/releases/download/V1.2Addon/MAdvanced.Vehicle.System.v1.2.zip",
-      "source": "zip",
-      "subfolder": "addons/M.A.V.S"
-    },
     "netfox": {
       "url": "https://github.com/foxssake/netfox/releases/download/v1.25.3/netfox.extras.v1.25.3.zip",
       "source": "zip",
@@ -91,11 +86,6 @@
       "url": "https://github.com/spimort/TerraBrush/archive/refs/tags/0.13.1Alpha.zip",
       "source": "zip",
       "subfolder": "TerraBrush-0.13.1Alpha/addons/terrabrush"
-    },
-    "terrain_3d": {
-      "url": "https://github.com/TokisanGames/Terrain3D/releases/download/v1.0.1/Terrain3D_v1.0.1.zip",
-      "source": "zip",
-      "subfolder": "addons/terrain_3d"
     },
     "waterways_net": {
         "url": "https://github.com/Tshmofen/waterways-net/archive/refs/tags/v1.0.1.zip",

@@ -12,6 +12,7 @@ from rich.prompt import Confirm
 class Git:
     repo: str
     subdirectory: str
+    vcs_ref: str | None = None
 
 
 PROJECT_DIR = pathlib.Path(os.path.dirname(__file__)).parent.parent.absolute()
@@ -35,13 +36,14 @@ DEPENDENCIES = {
         repo="gh:arkology/ShaderV",
         subdirectory="addons/shaderV",
     ),
+    "quick_layout_changer": Git(
+        repo="gh:mathrick/godot-quick-layout-changer",
+        subdirectory="addons/quick_layout_changer",
+    ),
     "SphynxMotionBlurToolkit": Git(
         repo="gh:sphynx-owner/JFA_driven_motion_blur_addon",
         subdirectory="addons/SphynxMotionBlurToolkit",
-    ),
-    "sky_3d": Git(
-        repo="gh:TokisanGames/Sky3D",
-        subdirectory="addons/sky_3d",
+        vcs_ref="Godot-4.4",
     ),
 }
 
@@ -59,7 +61,7 @@ for name, git in DEPENDENCIES.items():
     if not pathlib.Path(dependency).exists() or Confirm.ask(
         f"Update dependency {name}?"
     ):
-        copier.run_copy(git.repo, dependency)
+        copier.run_copy(git.repo, dependency, vcs_ref=git.vcs_ref)
 
     try:
         subprocess.run(["mklink", "/j", target, addon], shell=True, capture_output=True)

@@ -13,7 +13,6 @@ resource_name = "ColorMap"
 specular_mode = 1
 albedo_texture = ExtResource("1_lriri")
 roughness = 0.0
-clearcoat_enabled = true
 texture_filter = 2
 grow_amount = 16.0
 
@@ -57,6 +56,7 @@ size = Vector3(1.30286, 1.10083, 2.65198)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wo0uu"]
 resource_name = "colormap"
 cull_mode = 2
+albedo_texture = ExtResource("1_lriri")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dm03x"]
@@ -94,7 +94,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dm03x")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a58vu"]
-albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("1_lriri")
 
 [node name="Van" type="RigidBody3D" node_paths=PackedStringArray("front_left_wheel", "front_right_wheel", "rear_left_wheel", "rear_right_wheel")]
 center_of_mass_mode = 1
@@ -106,6 +106,8 @@ front_right_wheel = NodePath("FrontRightRaycast")
 rear_left_wheel = NodePath("BackLeftRaycast")
 rear_right_wheel = NodePath("BackRightRaycast")
 torque_curve = SubResource("Curve_a58vu")
+motor_drag = 0.0
+clutch_out_rpm = 0.0
 variable_torque_split = true
 front_variable_split = 0.5
 vehicle_mass = 2000.0
