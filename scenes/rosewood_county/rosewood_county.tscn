@@ -1,4 +1,4 @@
-[gd_scene load_steps=292 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=310 format=3 uid="uid://b37fnqq4a4l2r"]
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
@@ -229,6 +229,23 @@
 [ext_resource type="Texture2D" uid="uid://cxnogjfkw60lf" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_-1_12.res" id="215_pyy78"]
 [ext_resource type="Texture2D" uid="uid://yh3s4b5brqc8" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_0_-1_0.res" id="216_ynmki"]
 [ext_resource type="Texture2D" uid="uid://d0j50y12qp4r4" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_0_-1_1.res" id="217_shjas"]
+[ext_resource type="Texture2D" uid="uid://c3n16kt1rshvb" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_2_0.res" id="218_shjas"]
+[ext_resource type="Texture2D" uid="uid://djgktiu12kwa" path="res://scenes/rosewood_county/RosewoodCounty/Heightmap_0_2.res" id="219_5k18g"]
+[ext_resource type="Texture2D" uid="uid://nqqvvndf7yw2" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_0.res" id="220_1n5xe"]
+[ext_resource type="Texture2D" uid="uid://feeb7th6ad3h" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_1.res" id="221_xy0sd"]
+[ext_resource type="Texture2D" uid="uid://d32k1wk1tgmfv" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_2.res" id="222_3umvg"]
+[ext_resource type="Texture2D" uid="uid://bogj80jddsg1h" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_3.res" id="223_o46xw"]
+[ext_resource type="Texture2D" uid="uid://bpmgbmwi8ou1e" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_4.res" id="224_jsv6o"]
+[ext_resource type="Texture2D" uid="uid://cfwovqjv0y8m2" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_5.res" id="225_ba8pl"]
+[ext_resource type="Texture2D" uid="uid://4dr5kfmpm5wt" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_6.res" id="226_qf2hs"]
+[ext_resource type="Texture2D" uid="uid://bfsc7q6re1or5" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_7.res" id="227_d3gs7"]
+[ext_resource type="Texture2D" uid="uid://b8ax8c0ce636p" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_8.res" id="228_4vxae"]
+[ext_resource type="Texture2D" uid="uid://c6hnkdp1ynvj1" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_9.res" id="229_p3bo1"]
+[ext_resource type="Texture2D" uid="uid://50t2a4t72cni" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_10.res" id="230_hx3jp"]
+[ext_resource type="Texture2D" uid="uid://c7sqn5uogxuhm" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_11.res" id="231_n3met"]
+[ext_resource type="Texture2D" uid="uid://1lcjppbnumm8" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_2_12.res" id="232_jpj7o"]
+[ext_resource type="Texture2D" uid="uid://u6fmsbby1g4p" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_0_2_0.res" id="233_5it1g"]
+[ext_resource type="Texture2D" uid="uid://b0ec6a6o58kac" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_0_2_1.res" id="234_oboen"]
 
 [sub_resource type="Curve" id="Curve_22ta8"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.124352, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.752809), 0.0, 0.0, 0, 0]
@@ -788,9 +805,17 @@ SplatmapsTexture = [ExtResource("216_ynmki"), ExtResource("217_shjas")]
 FoliagesTexture = [ExtResource("201_w22y3")]
 ObjectsTexture = [ExtResource("203_1hxi2"), ExtResource("204_o2fpk"), ExtResource("205_yiqqv"), ExtResource("206_tkkc0"), ExtResource("207_chk8w"), ExtResource("208_k1ghw"), ExtResource("209_7qxvv"), ExtResource("210_ewlpw"), ExtResource("211_5wwun"), ExtResource("212_4c5qf"), ExtResource("213_d64by"), ExtResource("214_05baf"), ExtResource("215_pyy78")]
 
+[sub_resource type="Resource" id="Resource_y72ry"]
+script = ExtResource("4_3gwlq")
+ZonePosition = Vector2i(0, 2)
+HeightMapTexture = ExtResource("219_5k18g")
+SplatmapsTexture = [ExtResource("233_5it1g"), ExtResource("234_oboen")]
+FoliagesTexture = [ExtResource("218_shjas")]
+ObjectsTexture = [ExtResource("220_1n5xe"), ExtResource("221_xy0sd"), ExtResource("222_3umvg"), ExtResource("223_o46xw"), ExtResource("224_jsv6o"), ExtResource("225_ba8pl"), ExtResource("226_qf2hs"), ExtResource("227_d3gs7"), ExtResource("228_4vxae"), ExtResource("229_p3bo1"), ExtResource("230_hx3jp"), ExtResource("231_n3met"), ExtResource("232_jpj7o")]
+
 [sub_resource type="Resource" id="Resource_twxad"]
 script = ExtResource("5_mhw3e")
-Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResource("Resource_rbxhm"), SubResource("Resource_tscmc"), SubResource("Resource_1n5xe"), SubResource("Resource_xy0sd"), SubResource("Resource_3umvg"), SubResource("Resource_5k18g")]
+Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResource("Resource_rbxhm"), SubResource("Resource_tscmc"), SubResource("Resource_1n5xe"), SubResource("Resource_xy0sd"), SubResource("Resource_3umvg"), SubResource("Resource_5k18g"), SubResource("Resource_y72ry")]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ge1f"]
 
@@ -884,7 +909,7 @@ draw_lanes_game = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_target_dirs = Array[int]([-1, -1])
-edge_rp_locals = Array[NodePath]([NodePath("RP_003"), NodePath("RP_004")])
+edge_rp_locals = Array[NodePath]([NodePath("RP_003"), NodePath("RP_006")])
 edge_rp_local_dirs = Array[int]([1, 0])
 
 [node name="RP_001" type="Node3D" parent="Viewport/RoadManager/Road_001"]
@@ -897,22 +922,24 @@ prior_pt_init = NodePath("../RP_002")
 next_pt_init = NodePath("../RP_004")
 
 [node name="RP_002" type="Node3D" parent="Viewport/RoadManager/Road_001"]
-transform = Transform3D(0.999888, -0.000893308, -0.0149455, 0.000918488, 0.999998, 0.00167797, 0.014944, -0.00169151, 0.999887, 1.89776, -0.411003, -32.3088)
+transform = Transform3D(0.999888, -0.000893308, -0.0149455, 0.000918488, 0.999998, 0.00167797, 0.014944, -0.00169151, 0.999887, 1.898, -0.6, -32.309)
 script = ExtResource("148_df7rn")
 traffic_dir = Array[int]([2, 1])
 lanes = Array[int]([5, 5])
 prior_mag = 46.1755
 next_mag = 58.6629
+shoulder_width_l = 5.0
+shoulder_width_r = 5.0
 prior_pt_init = NodePath("../RP_003")
 next_pt_init = NodePath("../RP_001")
 
 [node name="RP_003" type="Node3D" parent="Viewport/RoadManager/Road_001"]
-transform = Transform3D(0.96439, 0.00429237, -0.264447, 0, 0.999868, 0.0162293, 0.264482, -0.0156514, 0.964263, 17.1918, -0.749996, -129.804)
+transform = Transform3D(0.96439, 0.00429237, -0.264447, 0, 0.999868, 0.0162293, 0.264482, -0.0156514, 0.964263, 17.192, -0.85, -129.804)
 script = ExtResource("148_df7rn")
 traffic_dir = Array[int]([2, 1])
 lanes = Array[int]([5, 5])
 prior_mag = 46.1755
-next_mag = 46.1755
+next_mag = 49.0663
 next_pt_init = NodePath("../RP_002")
 
 [node name="RP_004" type="Node3D" parent="Viewport/RoadManager/Road_001"]
@@ -921,8 +948,28 @@ script = ExtResource("148_df7rn")
 traffic_dir = Array[int]([2, 1])
 lanes = Array[int]([5, 5])
 prior_mag = 48.9598
-next_mag = 48.9598
+next_mag = 75.0917
 prior_pt_init = NodePath("../RP_001")
+next_pt_init = NodePath("../RP_005")
+
+[node name="RP_005" type="Node3D" parent="Viewport/RoadManager/Road_001"]
+transform = Transform3D(0.970685, -9.81552e-06, -0.240353, 0, 1, -4.08379e-05, 0.240353, 3.96408e-05, 0.970685, -10, -0.75, 400)
+script = ExtResource("148_df7rn")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_mag = 75.0917
+next_mag = 15.0441
+prior_pt_init = NodePath("../RP_004")
+next_pt_init = NodePath("../RP_006")
+
+[node name="RP_006" type="Node3D" parent="Viewport/RoadManager/Road_001"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 500)
+script = ExtResource("148_df7rn")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_mag = 15.0441
+next_mag = 15.0441
+prior_pt_init = NodePath("../RP_005")
 
 [node name="RiverManager" type="Node3D" parent="Viewport"]
 transform = Transform3D(-1.83588e-06, 0, 42, 0, 1, 0, -42, 0, -1.83588e-06, -100, -16, 25)
@@ -939,6 +986,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0567193, -0.490002, -0.028
 visible = false
 size = Vector3(71, 1, 72)
 material = ExtResource("24_f2gk3")
+
+[node name="SierraVerdeWelcomeSign" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 500)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Viewport/Blockout/SierraVerdeWelcomeSign"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.5, 0)
+size = Vector3(15, 4, 1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Viewport/Blockout/SierraVerdeWelcomeSign"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 5.5, 0)
+height = 13.0
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Viewport/Blockout/SierraVerdeWelcomeSign"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.5, 0)
+height = 13.0
+
+[node name="Note" type="MeshInstance3D" parent="Viewport/Blockout/SierraVerdeWelcomeSign"]
+editor_description = "Sign welcoming player to Sierra Verde National Park. This is connected to the city of Sky Springs, Rosewood County"
 
 [node name="VehicleController" type="Node3D" parent="Viewport" node_paths=PackedStringArray("vehicle_node")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 3)
