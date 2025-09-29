@@ -2,42 +2,42 @@
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
-[ext_resource type="Resource" uid="uid://cslvcweyejh3c" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_camera_movement_component.tres" id="3_qf2hs"]
+[ext_resource type="Resource" uid="uid://cslvcweyejh3c" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_camera_movement_component.tres" id="3_vc8ox"]
 [ext_resource type="Texture2D" uid="uid://bbk55bfymh7m8" path="res://scenes/rosewood_county/RosewoodCounty/Heightmap_0_0.res" id="3_vm3mq"]
-[ext_resource type="Resource" uid="uid://ca45noqewsyvp" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_experimental_blur_stage.tres" id="3_xy0sd"]
 [ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="4_3gwlq"]
-[ext_resource type="Resource" uid="uid://cvb65hfs2lrxo" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_neighbor_max_stage.tres" id="4_3umvg"]
-[ext_resource type="Resource" uid="uid://iru8ynu04i00" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_camera_rotation_component.tres" id="4_d3gs7"]
-[ext_resource type="Resource" uid="uid://rp3mpjmisoyh" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_object_movement_component.tres" id="5_4vxae"]
+[ext_resource type="Resource" uid="uid://iru8ynu04i00" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_camera_rotation_component.tres" id="4_w22y3"]
 [ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="5_mhw3e"]
-[ext_resource type="Resource" uid="uid://bidsfymvdyhek" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_overlay_stage.tres" id="5_o46xw"]
 [ext_resource type="Texture2D" uid="uid://c2j0nwgen02d2" path="res://assets/textures/placeholder/placeholder_albedo.png" id="5_xalad"]
+[ext_resource type="Resource" uid="uid://rp3mpjmisoyh" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/default_object_movement_component.tres" id="5_y1iw6"]
+[ext_resource type="Resource" uid="uid://c8ulad7utgrg7" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processing_stage.tres" id="6_1hxi2"]
 [ext_resource type="Script" uid="uid://sts7255qqg71" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
 [ext_resource type="Texture2D" uid="uid://c5yvn52y2hc3m" path="res://assets/textures/placeholder/placeholder_heightmap.png" id="6_diu77"]
-[ext_resource type="Script" uid="uid://x4ix4ppapsv" path="res://addons/SphynxMotionBlurToolkit/Guertin/new_guertin_motion_blur.gd" id="6_jsv6o"]
-[ext_resource type="Resource" uid="uid://c8ulad7utgrg7" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processing_stage.tres" id="6_p3bo1"]
-[ext_resource type="Resource" uid="uid://dipvwksvqb3dm" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_x_stage.tres" id="7_ba8pl"]
-[ext_resource type="Script" uid="uid://bqatbr2ut4ufr" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processor.gd" id="7_hx3jp"]
+[ext_resource type="Script" uid="uid://bqatbr2ut4ufr" path="res://addons/SphynxMotionBlurToolkit/PreBlurProcessing/pre_blur_processor.gd" id="7_o2fpk"]
 [ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="7_wvtwl"]
 [ext_resource type="Texture2D" uid="uid://cyiiu7oh2cujy" path="res://assets/textures/dirt/dirt_albedo.png" id="7_xalad"]
 [ext_resource type="Script" uid="uid://c2l8t4xcdxwvu" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetResource.cs" id="8_d055u"]
 [ext_resource type="Texture2D" uid="uid://dgvhkj7hrxei3" path="res://assets/textures/dirt/dirt_heightmap.png" id="8_diu77"]
-[ext_resource type="Resource" uid="uid://bxfg45ubc2pv7" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_y_stage.tres" id="8_qf2hs"]
 [ext_resource type="Texture2D" uid="uid://cik6rdk4i4jet" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_0_0_0.res" id="8_vjn5s"]
-[ext_resource type="Resource" uid="uid://bqehecsdgt70s" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_variance_stage.tres" id="9_d3gs7"]
+[ext_resource type="Resource" uid="uid://ca45noqewsyvp" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_experimental_blur_stage.tres" id="8_yiqqv"]
+[ext_resource type="Resource" uid="uid://cvb65hfs2lrxo" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_neighbor_max_stage.tres" id="9_tkkc0"]
 [ext_resource type="Script" uid="uid://043vjblb04jf" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetsResource.cs" id="9_vjn5s"]
-[ext_resource type="Script" uid="uid://b5pr3qiudguvt" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="10_4vxae"]
 [ext_resource type="Texture2D" uid="uid://dn7aetji0rnmt" path="res://assets/textures/rock/rock_albedo.png" id="10_5wwun"]
+[ext_resource type="Resource" uid="uid://bidsfymvdyhek" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_overlay_stage.tres" id="10_chk8w"]
 [ext_resource type="Texture2D" uid="uid://ddy774m2pwc08" path="res://assets/textures/grass/grass_albedo.png" id="10_inwir"]
 [ext_resource type="Texture2D" uid="uid://dd0ypp2ytg5p" path="res://assets/textures/rock/rock_heightmap.png" id="11_4c5qf"]
 [ext_resource type="Script" uid="uid://dgf8vwa2n8r11" path="res://addons/terrabrush/Scripts/EditorResources/FoliageDefinitionResource.cs" id="11_hd6wj"]
+[ext_resource type="Script" uid="uid://d3fmk1i3w3jho" path="res://addons/SphynxMotionBlurToolkit/Guertin/new_guertin_motion_blur.gd" id="11_k1ghw"]
+[ext_resource type="Resource" uid="uid://dipvwksvqb3dm" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_x_stage.tres" id="12_7qxvv"]
 [ext_resource type="Script" uid="uid://b2v2tfeq8ufsl" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
 [ext_resource type="Script" uid="uid://d33x21vao7tj2" path="res://addons/terrabrush/Scripts/EditorResources/FoliageResource.cs" id="12_801ui"]
+[ext_resource type="Resource" uid="uid://bxfg45ubc2pv7" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_max_y_stage.tres" id="13_ewlpw"]
 [ext_resource type="PackedScene" uid="uid://d0bqby3antgnt" path="res://assets/trees/tree_blocks.glb" id="13_lnxru"]
 [ext_resource type="Texture2D" uid="uid://b85tlq8wcklbo" path="res://addons/waterways_net/Textures/water_normal_bump.png" id="13_wvtwl"]
+[ext_resource type="Resource" uid="uid://bqehecsdgt70s" path="res://addons/SphynxMotionBlurToolkit/Guertin/guertin_tile_variance_stage.tres" id="14_5wwun"]
 [ext_resource type="Script" uid="uid://cgf61yxk46wa4" path="res://addons/terrabrush/Scripts/EditorResources/ObjectDefinitionResource.cs" id="14_bad0j"]
 [ext_resource type="PackedScene" uid="uid://d3l2dgp8vdsj4" path="res://assets/trees/tree_blocks_dark.glb" id="14_pom4q"]
 [ext_resource type="Script" uid="uid://b5ftfyp5hqomv" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
+[ext_resource type="Script" uid="uid://b5pr3qiudguvt" path="res://addons/SphynxMotionBlurToolkit/BaseClasses/mb_compositor.gd" id="15_4c5qf"]
 [ext_resource type="Script" uid="uid://comabiqrwe5u0" path="res://addons/terrabrush/Scripts/EditorResources/ObjectResource.cs" id="15_yi44v"]
 [ext_resource type="Texture2D" uid="uid://7fry2b6255x3" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_0_0.res" id="16_rm76u"]
 [ext_resource type="PackedScene" uid="uid://dc78nolah8i4q" path="res://assets/trees/tree_cone_dark.glb" id="17_1bb2y"]
@@ -298,24 +298,24 @@ auto_exposure_enabled = true
 dof_blur_far_enabled = true
 dof_blur_far_transition = 750.0
 
-[sub_resource type="CompositorEffect" id="CompositorEffect_qf2hs"]
+[sub_resource type="CompositorEffect" id="CompositorEffect_d64by"]
 resource_local_to_scene = false
 resource_name = ""
 enabled = true
 effect_callback_type = 1
 access_resolved_color = false
 access_resolved_depth = false
-needs_motion_vectors = true
-needs_normal_roughness = true
-script = ExtResource("7_hx3jp")
-pre_blur_processor_stage = ExtResource("6_p3bo1")
-camera_rotation_component = ExtResource("4_d3gs7")
-camera_movement_component = ExtResource("3_qf2hs")
-object_movement_component = ExtResource("5_4vxae")
+needs_motion_vectors = false
+needs_normal_roughness = false
+script = ExtResource("7_o2fpk")
+pre_blur_processor_stage = ExtResource("6_1hxi2")
+camera_rotation_component = ExtResource("4_w22y3")
+camera_movement_component = ExtResource("3_vc8ox")
+object_movement_component = ExtResource("5_y1iw6")
 debug = false
-metadata/_custom_type_script = "uid://bqatbr2ut4ufr"
+metadata/_custom_type_script = "uid://b4n1i7gnlrx1n"
 
-[sub_resource type="CompositorEffect" id="CompositorEffect_d3gs7"]
+[sub_resource type="CompositorEffect" id="CompositorEffect_05baf"]
 resource_local_to_scene = false
 resource_name = ""
 enabled = true
@@ -324,32 +324,31 @@ access_resolved_color = false
 access_resolved_depth = false
 needs_motion_vectors = true
 needs_normal_roughness = true
-script = ExtResource("6_jsv6o")
-blur_stage = ExtResource("3_xy0sd")
-overlay_stage = ExtResource("5_o46xw")
-tile_max_x_stage = ExtResource("7_ba8pl")
-tile_max_y_stage = ExtResource("8_qf2hs")
-neighbor_max_stage = ExtResource("4_3umvg")
-tile_variance_stage = ExtResource("9_d3gs7")
+script = ExtResource("11_k1ghw")
+blur_stage = ExtResource("8_yiqqv")
+overlay_stage = ExtResource("10_chk8w")
+tile_max_x_stage = ExtResource("12_7qxvv")
+tile_max_y_stage = ExtResource("13_ewlpw")
+neighbor_max_stage = ExtResource("9_tkkc0")
+tile_variance_stage = ExtResource("14_5wwun")
 tile_size = 40
 linear_falloff_slope = 1.0
-importance_bias = 40.0
-maximum_jitter_value = 0.95
-minimum_user_threshold = 1.5
+importance_bias = 280.0
+maximum_jitter_value = 64.0
+minimum_user_threshold = 10.5
 debug = false
-metadata/_custom_type_script = "uid://x4ix4ppapsv"
+metadata/_custom_type_script = "uid://d3fmk1i3w3jho"
 
-[sub_resource type="Compositor" id="Compositor_hx3jp"]
-resource_local_to_scene = true
-compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_qf2hs"), SubResource("CompositorEffect_d3gs7")])
-script = ExtResource("10_4vxae")
+[sub_resource type="Compositor" id="Compositor_pyy78"]
+compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_d64by"), SubResource("CompositorEffect_05baf")])
+script = ExtResource("15_4c5qf")
 samples = 16
 intensity = 1.0
 center_fade = 0.0
-framerate_independent = false
+framerate_independent = true
 uncapped_independence = false
-target_constant_framerate = 120.0
-metadata/_custom_type_script = "uid://b5pr3qiudguvt"
+target_constant_framerate = 30.0
+metadata/_custom_type_script = "uid://miqeye1gjimr"
 
 [sub_resource type="Resource" id="Resource_eigr0"]
 script = ExtResource("8_d055u")
@@ -795,16 +794,7 @@ Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResour
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ge1f"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_ewlpw"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_5wwun"]
-
-[sub_resource type="TorusMesh" id="TorusMesh_wvtwl"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcnw4"]
-albedo_color = Color(0.892571, 0.695265, 0, 1)
-
-[sub_resource type="Resource" id="Resource_vc8ox"]
+[sub_resource type="Resource" id="Resource_tkkc0"]
 script = ExtResource("14_tcnw4")
 MatShaderType = 1
 mat_albedo_color_first = Color(0.6, 0.7, 0.65, 1)
@@ -832,14 +822,22 @@ mat_edge_fade = 0.25
 LodLod0Distance = 50.0
 _selectedShader = 1
 
-[sub_resource type="Curve3D" id="Curve3D_w22y3"]
+[sub_resource type="Curve3D" id="Curve3D_chk8w"]
 resource_local_to_scene = true
-bake_interval = 0.05
 _data = {
-"points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 50),
-"tilts": PackedFloat32Array(0, 0, 0)
+"points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0, 0, 0.25, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 5),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
-point_count = 3
+point_count = 6
+
+[sub_resource type="SphereMesh" id="SphereMesh_ewlpw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5wwun"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_wvtwl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcnw4"]
+albedo_color = Color(0.892571, 0.695265, 0, 1)
 
 [node name="RosewoodCounty" type="Node3D"]
 
@@ -849,13 +847,14 @@ REFERENCE_CAMERA = NodePath("VehicleController/Camera3D")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport"]
 environment = SubResource("Environment_u0wwe")
 camera_attributes = SubResource("CameraAttributesPractical_b5n0v")
-compositor = SubResource("Compositor_hx3jp")
+compositor = SubResource("Compositor_pyy78")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Viewport/WorldEnvironment"]
 transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
 light_angular_distance = 2.0
 shadow_enabled = true
-directional_shadow_mode = 0
+shadow_blur = 2.0
+directional_shadow_mode = 1
 directional_shadow_fade_start = 1.0
 
 [node name="Terrain" type="Node3D" parent="Viewport"]
@@ -880,19 +879,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 script = ExtResource("147_8rj1c")
 use_lowpoly_preview = true
 physics_material = SubResource("PhysicsMaterial_5ge1f")
+draw_lanes_editor = true
+draw_lanes_game = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_target_dirs = Array[int]([-1, -1])
-edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_003")])
-edge_rp_local_dirs = Array[int]([0, 1])
+edge_rp_locals = Array[NodePath]([NodePath("RP_003"), NodePath("RP_004")])
+edge_rp_local_dirs = Array[int]([1, 0])
 
 [node name="RP_001" type="Node3D" parent="Viewport/RoadManager/Road_001"]
 transform = Transform3D(0.999888, -8.1844e-06, -0.0149435, 0, 1, -0.000547691, 0.0149435, 0.00054763, 0.999888, 0.144733, -0.725261, 85.0037)
 script = ExtResource("148_df7rn")
 traffic_dir = Array[int]([2, 1])
 lanes = Array[int]([5, 5])
-next_mag = 58.6629
+next_mag = 48.9598
 prior_pt_init = NodePath("../RP_002")
+next_pt_init = NodePath("../RP_004")
 
 [node name="RP_002" type="Node3D" parent="Viewport/RoadManager/Road_001"]
 transform = Transform3D(0.999888, -0.000893308, -0.0149455, 0.000918488, 0.999998, 0.00167797, 0.014944, -0.00169151, 0.999887, 1.89776, -0.411003, -32.3088)
@@ -912,6 +914,23 @@ lanes = Array[int]([5, 5])
 prior_mag = 46.1755
 next_mag = 46.1755
 next_pt_init = NodePath("../RP_002")
+
+[node name="RP_004" type="Node3D" parent="Viewport/RoadManager/Road_001"]
+transform = Transform3D(0.992721, -5.0829e-06, 0.120434, 0, 1, 4.22048e-05, -0.120434, -4.18976e-05, 0.992721, 4, -0.75, 256)
+script = ExtResource("148_df7rn")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_mag = 48.9598
+next_mag = 48.9598
+prior_pt_init = NodePath("../RP_001")
+
+[node name="RiverManager" type="Node3D" parent="Viewport"]
+transform = Transform3D(-1.83588e-06, 0, 42, 0, 1, 0, -42, 0, -1.83588e-06, -100, -16, 25)
+script = ExtResource("12_22ta8")
+ShaderSettings = SubResource("Resource_tkkc0")
+PointWidths = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+Curve = SubResource("Curve3D_chk8w")
+metadata/_custom_type_script = "uid://b2v2tfeq8ufsl"
 
 [node name="Blockout" type="Node3D" parent="Viewport"]
 
@@ -960,11 +979,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 89)
 mesh = SubResource("TorusMesh_wvtwl")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tcnw4")
-
-[node name="RiverManager" type="Node3D" parent="Viewport"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0688925, -10.9797, 17.9833)
-script = ExtResource("12_22ta8")
-ShaderSettings = SubResource("Resource_vc8ox")
-PointWidths = Array[float]([1.0, 1.0, 10.0])
-Curve = SubResource("Curve3D_w22y3")
-metadata/_custom_type_script = "uid://b2v2tfeq8ufsl"

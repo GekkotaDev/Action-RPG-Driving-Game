@@ -144,6 +144,9 @@ ambient_bus=&"RaytracedAmbient"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 global_illumination/gi/use_half_resolution=true
 textures/default_filters/anisotropic_filtering_level=0
+textures/default_filters/texture_mipmap_bias=-2.0
+textures/decals/filter=0
 occlusion_culling/use_occlusion_culling=true

@@ -43,7 +43,7 @@ DEPENDENCIES = {
     "SphynxMotionBlurToolkit": Git(
         repo="gh:sphynx-owner/JFA_driven_motion_blur_addon",
         subdirectory="addons/SphynxMotionBlurToolkit",
-        vcs_ref="Godot-4.4",
+        vcs_ref="4.5",
     ),
 }
 
