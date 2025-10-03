@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctgyvf10b000y"]
+
+[ext_resource type="FontFile" uid="uid://befv7bfyhrsdw" path="res://views/typefaces/zilla_slab/ZillaSlab-Bold.ttf" id="1_jcamu"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("1_jcamu")
+text = "mozilla"

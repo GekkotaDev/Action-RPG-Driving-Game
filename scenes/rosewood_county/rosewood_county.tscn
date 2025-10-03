@@ -441,7 +441,10 @@ metadata/_custom_type_script = "uid://043vjblb04jf"
 transparency = 1
 albedo_color = Color(0.85098, 0.643137, 0.12549, 1)
 albedo_texture = ExtResource("28_x50y5")
+rim = 0.25
 ao_enabled = true
+ao_texture_channel = 4
+texture_filter = 0
 disable_receive_shadows = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bgsc0"]
@@ -895,7 +898,7 @@ Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResour
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_shjas"]
 
-[sub_resource type="Resource" id="Resource_7as80"]
+[sub_resource type="Resource" id="Resource_3hcx2"]
 script = ExtResource("14_tcnw4")
 MatShaderType = 1
 mat_albedo_color_first = Color(0.6, 0.7, 0.65, 1)
@@ -923,7 +926,7 @@ mat_edge_fade = 0.25
 LodLod0Distance = 50.0
 _selectedShader = 1
 
-[sub_resource type="Curve3D" id="Curve3D_q57bw"]
+[sub_resource type="Curve3D" id="Curve3D_pfggy"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0, 0, 0.25, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 5),
@@ -951,9 +954,7 @@ camera_attributes = SubResource("CameraAttributesPractical_b5n0v")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Viewport/WorldEnvironment"]
 transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
-light_angular_distance = 2.0
 shadow_enabled = true
-shadow_blur = 2.0
 directional_shadow_mode = 1
 directional_shadow_fade_start = 1.0
 
@@ -984,7 +985,7 @@ draw_lanes_game = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_target_dirs = Array[int]([-1, -1])
-edge_rp_locals = Array[NodePath]([NodePath("RP_003"), NodePath("RP_006")])
+edge_rp_locals = Array[NodePath]([NodePath("RP_003"), NodePath("RP_007")])
 edge_rp_local_dirs = Array[int]([1, 0])
 
 [node name="RP_001" type="Node3D" parent="Viewport/RoadManager/Road_001"]
@@ -1043,8 +1044,18 @@ script = ExtResource("148_df7rn")
 traffic_dir = Array[int]([2, 1])
 lanes = Array[int]([5, 5])
 prior_mag = 15.0441
-next_mag = 15.0441
+next_mag = 162.833
 prior_pt_init = NodePath("../RP_005")
+next_pt_init = NodePath("../RP_007")
+
+[node name="RP_007" type="Node3D" parent="Viewport/RoadManager/Road_001"]
+transform = Transform3D(0.999645, 0, -0.026651, 0, 1, 0, 0.026651, 0, 0.999645, 0, -0.75, 825.637)
+script = ExtResource("148_df7rn")
+traffic_dir = Array[int]([2, 1])
+lanes = Array[int]([5, 5])
+prior_mag = 162.833
+next_mag = 162.833
+prior_pt_init = NodePath("../RP_006")
 
 [node name="BridgeUnderside" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.1, 0)
@@ -1114,9 +1125,9 @@ next_pt_init = NodePath("../RP_001")
 [node name="RiverManager" type="Node3D" parent="Viewport"]
 transform = Transform3D(-1.83588e-06, 0, 42, 0, 1, 0, -42, 0, -1.83588e-06, -100, -16, 25)
 script = ExtResource("12_22ta8")
-ShaderSettings = SubResource("Resource_7as80")
+ShaderSettings = SubResource("Resource_3hcx2")
 PointWidths = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
-Curve = SubResource("Curve3D_q57bw")
+Curve = SubResource("Curve3D_pfggy")
 metadata/_custom_type_script = "uid://b2v2tfeq8ufsl"
 
 [node name="Blockout" type="Node3D" parent="Viewport"]
@@ -1145,13 +1156,31 @@ height = 13.0
 [node name="Note" type="MeshInstance3D" parent="Viewport/Blockout/SierraVerdeWelcomeSign"]
 editor_description = "Sign welcoming player to Sierra Verde National Park. This is connected to the city of Sky Springs, Rosewood County"
 
-[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Viewport/Blockout"]
+[node name="BridgePole" type="CSGCombiner3D" parent="Viewport/Blockout"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 25)
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Viewport/Blockout/CSGCombiner3D2"]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Viewport/Blockout/BridgePole"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.9688, 0)
 radius = 5.0
 height = 23.9375
+
+[node name="RoadBarrier" type="CSGCombiner3D" parent="Viewport/Blockout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9, -0.3, -33)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Viewport/Blockout/RoadBarrier"]
+transform = Transform3D(0.2, 0, 0, 0, 0.75, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Viewport/Blockout/RoadBarrier"]
+transform = Transform3D(0.49, 0, 0, 0, 0.1, 0, 0, 0, 1, 0.000358939, -0.34, 0)
+size = Vector3(1.00146, 1, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Viewport/Blockout/RoadBarrier"]
+transform = Transform3D(0.181262, -0.316964, 0, 0.0845237, 0.679731, 0, 0, 0, 1, 0.0758628, -0.162688, 0)
+size = Vector3(1, 0.49971, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Viewport/Blockout/RoadBarrier"]
+transform = Transform3D(0.181262, 0.316964, 0, -0.0845237, 0.679731, 0, 0, 0, 1, -0.0759134, -0.162797, 0)
+size = Vector3(1, 0.499512, 1)
 
 [node name="VehicleController" type="Node3D" parent="Viewport" node_paths=PackedStringArray("vehicle_node")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 3)

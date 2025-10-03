@@ -58,7 +58,8 @@ enabled=PackedStringArray("res://addons/SphynxMotionBlurToolkit/plugin.cfg", "re
 folder_colors={
 "res://assets/": "yellow",
 "res://modules/": "gray",
-"res://scenes/": "blue"
+"res://scenes/": "blue",
+"res://views/": "red"
 }
 
 [input]
@@ -146,7 +147,11 @@ ambient_bus=&"RaytracedAmbient"
 
 textures/canvas_textures/default_texture_filter=0
 global_illumination/gi/use_half_resolution=true
+textures/default_filters/use_nearest_mipmap_filter=true
 textures/default_filters/anisotropic_filtering_level=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false
 textures/default_filters/texture_mipmap_bias=-2.0
 textures/decals/filter=0
+textures/light_projectors/filter=0
+anti_aliasing/quality/use_debanding=true
 occlusion_culling/use_occlusion_culling=true
