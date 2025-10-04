@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://ba8loxlgco2je"]
 
 [ext_resource type="Script" uid="uid://dugj1wi8ht8j2" path="res://assets/vehicles/cars/van/scripts/vehicle_controller.gd" id="1_8t6ww"]
-[ext_resource type="Texture2D" uid="uid://u4tsgf7tjigq" path="res://assets/vehicles/cars/van/models/van_colormap.png" id="2_njqma"]
+[ext_resource type="Texture2D" uid="uid://u4tsgf7tjigq" path="res://assets/vehicles/cars/detroit_motors_limited/vanity/models/van_colormap.png" id="2_njqma"]
 [ext_resource type="PackedScene" uid="uid://bsed4tmlifbcf" path="res://modules/xv_chassis/car/parts/axle/connected_axle.tscn" id="3_njqma"]
 [ext_resource type="PackedScene" uid="uid://crsqbho5fxrfk" path="res://modules/xv_chassis/car/parts/drivetrain/vehicle_drivetrain.tscn" id="4_r78ly"]
 [ext_resource type="Script" uid="uid://f81x5tr8suf8" path="res://modules/xv_chassis/car/parts/transmission/vehicle_transmission.gd" id="5_5h1ep"]

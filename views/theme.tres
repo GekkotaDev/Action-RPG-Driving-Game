@@ -1,6 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d04wd0y4ej4f"]
-
-[ext_resource type="FontFile" uid="uid://bmghykd6ypik4" path="res://views/typefaces/zilla_slab/ZillaSlab-Regular.ttf" id="1_d5kb8"]
-
-[resource]
-default_font = ExtResource("1_d5kb8")

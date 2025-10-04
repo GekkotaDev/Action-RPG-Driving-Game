@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://d04wd0y4ej4f"]
+
+[ext_resource type="FontFile" uid="uid://bmghykd6ypik4" path="res://views/typefaces/zilla_slab/ZillaSlab-Regular.ttf" id="1_lpowv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gq2p"]
+content_margin_left = 24.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpowv"]
+content_margin_left = 24.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.162353, 0.162353, 0.162353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hxg8"]
+content_margin_left = 24.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = ExtResource("1_lpowv")
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 20
+Button/fonts/default = ExtResource("1_lpowv")
+Button/styles/hover = SubResource("StyleBoxFlat_7gq2p")
+Button/styles/normal = SubResource("StyleBoxFlat_lpowv")
+Button/styles/pressed = SubResource("StyleBoxFlat_2hxg8")

@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://bht7715cfgr5m"]
+
+[ext_resource type="Theme" uid="uid://d04wd0y4ej4f" path="res://views/themes/theme.tres" id="1_f5aal"]
+[ext_resource type="Script" uid="uid://ci0t41kmv0x1h" path="res://views/screens/settings_menu/settings_menu.gd" id="1_ux17n"]
+[ext_resource type="FontFile" uid="uid://cmwrcxowxh2gs" path="res://views/typefaces/zilla_slab/ZillaSlab-BoldItalic.ttf" id="3_kccgd"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_f5aal")
+script = ExtResource("1_ux17n")
+
+[node name="View" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="View"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -20.0
+offset_right = 38.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="View/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("3_kccgd")
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="DifficultyButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "DIFFICULTY"
+alignment = 0
+
+[node name="AccessibilityButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "ACCESSIBILITY"
+alignment = 0
+
+[node name="HudUIButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "HUD & UI"
+alignment = 0
+
+[node name="ControlsButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "CONTROLS"
+alignment = 0
+
+[node name="AudioButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "AUDIO"
+alignment = 0
+
+[node name="GraphicsButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "GRAPHICS"
+alignment = 0
+
+[node name="BackButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "BACK"
+alignment = 0
+
+[connection signal="pressed" from="View/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

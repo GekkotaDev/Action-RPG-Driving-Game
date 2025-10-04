@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sttogv7tycui"
-path.s3tc="res://.godot/imported/colormap.png-9cf548c218d5fc80c87f661e93d13be0.s3tc.ctex"
+uid="uid://u4tsgf7tjigq"
+path.s3tc="res://.godot/imported/van_colormap.png-db451af7438a258b11d7d0fa10d29a51.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "611df30398ddade53b30132a6d84ae0a"
+}
 
 [deps]
 
-source_file="res://assets/vehicles/cars/van_legacy/textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-9cf548c218d5fc80c87f661e93d13be0.s3tc.ctex"]
+source_file="res://assets/vehicles/cars/detroit_motors_limited/vanity/models/van_colormap.png"
+dest_files=["res://.godot/imported/van_colormap.png-db451af7438a258b11d7d0fa10d29a51.s3tc.ctex"]
 
 [params]
 

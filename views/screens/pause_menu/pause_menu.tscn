@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctgyvf10b000y"]
+[gd_scene load_steps=4 format=3 uid="uid://ctgyvf10b000y"]
 
-[ext_resource type="FontFile" uid="uid://befv7bfyhrsdw" path="res://views/typefaces/zilla_slab/ZillaSlab-Bold.ttf" id="1_jcamu"]
+[ext_resource type="Theme" uid="uid://d04wd0y4ej4f" path="res://views/themes/theme.tres" id="1_ndshx"]
+[ext_resource type="Script" uid="uid://iw5pftybkvg1" path="res://views/screens/pause_menu/pause_menu.gd" id="2_dl4wc"]
+[ext_resource type="PackedScene" uid="uid://bht7715cfgr5m" path="res://views/screens/settings_menu/settings_menu.tscn" id="3_2r5tv"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -10,10 +12,82 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme = ExtResource("1_ndshx")
+script = ExtResource("2_dl4wc")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-theme_override_fonts/font = ExtResource("1_jcamu")
-text = "mozilla"
+[node name="View" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="View"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -64.0
+offset_right = 240.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "RESUME"
+alignment = 0
+
+[node name="ResetVehicleButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "RESET VEHICLE"
+alignment = 0
+
+[node name="SettingsButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS"
+alignment = 0
+
+[node name="QuitButton" type="Button" parent="View/VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
+alignment = 0
+
+[node name="SubRoutes" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsMenu" parent="SubRoutes" instance=ExtResource("3_2r5tv")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[connection signal="pressed" from="View/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="View/VBoxContainer/ResetVehicleButton" to="." method="_on_reset_vehicle_button_pressed"]
+[connection signal="pressed" from="View/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="View/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

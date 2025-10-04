@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d1g4lumqdleyl"
-path="res://.godot/imported/van.blend-49eeb0e230a5f48d4b7a9d411d689095.scn"
+path="res://.godot/imported/van.blend-0343c395e45c63fa577a98e9f079cfd4.scn"
 
 [deps]
 
-source_file="res://assets/vehicles/cars/van_legacy/van.blend"
-dest_files=["res://.godot/imported/van.blend-49eeb0e230a5f48d4b7a9d411d689095.scn"]
+source_file="res://assets/vehicles/cars/detroit_motors_limited/vanity/models/van.blend"
+dest_files=["res://.godot/imported/van.blend-0343c395e45c63fa577a98e9f079cfd4.scn"]
 
 [params]
 

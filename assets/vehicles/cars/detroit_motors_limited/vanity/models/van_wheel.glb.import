@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ch47c32do38ut"
-path="res://.godot/imported/van.glb-c65b2fe03df13e06c39e9ce70fd9ff3a.scn"
+uid="uid://bnd4o0pxmmnp1"
+path="res://.godot/imported/van_wheel.glb-b7292cbeb0bc01be36fcc7733db0c33e.scn"
 
 [deps]
 
-source_file="res://assets/vehicles/cars/van/models/van.glb"
-dest_files=["res://.godot/imported/van.glb-c65b2fe03df13e06c39e9ce70fd9ff3a.scn"]
+source_file="res://assets/vehicles/cars/detroit_motors_limited/vanity/models/van_wheel.glb"
+dest_files=["res://.godot/imported/van_wheel.glb-b7292cbeb0bc01be36fcc7733db0c33e.scn"]
 
 [params]
 

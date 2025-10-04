@@ -1,4 +1,4 @@
-[gd_scene load_steps=388 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=389 format=3 uid="uid://b37fnqq4a4l2r"]
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="4_3gwlq"]
 [ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="5_mhw3e"]
 [ext_resource type="Texture2D" uid="uid://c2j0nwgen02d2" path="res://assets/textures/placeholder/placeholder_albedo.png" id="5_xalad"]
-[ext_resource type="Script" uid="uid://sts7255qqg71" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
+[ext_resource type="Script" uid="uid://d00n2urebki1i" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
 [ext_resource type="Texture2D" uid="uid://c5yvn52y2hc3m" path="res://assets/textures/placeholder/placeholder_heightmap.png" id="6_diu77"]
 [ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="7_wvtwl"]
 [ext_resource type="Texture2D" uid="uid://cyiiu7oh2cujy" path="res://assets/textures/dirt/dirt_albedo.png" id="7_xalad"]
@@ -18,13 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://ddy774m2pwc08" path="res://assets/textures/grass/grass_albedo.png" id="10_inwir"]
 [ext_resource type="Texture2D" uid="uid://dd0ypp2ytg5p" path="res://assets/textures/rock/rock_heightmap.png" id="11_4c5qf"]
 [ext_resource type="Script" uid="uid://dgf8vwa2n8r11" path="res://addons/terrabrush/Scripts/EditorResources/FoliageDefinitionResource.cs" id="11_hd6wj"]
-[ext_resource type="Script" uid="uid://b2v2tfeq8ufsl" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
+[ext_resource type="Script" uid="uid://caqxy7yg877iy" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
 [ext_resource type="Script" uid="uid://d33x21vao7tj2" path="res://addons/terrabrush/Scripts/EditorResources/FoliageResource.cs" id="12_801ui"]
 [ext_resource type="PackedScene" uid="uid://d0bqby3antgnt" path="res://assets/trees/tree_blocks.glb" id="13_lnxru"]
 [ext_resource type="Texture2D" uid="uid://b85tlq8wcklbo" path="res://addons/waterways_net/Textures/water_normal_bump.png" id="13_wvtwl"]
 [ext_resource type="Script" uid="uid://cgf61yxk46wa4" path="res://addons/terrabrush/Scripts/EditorResources/ObjectDefinitionResource.cs" id="14_bad0j"]
 [ext_resource type="PackedScene" uid="uid://d3l2dgp8vdsj4" path="res://assets/trees/tree_blocks_dark.glb" id="14_pom4q"]
-[ext_resource type="Script" uid="uid://b5ftfyp5hqomv" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
+[ext_resource type="Script" uid="uid://po80rlfb2gwp" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
 [ext_resource type="Script" uid="uid://comabiqrwe5u0" path="res://addons/terrabrush/Scripts/EditorResources/ObjectResource.cs" id="15_yi44v"]
 [ext_resource type="Texture2D" uid="uid://7fry2b6255x3" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_0_0.res" id="16_rm76u"]
 [ext_resource type="PackedScene" uid="uid://dc78nolah8i4q" path="res://assets/trees/tree_cone_dark.glb" id="17_1bb2y"]
@@ -35,15 +35,15 @@
 [ext_resource type="Texture2D" uid="uid://djseiplbjf47s" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_0_1.res" id="23_uwv0q"]
 [ext_resource type="PackedScene" uid="uid://d0xlgokiqp03i" path="res://assets/trees/tree_detailed_dark.glb" id="23_yjk3y"]
 [ext_resource type="Material" uid="uid://curd3vnflpk3c" path="res://assets/textures/bricks/bricks.tres" id="24_f2gk3"]
-[ext_resource type="Script" uid="uid://c2jkpsuouxtbo" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
+[ext_resource type="Script" uid="uid://q3y0ky61c6af" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
 [ext_resource type="Texture2D" uid="uid://vhovnldiwlew" path="res://assets/textures/dirt_loam/dirt_loam_albedo.png" id="25_v856g"]
 [ext_resource type="PackedScene" uid="uid://xq484acfcx6o" path="res://assets/trees/tree_fat.glb" id="25_yuohp"]
 [ext_resource type="PackedScene" uid="uid://bnahsbbr28pqp" path="res://assets/trees/tree_fat_darkh.glb" id="26_5ycgg"]
 [ext_resource type="Texture2D" uid="uid://xlcchivopb1t" path="res://assets/textures/dirt_loam/dirt_loam_heightmap.png" id="26_68ado"]
 [ext_resource type="PackedScene" uid="uid://xne5qir4cixh" path="res://assets/trees/tree_pineDefaultA.glb" id="26_trg5o"]
-[ext_resource type="PackedScene" uid="uid://jvn17rutxpfg" path="res://assets/vehicles/cars/van_legacy/van.tscn" id="26_vn167"]
+[ext_resource type="PackedScene" uid="uid://jvn17rutxpfg" path="res://assets/vehicles/cars/van_legacy/scenes/van.tscn" id="26_vn167"]
 [ext_resource type="PackedScene" uid="uid://61ugflxua6uv" path="res://assets/trees/tree_palm.glb" id="26_y2kel"]
-[ext_resource type="Script" uid="uid://byl7vs5o8oaca" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
+[ext_resource type="Script" uid="uid://chimjx2xvwojo" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
 [ext_resource type="PackedScene" uid="uid://ctvxwa0incj28" path="res://assets/trees/tree_pineDefaultB.glb" id="27_lyced"]
 [ext_resource type="PackedScene" uid="uid://pfvcvyxvl2dg" path="res://assets/trees/tree_palmBend.glb" id="27_smlow"]
 [ext_resource type="PackedScene" uid="uid://beh15rhsn7knt" path="res://assets/trees/tree_pineGroundA.glb" id="28_4h4l1"]
@@ -149,9 +149,9 @@
 [ext_resource type="Texture2D" uid="uid://6xx4dlb0l074" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_1_0.res" id="144_8rj1c"]
 [ext_resource type="Texture2D" uid="uid://bwwvro6f2a37d" path="res://scenes/rosewood_county/RosewoodCounty/Heightmap_0_1.res" id="145_df7rn"]
 [ext_resource type="Texture2D" uid="uid://j2yws2dcrnl3" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_0.res" id="146_bmbky"]
-[ext_resource type="Script" uid="uid://dipr28fhn8dmj" path="res://addons/road-generator/nodes/road_container.gd" id="147_8rj1c"]
+[ext_resource type="Script" uid="uid://dynn3cft6b107" path="res://addons/road-generator/nodes/road_container.gd" id="147_8rj1c"]
 [ext_resource type="Texture2D" uid="uid://l3je6q168dc8" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_1.res" id="147_rbxhm"]
-[ext_resource type="Script" uid="uid://b2fc8pnynrx2o" path="res://addons/road-generator/nodes/road_point.gd" id="148_df7rn"]
+[ext_resource type="Script" uid="uid://ctpi87ckf75bq" path="res://addons/road-generator/nodes/road_point.gd" id="148_df7rn"]
 [ext_resource type="Texture2D" uid="uid://c6np4aaulk6ca" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_2.res" id="148_tscmc"]
 [ext_resource type="Texture2D" uid="uid://chwh0oexwpws3" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_3.res" id="149_5ge1f"]
 [ext_resource type="Texture2D" uid="uid://dh3yma4kf08mq" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_1_1_1.res" id="149_axtnu"]
@@ -319,6 +319,7 @@
 [ext_resource type="Texture2D" uid="uid://co2jp0ul1vw88" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_12.res" id="318_ihgpw"]
 [ext_resource type="Texture2D" uid="uid://c6u41u33cjwc4" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_-1_3_0.res" id="319_mqa8l"]
 [ext_resource type="Texture2D" uid="uid://bte7phk0wmy17" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_-1_3_1.res" id="320_0ptwu"]
+[ext_resource type="PackedScene" uid="uid://ctgyvf10b000y" path="res://views/screens/pause_menu/pause_menu.tscn" id="320_pfggy"]
 
 [sub_resource type="Curve" id="Curve_22ta8"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.124352, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.752809), 0.0, 0.0, 0, 0]
@@ -898,7 +899,7 @@ Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResour
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_shjas"]
 
-[sub_resource type="Resource" id="Resource_3hcx2"]
+[sub_resource type="Resource" id="Resource_pfggy"]
 script = ExtResource("14_tcnw4")
 MatShaderType = 1
 mat_albedo_color_first = Color(0.6, 0.7, 0.65, 1)
@@ -926,7 +927,7 @@ mat_edge_fade = 0.25
 LodLod0Distance = 50.0
 _selectedShader = 1
 
-[sub_resource type="Curve3D" id="Curve3D_pfggy"]
+[sub_resource type="Curve3D" id="Curve3D_nlobf"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0, 0, 0.25, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 5),
@@ -1067,7 +1068,6 @@ edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_target_dirs = Array[int]([-1, -1])
 edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_002")])
 edge_rp_local_dirs = Array[int]([0, 1])
-metadata/_custom_type_script = "uid://dipr28fhn8dmj"
 
 [node name="RP_001" type="Node3D" parent="Viewport/RoadManager/BridgeUnderside"]
 transform = Transform3D(-0.999995, 1.57899e-05, -0.00329815, 0, 0.999989, 0.00478746, 0.00329819, 0.00478743, -0.999983, 1.898, -0.6, -32.309)
@@ -1098,7 +1098,6 @@ edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_target_dirs = Array[int]([-1, -1])
 edge_rp_locals = Array[NodePath]([NodePath("RP_001"), NodePath("RP_002")])
 edge_rp_local_dirs = Array[int]([0, 1])
-metadata/_custom_type_script = "uid://dipr28fhn8dmj"
 
 [node name="RP_001" type="Node3D" parent="Viewport/RoadManager/BridgeSides"]
 transform = Transform3D(-0.999995, 1.57899e-05, -0.00329815, 0, 0.999989, 0.00478746, 0.00329819, 0.00478743, -0.999983, 1.898, -0.6, -37.309)
@@ -1125,10 +1124,9 @@ next_pt_init = NodePath("../RP_001")
 [node name="RiverManager" type="Node3D" parent="Viewport"]
 transform = Transform3D(-1.83588e-06, 0, 42, 0, 1, 0, -42, 0, -1.83588e-06, -100, -16, 25)
 script = ExtResource("12_22ta8")
-ShaderSettings = SubResource("Resource_3hcx2")
+ShaderSettings = SubResource("Resource_pfggy")
 PointWidths = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
-Curve = SubResource("Curve3D_pfggy")
-metadata/_custom_type_script = "uid://b2v2tfeq8ufsl"
+Curve = SubResource("Curve3D_nlobf")
 
 [node name="Blockout" type="Node3D" parent="Viewport"]
 
@@ -1221,3 +1219,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 89)
 mesh = SubResource("TorusMesh_wvtwl")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tcnw4")
+
+[node name="PauseMenu" parent="." instance=ExtResource("320_pfggy")]
