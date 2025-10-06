@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://blv3oeswpfwf4"]
+
+[ext_resource type="Script" uid="uid://cpp2u3ue6k1ru" path="res://modules/gevp_plus/scripts/vehicle_chassis.gd" id="1_jjiq8"]
+
+[node name="DmlVanity" type="Node3D"]
+script = ExtResource("1_jjiq8")
