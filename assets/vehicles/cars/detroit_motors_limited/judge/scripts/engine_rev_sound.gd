@@ -1,0 +1,1 @@
+extends RaytracedAudioPlayer3D
