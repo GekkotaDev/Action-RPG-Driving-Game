@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://5ii5mv7h5djw"]
+
+[ext_resource type="Script" uid="uid://dd7ndea633gug" path="res://assets/world_viewport/world_viewport.gd" id="1_7fnp6"]
+[ext_resource type="Shader" uid="uid://6jly3xt3ssln" path="res://assets/shaders/edge_detection.gdshader" id="2_7fnp6"]
+[ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/world_viewport/edge_detection.gdshader" id="3_5iquc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lndhg"]
+render_priority = 0
+shader = ExtResource("2_7fnp6")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_o7owe"]
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0x13"]
+render_priority = 0
+shader = ExtResource("3_5iquc")
+shader_parameter/lightIntensity = 1.25
+shader_parameter/lineAlpha = 0.7
+shader_parameter/useLighting = true
+shader_parameter/lineHighlight = 0.2
+shader_parameter/lineShadow = 1.0
+
+[node name="Viewport" type="SubViewportContainer"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_lndhg")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+stretch = true
+stretch_shrink = 4
+script = ExtResource("1_7fnp6")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(320, 180)
+render_target_update_mode = 4
+
+[node name="ViewportCamera" type="Camera3D" parent="SubViewport"]
+unique_name_in_owner = true
+top_level = true
+v_offset = 1.0
+doppler_tracking = 2
+
+[node name="EdgeDetectionShader" type="MeshInstance3D" parent="SubViewport/ViewportCamera"]
+transform = Transform3D(0.999988, 0.00408909, -0.00253917, -0.00408341, 0.999989, 0.00223752, 0.00254828, -0.00222713, 0.999994, 0, 0, 0)
+visible = false
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_o7owe")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_q0x13")
