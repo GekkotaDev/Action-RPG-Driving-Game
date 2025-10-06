@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://duw6pg81rngdy"]
+
+[ext_resource type="Theme" uid="uid://d04wd0y4ej4f" path="res://views/themes/theme.tres" id="1_6uxe2"]
+[ext_resource type="Script" uid="uid://dk2tyygmqb8iw" path="res://modules/gevp_plus/views/debug_hud.gd" id="2_y0o6x"]
+[ext_resource type="FontFile" uid="uid://befv7bfyhrsdw" path="res://views/typefaces/zilla_slab/ZillaSlab-Bold.ttf" id="3_fs8nv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04nfc"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="DebugHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_6uxe2")
+script = ExtResource("2_y0o6x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -73.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Speed" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 32
+text = "100 km/h"
+
+[node name="RPM" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 32
+text = "100"
+
+[node name="Gear" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fs8nv")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_04nfc")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
