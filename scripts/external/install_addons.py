@@ -24,6 +24,10 @@ DEPENDENCIES = {
         repo="gh:VenitStudios/AmbientCG",
         subdirectory="addons/ambientcg",
     ),
+    "deformablemesh": Git(
+        repo="gh:cloudofoz/godot-deformablemesh",
+        subdirectory="addons/deformablemesh",
+    ),
     "gevp": Git(
         repo="gh:DAShoe1/Godot-Easy-Vehicle-Physics",
         subdirectory="addons/gevp",
