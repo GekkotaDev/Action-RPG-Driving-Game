@@ -1,4 +1,4 @@
-[gd_scene load_steps=389 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=390 format=3 uid="uid://b37fnqq4a4l2r"]
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="4_3gwlq"]
 [ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="5_mhw3e"]
 [ext_resource type="Texture2D" uid="uid://c2j0nwgen02d2" path="res://assets/textures/placeholder/placeholder_albedo.png" id="5_xalad"]
-[ext_resource type="Script" uid="uid://d00n2urebki1i" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
+[ext_resource type="Script" uid="uid://sts7255qqg71" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
 [ext_resource type="Texture2D" uid="uid://c5yvn52y2hc3m" path="res://assets/textures/placeholder/placeholder_heightmap.png" id="6_diu77"]
 [ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="7_wvtwl"]
 [ext_resource type="Texture2D" uid="uid://cyiiu7oh2cujy" path="res://assets/textures/dirt/dirt_albedo.png" id="7_xalad"]
@@ -18,13 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://ddy774m2pwc08" path="res://assets/textures/grass/grass_albedo.png" id="10_inwir"]
 [ext_resource type="Texture2D" uid="uid://dd0ypp2ytg5p" path="res://assets/textures/rock/rock_heightmap.png" id="11_4c5qf"]
 [ext_resource type="Script" uid="uid://dgf8vwa2n8r11" path="res://addons/terrabrush/Scripts/EditorResources/FoliageDefinitionResource.cs" id="11_hd6wj"]
-[ext_resource type="Script" uid="uid://caqxy7yg877iy" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
+[ext_resource type="Script" uid="uid://b2v2tfeq8ufsl" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
 [ext_resource type="Script" uid="uid://d33x21vao7tj2" path="res://addons/terrabrush/Scripts/EditorResources/FoliageResource.cs" id="12_801ui"]
 [ext_resource type="PackedScene" uid="uid://d0bqby3antgnt" path="res://assets/trees/tree_blocks.glb" id="13_lnxru"]
 [ext_resource type="Texture2D" uid="uid://b85tlq8wcklbo" path="res://addons/waterways_net/Textures/water_normal_bump.png" id="13_wvtwl"]
 [ext_resource type="Script" uid="uid://cgf61yxk46wa4" path="res://addons/terrabrush/Scripts/EditorResources/ObjectDefinitionResource.cs" id="14_bad0j"]
 [ext_resource type="PackedScene" uid="uid://d3l2dgp8vdsj4" path="res://assets/trees/tree_blocks_dark.glb" id="14_pom4q"]
-[ext_resource type="Script" uid="uid://po80rlfb2gwp" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
+[ext_resource type="Script" uid="uid://b5ftfyp5hqomv" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
 [ext_resource type="Script" uid="uid://comabiqrwe5u0" path="res://addons/terrabrush/Scripts/EditorResources/ObjectResource.cs" id="15_yi44v"]
 [ext_resource type="Texture2D" uid="uid://7fry2b6255x3" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_0_0.res" id="16_rm76u"]
 [ext_resource type="PackedScene" uid="uid://dc78nolah8i4q" path="res://assets/trees/tree_cone_dark.glb" id="17_1bb2y"]
@@ -35,15 +35,14 @@
 [ext_resource type="Texture2D" uid="uid://djseiplbjf47s" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_0_1.res" id="23_uwv0q"]
 [ext_resource type="PackedScene" uid="uid://d0xlgokiqp03i" path="res://assets/trees/tree_detailed_dark.glb" id="23_yjk3y"]
 [ext_resource type="Material" uid="uid://curd3vnflpk3c" path="res://assets/textures/bricks/bricks.tres" id="24_f2gk3"]
-[ext_resource type="Script" uid="uid://q3y0ky61c6af" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
+[ext_resource type="Script" uid="uid://c2jkpsuouxtbo" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
 [ext_resource type="Texture2D" uid="uid://vhovnldiwlew" path="res://assets/textures/dirt_loam/dirt_loam_albedo.png" id="25_v856g"]
 [ext_resource type="PackedScene" uid="uid://xq484acfcx6o" path="res://assets/trees/tree_fat.glb" id="25_yuohp"]
 [ext_resource type="PackedScene" uid="uid://bnahsbbr28pqp" path="res://assets/trees/tree_fat_darkh.glb" id="26_5ycgg"]
 [ext_resource type="Texture2D" uid="uid://xlcchivopb1t" path="res://assets/textures/dirt_loam/dirt_loam_heightmap.png" id="26_68ado"]
 [ext_resource type="PackedScene" uid="uid://xne5qir4cixh" path="res://assets/trees/tree_pineDefaultA.glb" id="26_trg5o"]
-[ext_resource type="PackedScene" uid="uid://jvn17rutxpfg" path="res://assets/vehicles/cars/van_legacy/scenes/van.tscn" id="26_vn167"]
 [ext_resource type="PackedScene" uid="uid://61ugflxua6uv" path="res://assets/trees/tree_palm.glb" id="26_y2kel"]
-[ext_resource type="Script" uid="uid://chimjx2xvwojo" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
+[ext_resource type="Script" uid="uid://byl7vs5o8oaca" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
 [ext_resource type="PackedScene" uid="uid://ctvxwa0incj28" path="res://assets/trees/tree_pineDefaultB.glb" id="27_lyced"]
 [ext_resource type="PackedScene" uid="uid://pfvcvyxvl2dg" path="res://assets/trees/tree_palmBend.glb" id="27_smlow"]
 [ext_resource type="PackedScene" uid="uid://beh15rhsn7knt" path="res://assets/trees/tree_pineGroundA.glb" id="28_4h4l1"]
@@ -106,7 +105,7 @@
 [ext_resource type="Texture2D" uid="uid://cc3fb1mpkkved" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_6.res" id="104_ngh15"]
 [ext_resource type="Texture2D" uid="uid://bsq3dq7x53b1w" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_7.res" id="105_88bq3"]
 [ext_resource type="Texture2D" uid="uid://bes5w8h74dblw" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_8.res" id="106_yfllw"]
-[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/viewport_shader/viewport.tscn" id="107_b5n0v"]
+[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/world_viewport/world_viewport.tscn" id="107_b5n0v"]
 [ext_resource type="Texture2D" uid="uid://dp84jfjb1rrr0" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_9.res" id="107_i4184"]
 [ext_resource type="Texture2D" uid="uid://dki0d3wp3wmm8" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_10.res" id="108_y62uy"]
 [ext_resource type="Texture2D" uid="uid://blekhat0ql3kd" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_11.res" id="109_kc0tb"]
@@ -149,9 +148,9 @@
 [ext_resource type="Texture2D" uid="uid://6xx4dlb0l074" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_1_0.res" id="144_8rj1c"]
 [ext_resource type="Texture2D" uid="uid://bwwvro6f2a37d" path="res://scenes/rosewood_county/RosewoodCounty/Heightmap_0_1.res" id="145_df7rn"]
 [ext_resource type="Texture2D" uid="uid://j2yws2dcrnl3" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_0.res" id="146_bmbky"]
-[ext_resource type="Script" uid="uid://dynn3cft6b107" path="res://addons/road-generator/nodes/road_container.gd" id="147_8rj1c"]
+[ext_resource type="Script" uid="uid://dipr28fhn8dmj" path="res://addons/road-generator/nodes/road_container.gd" id="147_8rj1c"]
 [ext_resource type="Texture2D" uid="uid://l3je6q168dc8" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_1.res" id="147_rbxhm"]
-[ext_resource type="Script" uid="uid://ctpi87ckf75bq" path="res://addons/road-generator/nodes/road_point.gd" id="148_df7rn"]
+[ext_resource type="Script" uid="uid://b2fc8pnynrx2o" path="res://addons/road-generator/nodes/road_point.gd" id="148_df7rn"]
 [ext_resource type="Texture2D" uid="uid://c6np4aaulk6ca" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_2.res" id="148_tscmc"]
 [ext_resource type="Texture2D" uid="uid://chwh0oexwpws3" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_3.res" id="149_5ge1f"]
 [ext_resource type="Texture2D" uid="uid://dh3yma4kf08mq" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_1_1_1.res" id="149_axtnu"]
@@ -318,8 +317,10 @@
 [ext_resource type="Texture2D" uid="uid://dh2cvvacsvksy" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_11.res" id="317_4qes4"]
 [ext_resource type="Texture2D" uid="uid://co2jp0ul1vw88" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_12.res" id="318_ihgpw"]
 [ext_resource type="Texture2D" uid="uid://c6u41u33cjwc4" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_-1_3_0.res" id="319_mqa8l"]
+[ext_resource type="PackedScene" uid="uid://c5jichmbbdws8" path="res://assets/vehicles/cars/detroit_motors_limited/judge/scenes/dml_judge.tscn" id="319_pfggy"]
 [ext_resource type="Texture2D" uid="uid://bte7phk0wmy17" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_-1_3_1.res" id="320_0ptwu"]
 [ext_resource type="PackedScene" uid="uid://ctgyvf10b000y" path="res://views/screens/pause_menu/pause_menu.tscn" id="320_pfggy"]
+[ext_resource type="PackedScene" uid="uid://duw6pg81rngdy" path="res://modules/gevp_plus/views/debug_hud.tscn" id="321_nlobf"]
 
 [sub_resource type="Curve" id="Curve_22ta8"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.124352, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.752809), 0.0, 0.0, 0, 0]
@@ -382,12 +383,6 @@ volumetric_fog_emission_energy = 0.0
 volumetric_fog_anisotropy = 0.0
 volumetric_fog_length = 16.0
 volumetric_fog_sky_affect = 0.0
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_b5n0v"]
-exposure_multiplier = 0.75
-auto_exposure_enabled = true
-dof_blur_far_enabled = true
-dof_blur_far_transition = 750.0
 
 [sub_resource type="Resource" id="Resource_eigr0"]
 script = ExtResource("8_d055u")
@@ -899,7 +894,7 @@ Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResour
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_shjas"]
 
-[sub_resource type="Resource" id="Resource_pfggy"]
+[sub_resource type="Resource" id="Resource_nlobf"]
 script = ExtResource("14_tcnw4")
 MatShaderType = 1
 mat_albedo_color_first = Color(0.6, 0.7, 0.65, 1)
@@ -927,13 +922,20 @@ mat_edge_fade = 0.25
 LodLod0Distance = 50.0
 _selectedShader = 1
 
-[sub_resource type="Curve3D" id="Curve3D_nlobf"]
+[sub_resource type="Curve3D" id="Curve3D_r5gex"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0, 0, 0.25, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 5),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
 }
 point_count = 6
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qjbkh"]
+exposure_multiplier = 0.75
+auto_exposure_enabled = true
+dof_blur_far_enabled = true
+dof_blur_far_transition = 750.0
+dof_blur_near_transition = 16.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_ewlpw"]
 
@@ -951,7 +953,6 @@ REFERENCE_CAMERA = NodePath("VehicleController/Camera3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport"]
 environment = SubResource("Environment_u0wwe")
-camera_attributes = SubResource("CameraAttributesPractical_b5n0v")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Viewport/WorldEnvironment"]
 transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
@@ -1124,9 +1125,9 @@ next_pt_init = NodePath("../RP_001")
 [node name="RiverManager" type="Node3D" parent="Viewport"]
 transform = Transform3D(-1.83588e-06, 0, 42, 0, 1, 0, -42, 0, -1.83588e-06, -100, -16, 25)
 script = ExtResource("12_22ta8")
-ShaderSettings = SubResource("Resource_pfggy")
+ShaderSettings = SubResource("Resource_nlobf")
 PointWidths = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
-Curve = SubResource("Curve3D_nlobf")
+Curve = SubResource("Curve3D_r5gex")
 
 [node name="Blockout" type="Node3D" parent="Viewport"]
 
@@ -1183,7 +1184,7 @@ size = Vector3(1, 0.499512, 1)
 [node name="VehicleController" type="Node3D" parent="Viewport" node_paths=PackedStringArray("vehicle_node")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 3)
 script = ExtResource("25_tye1i")
-vehicle_node = NodePath("Van")
+vehicle_node = NodePath("DmlJudge")
 string_brake_input = "vehicle_brake"
 string_steer_left = "vehicle_steer_left"
 string_steer_right = "vehicle_steer_right"
@@ -1197,13 +1198,15 @@ string_shift_down = "vehicle_shift_down"
 [node name="Camera3D" type="Camera3D" parent="Viewport/VehicleController" node_paths=PackedStringArray("follow_this")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
 top_level = true
+attributes = SubResource("CameraAttributesPractical_qjbkh")
 current = true
+fov = 100.0
 script = ExtResource("27_dyjwu")
 follow_distance = 4
-follow_this = NodePath("../Van")
+follow_this = NodePath("../DmlJudge")
 
-[node name="Van" parent="Viewport/VehicleController" instance=ExtResource("26_vn167")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="DmlJudge" parent="Viewport/VehicleController" node_paths=PackedStringArray("camera") instance=ExtResource("319_pfggy")]
+camera = NodePath("../Camera3D")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Viewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -15)
@@ -1221,3 +1224,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tcnw4")
 
 [node name="PauseMenu" parent="." instance=ExtResource("320_pfggy")]
+visible = false
+
+[node name="DebugHud" parent="." node_paths=PackedStringArray("vehicle") instance=ExtResource("321_nlobf")]
+vehicle = NodePath("../Viewport/VehicleController/DmlJudge")
