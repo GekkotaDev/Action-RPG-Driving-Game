@@ -12,6 +12,7 @@
         "editor.insertSpaces": true,
         "editor.tabSize": 4,
         "files.exclude": {
+            "**/*.import": true,
             "**/*.uid": true
         },
         "godotTools.editorPath.godot4": "D:\\Program Files\\Godots\\versions\\Godot_v4_4_1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
