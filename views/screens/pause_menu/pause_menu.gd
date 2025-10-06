@@ -14,4 +14,4 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_settings_button_pressed() -> void:
-    route_to($"SubRoutes/SettingsMenu")
+    push_route($"SubRoutes/SettingsMenu")
