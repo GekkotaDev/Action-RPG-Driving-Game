@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://c5jichmbbdws8"]
+[gd_scene load_steps=38 format=4 uid="uid://c5jichmbbdws8"]
 
 [ext_resource type="Texture2D" uid="uid://dum2acwvjnot6" path="res://assets/vehicles/cars/detroit_motors_limited/judge/models/colormap.png" id="1_suqwu"]
 [ext_resource type="Script" uid="uid://c1jay85tn50a2" path="res://modules/gevp_plus/middleware/middlewares/idle_middleware.gd" id="2_cyxdl"]
@@ -6,13 +6,15 @@
 [ext_resource type="Script" uid="uid://dqgcpepuk2fc2" path="res://modules/gevp_plus/middleware/middlewares/camera_middleware.gd" id="3_hv7os"]
 [ext_resource type="Script" uid="uid://dfybd0rp4nuao" path="res://addons/gevp/scripts/wheel.gd" id="3_td1jw"]
 [ext_resource type="Script" uid="uid://cjwkprba6c2ag" path="res://modules/gevp_plus/middleware/middlewares/wheelspin_middleware.gd" id="4_hv7os"]
+[ext_resource type="Script" uid="uid://c0onr4pkpuunr" path="res://modules/gevp_plus/middleware/middlewares/impact_middleware.gd" id="4_nr6yc"]
 [ext_resource type="PackedScene" uid="uid://b2hlchrj4h2b7" path="res://addons/gevp/scenes/engine_sound.tscn" id="4_xx2vt"]
 [ext_resource type="AudioStream" uid="uid://ddmmbmcs27hvg" path="res://assets/vehicles/cars/detroit_motors_limited/judge/sounds/5000.wav" id="5_745jl"]
 [ext_resource type="AudioStream" uid="uid://blyllnd7tej20" path="res://assets/vehicles/cars/detroit_motors_limited/judge/sounds/idle.wav" id="7_xx2vt"]
-[ext_resource type="AudioStream" uid="uid://cyl4oo3o57bfr" path="res://assets/vehicles/resources/horns/horn_1.wav" id="8_745jl"]
+[ext_resource type="AudioStream" uid="uid://cyl4oo3o57bfr" path="res://assets/vehicles/resources/audio/horns/horn_1.wav" id="8_745jl"]
 [ext_resource type="Script" uid="uid://eligj0ca5q6p" path="res://modules/gevp_plus/sounds/sound_horn.gd" id="9_cyxdl"]
-[ext_resource type="AudioStream" uid="uid://djk2unecgu03m" path="res://assets/vehicles/resources/environment/squeal.wav" id="12_65msh"]
+[ext_resource type="AudioStream" uid="uid://djk2unecgu03m" path="res://assets/vehicles/resources/audio/environment/squeal.wav" id="12_65msh"]
 [ext_resource type="Script" uid="uid://cdhxtssp3srur" path="res://assets/vehicles/cars/detroit_motors_limited/judge/scripts/wheel_spin.gd" id="12_80kcv"]
+[ext_resource type="AudioStream" uid="uid://0ubaoxw72gi5" path="res://assets/vehicles/resources/audio/damage/crash_2.wav" id="13_65msh"]
 
 [sub_resource type="Curve" id="Curve_suqwu"]
 _data = [Vector2(0, 0.494505), 0.0, 2.04495, 0, 0, Vector2(0.617978, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.692308), -1.4839, 0.0, 0, 0]
@@ -216,18 +218,22 @@ braking_grip_multiplier = 2.0
 
 [node name="Middlewares" type="Node" parent="."]
 
-[node name="IdleMiddleware" type="Node" parent="Middlewares" node_paths=PackedStringArray("idle_sound")]
-script = ExtResource("2_cyxdl")
-idle_sound = NodePath("../../Node3D/EngineIdleSound")
-
 [node name="CameraMiddleware" type="Node" parent="Middlewares"]
 script = ExtResource("3_hv7os")
 dof_curve = SubResource("Curve_cyxdl")
 fov_curve = SubResource("Curve_80kcv")
 
+[node name="IdleMiddleware" type="Node" parent="Middlewares" node_paths=PackedStringArray("idle_sound")]
+script = ExtResource("2_cyxdl")
+idle_sound = NodePath("../../Sounds/EngineIdleSound")
+
+[node name="ImpactMiddleware" type="Node" parent="Middlewares" node_paths=PackedStringArray("crash_sound")]
+script = ExtResource("4_nr6yc")
+crash_sound = NodePath("../../Sounds/CrashSound")
+
 [node name="WheelspinMiddleware" type="Node" parent="Middlewares" node_paths=PackedStringArray("squeal_sound")]
 script = ExtResource("4_hv7os")
-squeal_sound = NodePath("../../Node3D/SquealSound")
+squeal_sound = NodePath("../../Sounds/SquealSound")
 
 [node name="BodyMesh3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0, 0.15, -0.025)
@@ -297,27 +303,30 @@ mesh = SubResource("ArrayMesh_phkgm")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ORMMaterial3D_65msh")
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Sounds" type="Node3D" parent="."]
 
-[node name="EngineRevSound" parent="Node3D" node_paths=PackedStringArray("vehicle") instance=ExtResource("4_xx2vt")]
+[node name="EngineRevSound" parent="Sounds" node_paths=PackedStringArray("vehicle") instance=ExtResource("4_xx2vt")]
 stream = ExtResource("5_745jl")
 vehicle = NodePath("../..")
 sample_rpm = 5500.0
 
-[node name="EngineIdleSound" type="AudioStreamPlayer3D" parent="Node3D"]
+[node name="EngineIdleSound" type="AudioStreamPlayer3D" parent="Sounds"]
 stream = ExtResource("7_xx2vt")
 volume_db = -10.0
 autoplay = true
 
-[node name="HornSound" type="AudioStreamPlayer3D" parent="Node3D"]
+[node name="HornSound" type="AudioStreamPlayer3D" parent="Sounds"]
 stream = ExtResource("8_745jl")
 max_polyphony = 2
 script = ExtResource("9_cyxdl")
 
-[node name="SquealSound" type="AudioStreamPlayer3D" parent="Node3D"]
+[node name="SquealSound" type="AudioStreamPlayer3D" parent="Sounds"]
 stream = ExtResource("12_65msh")
 volume_db = -16.0
 max_polyphony = 2
+
+[node name="CrashSound" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("13_65msh")
 
 [node name="Smoke" type="GPUParticles3D" parent="." node_paths=PackedStringArray("vehicle")]
 emitting = false

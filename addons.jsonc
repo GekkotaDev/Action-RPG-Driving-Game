@@ -18,17 +18,17 @@
       "subfolder": "CSG_Toolkit-1.6.1/addons/csg_toolkit"
     },
     "gdUnit4": {
-      "url": "https://github.com/MikeSchulze/gdUnit4/archive/refs/tags/v5.1.0.zip",
+      "url": "https://github.com/MikeSchulze/gdUnit4/archive/refs/tags/v6.0.0.zip",
       "source": "zip",
-      "subfolder": "gdUnit4-5.1.0/addons/gdUnit4"
+      "subfolder": "gdUnit4-6.0.0/addons/gdUnit4"
     },
     "ggs": {
-      "url": "https://github.com/c16s8/godot-game-settings/archive/refs/tags/3.2.3.zip",
+      "url": "https://github.com/c16s8/godot-game-settings/archive/refs/tags/3.3.0.zip",
       "source": "zip",
-      "subfolder": "godot-game-settings-3.2.3/addons/ggs"
+      "subfolder": "godot-game-settings-3.3.0/addons/ggs"
     },
     "limboai": {
-      "url": "https://github.com/limbonaut/limboai/releases/download/v1.4.1/limboai+v1.4.1.gdextension-4.4.zip",
+      "url": "https://github.com/limbonaut/limboai/releases/download/v1.5.0/limboai+v1.5.0.gdextension-4.4.zip",
       "source": "zip",
       "subfolder": "addons/limboai"
     },
@@ -63,9 +63,9 @@
       "subfolder": "quest-system-2.0.1.4_4/addons/quest_system"
     },
     "road-generator": {
-      "url": "https://github.com/TheDuckCow/godot-road-generator/archive/refs/tags/0.7.0.zip",
+      "url": "https://github.com/TheDuckCow/godot-road-generator/archive/refs/tags/0.8.0.zip",
       "source": "zip",
-      "subfolder": "godot-road-generator-0.7.0/addons/road-generator"
+      "subfolder": "godot-road-generator-0.8.0/addons/road-generator"
     },
     "scene_manager": {
       "url": "https://github.com/glass-brick/Scene-Manager/archive/refs/tags/v1.1.1.zip",
@@ -78,7 +78,7 @@
       "subfolder": "Shaker-1.0.7/addons/shaker"
     },
     "signal_lens": {
-      "url": "https://github.com/yannlemos/Signal-Lens/releases/download/v1.4.0/signal_lens.zip",
+      "url": "https://github.com/yannlemos/Signal-Lens/releases/download/v1.4.1/signal_lens.zip",
       "source": "zip",
       "subfolder": "signal_lens"
     },

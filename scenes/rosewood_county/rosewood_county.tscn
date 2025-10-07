@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="4_3gwlq"]
 [ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="5_mhw3e"]
 [ext_resource type="Texture2D" uid="uid://c2j0nwgen02d2" path="res://assets/textures/placeholder/placeholder_albedo.png" id="5_xalad"]
-[ext_resource type="Script" uid="uid://sts7255qqg71" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
+[ext_resource type="Script" uid="uid://bbahb0bjns7me" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
 [ext_resource type="Texture2D" uid="uid://c5yvn52y2hc3m" path="res://assets/textures/placeholder/placeholder_heightmap.png" id="6_diu77"]
 [ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="7_wvtwl"]
 [ext_resource type="Texture2D" uid="uid://cyiiu7oh2cujy" path="res://assets/textures/dirt/dirt_albedo.png" id="7_xalad"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ddy774m2pwc08" path="res://assets/textures/grass/grass_albedo.png" id="10_inwir"]
 [ext_resource type="Texture2D" uid="uid://dd0ypp2ytg5p" path="res://assets/textures/rock/rock_heightmap.png" id="11_4c5qf"]
 [ext_resource type="Script" uid="uid://dgf8vwa2n8r11" path="res://addons/terrabrush/Scripts/EditorResources/FoliageDefinitionResource.cs" id="11_hd6wj"]
-[ext_resource type="Script" uid="uid://b2v2tfeq8ufsl" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
+[ext_resource type="Script" uid="uid://cxepnwab3wydp" path="res://addons/waterways_net/RiverManager.cs" id="12_22ta8"]
 [ext_resource type="Script" uid="uid://d33x21vao7tj2" path="res://addons/terrabrush/Scripts/EditorResources/FoliageResource.cs" id="12_801ui"]
 [ext_resource type="PackedScene" uid="uid://d0bqby3antgnt" path="res://assets/trees/tree_blocks.glb" id="13_lnxru"]
 [ext_resource type="Texture2D" uid="uid://b85tlq8wcklbo" path="res://addons/waterways_net/Textures/water_normal_bump.png" id="13_wvtwl"]
@@ -148,9 +148,9 @@
 [ext_resource type="Texture2D" uid="uid://6xx4dlb0l074" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_1_0.res" id="144_8rj1c"]
 [ext_resource type="Texture2D" uid="uid://bwwvro6f2a37d" path="res://scenes/rosewood_county/RosewoodCounty/Heightmap_0_1.res" id="145_df7rn"]
 [ext_resource type="Texture2D" uid="uid://j2yws2dcrnl3" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_0.res" id="146_bmbky"]
-[ext_resource type="Script" uid="uid://dipr28fhn8dmj" path="res://addons/road-generator/nodes/road_container.gd" id="147_8rj1c"]
+[ext_resource type="Script" uid="uid://bfxq2aa3gpdad" path="res://addons/road-generator/nodes/road_container.gd" id="147_8rj1c"]
 [ext_resource type="Texture2D" uid="uid://l3je6q168dc8" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_1.res" id="147_rbxhm"]
-[ext_resource type="Script" uid="uid://b2fc8pnynrx2o" path="res://addons/road-generator/nodes/road_point.gd" id="148_df7rn"]
+[ext_resource type="Script" uid="uid://dfkfgg47rr183" path="res://addons/road-generator/nodes/road_point.gd" id="148_df7rn"]
 [ext_resource type="Texture2D" uid="uid://c6np4aaulk6ca" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_2.res" id="148_tscmc"]
 [ext_resource type="Texture2D" uid="uid://chwh0oexwpws3" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_1_3.res" id="149_5ge1f"]
 [ext_resource type="Texture2D" uid="uid://dh3yma4kf08mq" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_1_1_1.res" id="149_axtnu"]
@@ -332,12 +332,12 @@ curve = SubResource("Curve_22ta8")
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_tcnw4"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0o7b5"]
-seamless = true
 noise = SubResource("FastNoiseLite_tcnw4")
+seamless = true
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sd1a"]
-seamless = true
 noise = SubResource("FastNoiseLite_tcnw4")
+seamless = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nk60t"]
 shader = ExtResource("1_rpx2b")
@@ -389,8 +389,6 @@ script = ExtResource("8_d055u")
 Name = "placeholder"
 AlbedoTexture = ExtResource("5_xalad")
 HeightTexture = ExtResource("6_diu77")
-TextureDetail = -1
-Triplanar = false
 metadata/_custom_type_script = "uid://c2l8t4xcdxwvu"
 
 [sub_resource type="Resource" id="Resource_v0n6e"]
@@ -399,15 +397,12 @@ Name = "sand"
 AlbedoTexture = ExtResource("7_xalad")
 HeightTexture = ExtResource("8_diu77")
 TextureDetail = 0
-Triplanar = false
 metadata/_custom_type_script = "uid://c2l8t4xcdxwvu"
 
 [sub_resource type="Resource" id="Resource_ul2yj"]
 script = ExtResource("8_d055u")
 Name = "grass"
 AlbedoTexture = ExtResource("10_inwir")
-TextureDetail = -1
-Triplanar = false
 metadata/_custom_type_script = "uid://c2l8t4xcdxwvu"
 
 [sub_resource type="Resource" id="Resource_d64by"]
@@ -415,8 +410,6 @@ script = ExtResource("8_d055u")
 Name = "rock"
 AlbedoTexture = ExtResource("10_5wwun")
 HeightTexture = ExtResource("11_4c5qf")
-TextureDetail = -1
-Triplanar = false
 metadata/_custom_type_script = "uid://c2l8t4xcdxwvu"
 
 [sub_resource type="Resource" id="Resource_g2y43"]
@@ -424,8 +417,6 @@ script = ExtResource("8_d055u")
 Name = "dirt_loam"
 AlbedoTexture = ExtResource("25_v856g")
 HeightTexture = ExtResource("26_68ado")
-TextureDetail = -1
-Triplanar = false
 metadata/_custom_type_script = "uid://c2l8t4xcdxwvu"
 
 [sub_resource type="Resource" id="Resource_yiskq"]
@@ -452,20 +443,8 @@ orientation = 2
 script = ExtResource("11_hd6wj")
 Strategy = 2
 Mesh = SubResource("PlaneMesh_bgsc0")
-MeshScale = Vector3(1, 1, 1)
-WindStrength = 0.1
-VisualInstanceLayers = 1
-LODLevels = 3
-LODRowsPerLevel = 50
-LODInitialCellWidth = 1.0
 Albedo = Color(0.85098, 0.643137, 0.12549, 1)
 AlbedoTextures = [ExtResource("28_x50y5")]
-NearestTextureFilter = false
-UseGroundColor = false
-CastShadow = false
-UseBrushScale = true
-RandomPlacementRange = 3.0
-ApplyOnTextureIndexes = PackedInt32Array()
 MaximumRenderDistance = 175
 EditorMaximumRenderDistance = 175
 metadata/_custom_type_script = "uid://dgf8vwa2n8r11"
@@ -478,8 +457,6 @@ metadata/_custom_type_script = "uid://d33x21vao7tj2"
 [sub_resource type="Resource" id="Resource_fhtif"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -487,45 +464,32 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("13_lnxru"), ExtResource("14_pom4q")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_8y64q"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_fhtif")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_lnxru"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
-RandomSizeFactorMax = 1.2
 ObjectScenes = [ExtResource("17_1bb2y"), ExtResource("17_1bb2y")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_bad0j"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_lnxru")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_lhl04"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -533,22 +497,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("22_a3kvq"), ExtResource("23_yjk3y")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_6gm7e"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_lhl04")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_i44rq"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -556,22 +514,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("20_5ycgg"), ExtResource("21_f0npx")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_kkx2k"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_i44rq")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_ylsnk"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -579,22 +531,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("25_yuohp"), ExtResource("26_5ycgg")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_rjjnl"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_ylsnk")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_xea76"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -602,22 +548,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("28_i44rq"), ExtResource("29_kkx2k")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_xb7fn"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_xea76")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_5ycgg"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -625,22 +565,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("26_y2kel"), ExtResource("27_smlow"), ExtResource("28_trg5o"), ExtResource("29_lyced"), ExtResource("30_4h4l1"), ExtResource("31_26x7s")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_f0npx"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_5ycgg")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_1e057"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -648,45 +582,32 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("26_trg5o"), ExtResource("27_lyced"), ExtResource("28_4h4l1"), ExtResource("29_26x7s"), ExtResource("30_rurxs"), ExtResource("31_dgulo"), ExtResource("32_svcud"), ExtResource("33_cdt8e"), ExtResource("34_b4xn7"), ExtResource("35_tx8lt"), ExtResource("36_547yk"), ExtResource("37_w4iyd"), ExtResource("38_maooe"), ExtResource("39_d17td"), ExtResource("51_p43v1"), ExtResource("41_lx264"), ExtResource("53_88bq3"), ExtResource("43_hwagh"), ExtResource("55_i4184"), ExtResource("45_6ntlg"), ExtResource("57_kc0tb"), ExtResource("47_p43v1")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_r4b0w"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_1e057")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_lx264"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
-RandomYRotation = false
 RandomSize = true
 RandomSizeFactorMin = 10.0
 RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("54_svcud"), ExtResource("55_cdt8e")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_hwagh"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_lx264")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_6ntlg"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -694,22 +615,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("56_b4xn7"), ExtResource("57_tx8lt")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_p43v1"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_6ntlg")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_ngh15"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -717,22 +632,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("58_547yk"), ExtResource("59_w4iyd")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_88bq3"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_ngh15")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_yfllw"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -740,22 +649,16 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("60_maooe"), ExtResource("61_d17td")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_i4184"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_yfllw")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_y62uy"]
 script = ExtResource("14_bad0j")
 Strategy = 2
-ObjectFrequency = -1
-RandomRange = 1.0
 RandomYRotation = true
 RandomSize = true
 RandomSizeFactorMin = 10.0
@@ -763,20 +666,15 @@ RandomSizeFactorMax = 15.0
 ObjectScenes = [ExtResource("62_b4xn7"), ExtResource("63_tx8lt")]
 LODList = []
 LODMeshes = []
-UpdateDistanceThreshold = 1.0
-UpdateTimeFrequency = 0.1
-VisualInstanceLayers = 1
 metadata/_custom_type_script = "uid://cgf61yxk46wa4"
 
 [sub_resource type="Resource" id="Resource_kc0tb"]
 script = ExtResource("15_yi44v")
 Definition = SubResource("Resource_y62uy")
-Hide = false
 metadata/_custom_type_script = "uid://comabiqrwe5u0"
 
 [sub_resource type="Resource" id="Resource_b5n0v"]
 script = ExtResource("4_3gwlq")
-ZonePosition = Vector2i(0, 0)
 HeightMapTexture = ExtResource("3_vm3mq")
 SplatmapsTexture = [ExtResource("8_vjn5s"), ExtResource("97_l7ko7")]
 FoliagesTexture = [ExtResource("16_rm76u")]
@@ -892,7 +790,8 @@ Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResour
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ge1f"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_shjas"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_nlobf"]
+albedo_color = Color(0.601223, 0.601223, 0.60122293, 1)
 
 [sub_resource type="Resource" id="Resource_nlobf"]
 script = ExtResource("14_tcnw4")
@@ -975,11 +874,11 @@ metadata/_edit_lock_ = true
 
 [node name="RoadManager" type="Node3D" parent="Viewport"]
 script = ExtResource("6_22ta8")
-material_resource = ExtResource("7_wvtwl")
 
 [node name="Road_001" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 script = ExtResource("147_8rj1c")
+material_resource = ExtResource("7_wvtwl")
 use_lowpoly_preview = true
 physics_material = SubResource("PhysicsMaterial_5ge1f")
 draw_lanes_editor = true
@@ -1062,7 +961,7 @@ prior_pt_init = NodePath("../RP_006")
 [node name="BridgeUnderside" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.1, 0)
 script = ExtResource("147_8rj1c")
-material_resource = SubResource("ORMMaterial3D_shjas")
+material_resource = SubResource("ORMMaterial3D_nlobf")
 use_lowpoly_preview = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
@@ -1092,7 +991,7 @@ next_pt_init = NodePath("../RP_001")
 [node name="BridgeSides" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.1, 0)
 script = ExtResource("147_8rj1c")
-material_resource = SubResource("ORMMaterial3D_shjas")
+material_resource = SubResource("ORMMaterial3D_nlobf")
 use_lowpoly_preview = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])

@@ -32,6 +32,10 @@ DEPENDENCIES = {
         repo="gh:DAShoe1/Godot-Easy-Vehicle-Physics",
         subdirectory="addons/gevp",
     ),
+    "R3.Godot": Git(
+        repo="gh:Cysharp/R3",
+        subdirectory="src/R3.Godot/addons/R3.Godot",
+    ),
     "raytraced_audio": Git(
         repo="gh:WhoStoleMyCoffee/raytraced-audio",
         subdirectory="addons/raytraced_audio",

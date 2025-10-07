@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://djk2unecgu03m"
-path="res://.godot/imported/squeal.wav-0cda313175fc38b12d1a895b7d8c75de.sample"
+path="res://.godot/imported/squeal.wav-82db1738c5ad62c8b82ad7895769905a.sample"
 
 [deps]
 
-source_file="res://assets/vehicles/resources/environment/squeal.wav"
-dest_files=["res://.godot/imported/squeal.wav-0cda313175fc38b12d1a895b7d8c75de.sample"]
+source_file="res://assets/vehicles/resources/audio/environment/squeal.wav"
+dest_files=["res://.godot/imported/squeal.wav-82db1738c5ad62c8b82ad7895769905a.sample"]
 
 [params]
 
