@@ -1,3 +1,4 @@
+import shutil
 import subprocess
 
 from rich import print
@@ -5,13 +6,25 @@ from rich.prompt import Confirm
 
 
 ORIGIN = "[bold blue]origin[/bold blue]"
+
+INFO = "[bold blue]INFO[/bold blue]"
 WARN = "[bold yellow]WARN[/bold yellow]"
 
 
 def main():
     print(f"Rolling back to latest commit from {ORIGIN}.")
 
-    if not Confirm.ask(f"{WARN} All uncommitted work will be lost, continue?"):
+    permission = Confirm.ask(f"{WARN} All uncommitted work will be lost, continue?")
+
+    if (
+        not permission
+        and shutil.which("lazygit")
+        and Confirm.ask(f"{INFO} Commit files with Lazygit?")
+    ):
+        subprocess.run(["lazygit"], shell=False)
+        main()
+
+    if not permission:
         return
 
     subprocess.run(["git", "add", "."], shell=False)
