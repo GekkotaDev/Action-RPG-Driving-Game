@@ -1,0 +1,28 @@
+site_name: Sierra Verde Documentation
+
+extra_css:
+  - stylesheets/index.css
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+
+markdown_extensions: 
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+
+plugins:
+  - search
+  - blog
+  - meta
+  - offline
+
+nav:
+  - Documentation: index.md
+  - Dev Logs:
+    - blog/index.md
