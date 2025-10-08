@@ -22,7 +22,15 @@ def main():
         and Confirm.ask(f"{INFO} Commit files with Lazygit?")
     ):
         subprocess.run(["lazygit"], shell=False)
-        main()
+        return
+
+    if (
+        not permission
+        and shutil.which("gitui")
+        and Confirm.ask(f"{INFO} Commit files with gitui?")
+    ):
+        subprocess.run(["gitui"], shell=False)
+        return
 
     if not permission:
         return
