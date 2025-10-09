@@ -19,5 +19,6 @@
             "**/*.uid": true
         },
         "godotTools.editorPath.godot4": "D:\\Program Files\\Godots\\versions\\Godot_v4_4_1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
+        "yaml.customTags": ["!ENV sequence"]
     }
 }
