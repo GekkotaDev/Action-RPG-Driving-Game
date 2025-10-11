@@ -1,4 +1,4 @@
-[gd_scene load_steps=390 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=389 format=3 uid="uid://b37fnqq4a4l2r"]
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c2j0nwgen02d2" path="res://assets/textures/placeholder/placeholder_albedo.png" id="5_xalad"]
 [ext_resource type="Script" uid="uid://bbahb0bjns7me" path="res://addons/road-generator/nodes/road_manager.gd" id="6_22ta8"]
 [ext_resource type="Texture2D" uid="uid://c5yvn52y2hc3m" path="res://assets/textures/placeholder/placeholder_heightmap.png" id="6_diu77"]
-[ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="7_wvtwl"]
 [ext_resource type="Texture2D" uid="uid://cyiiu7oh2cujy" path="res://assets/textures/dirt/dirt_albedo.png" id="7_xalad"]
 [ext_resource type="Script" uid="uid://c2l8t4xcdxwvu" path="res://addons/terrabrush/Scripts/EditorResources/TextureSetResource.cs" id="8_d055u"]
 [ext_resource type="Texture2D" uid="uid://dgvhkj7hrxei3" path="res://assets/textures/dirt/dirt_heightmap.png" id="8_diu77"]
@@ -308,6 +307,7 @@
 [ext_resource type="Texture2D" uid="uid://bsg5qsuvler0w" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_2.res" id="308_p4t15"]
 [ext_resource type="Texture2D" uid="uid://bisa783kkni4p" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_3.res" id="309_730hg"]
 [ext_resource type="Texture2D" uid="uid://dvpilrd6vobig" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_4.res" id="310_kt8so"]
+[ext_resource type="Material" uid="uid://cgdfg5it51ggx" path="res://assets/textures/road_texture/road_texture.material" id="311_nlobf"]
 [ext_resource type="Texture2D" uid="uid://ldv6lbrvi3mp" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_5.res" id="311_orxto"]
 [ext_resource type="Texture2D" uid="uid://dhed36j78nxnw" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_6.res" id="312_op0kt"]
 [ext_resource type="Texture2D" uid="uid://bq0e8t0p3uggy" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_7.res" id="313_7g3r2"]
@@ -320,69 +320,7 @@
 [ext_resource type="PackedScene" uid="uid://c5jichmbbdws8" path="res://assets/vehicles/cars/detroit_motors_limited/judge/scenes/dml_judge.tscn" id="319_pfggy"]
 [ext_resource type="Texture2D" uid="uid://bte7phk0wmy17" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_-1_3_1.res" id="320_0ptwu"]
 [ext_resource type="PackedScene" uid="uid://ctgyvf10b000y" path="res://views/screens/pause_menu/pause_menu.tscn" id="320_pfggy"]
-[ext_resource type="PackedScene" uid="uid://duw6pg81rngdy" path="res://modules/gevp_plus/views/debug_hud.tscn" id="321_nlobf"]
-
-[sub_resource type="Curve" id="Curve_22ta8"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.124352, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.752809), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_wvtwl"]
-curve = SubResource("Curve_22ta8")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_tcnw4"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0o7b5"]
-noise = SubResource("FastNoiseLite_tcnw4")
-seamless = true
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sd1a"]
-noise = SubResource("FastNoiseLite_tcnw4")
-seamless = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nk60t"]
-shader = ExtResource("1_rpx2b")
-shader_parameter/cloud_shape_sampler = SubResource("NoiseTexture2D_4sd1a")
-shader_parameter/cloud_noise_sampler = SubResource("NoiseTexture2D_0o7b5")
-shader_parameter/cloud_curves = SubResource("CurveTexture_wvtwl")
-shader_parameter/clouds_samples = 32
-shader_parameter/shadow_sample = 4
-shader_parameter/clouds_density = 0.4
-shader_parameter/clouds_scale = 1.0
-shader_parameter/clouds_smoothness = 0.03
-shader_parameter/clouds_light_color = Color(1, 1, 1, 1)
-shader_parameter/clouds_shadow_intensity = 1.0
-shader_parameter/high_clouds_sampler = SubResource("NoiseTexture2D_4sd1a")
-shader_parameter/high_clouds_density = 0.2
-shader_parameter/top_color = Color(0.34902, 0.588235, 1, 1)
-shader_parameter/bottom_color = Color(0, 0.329412, 0.968627, 1)
-shader_parameter/sun_scatter = Color(0.298039, 0.298039, 0.298039, 1)
-shader_parameter/astro_tint = Color(0.905882, 0.788235, 0.627451, 1)
-shader_parameter/astro_scale = 9.0
-shader_parameter/astro_intensity = 3.0
-shader_parameter/stars_intensity = 0.0
-shader_parameter/shooting_stars_intensity = 0.0
-shader_parameter/shooting_star_tint = Color(0, 0, 0, 1)
-
-[sub_resource type="Sky" id="Sky_3see1"]
-sky_material = SubResource("ShaderMaterial_nk60t")
-radiance_size = 0
-
-[sub_resource type="Environment" id="Environment_u0wwe"]
-background_mode = 2
-sky = SubResource("Sky_3see1")
-tonemap_mode = 2
-fog_enabled = true
-fog_mode = 1
-fog_light_color = Color(1, 1, 1, 1)
-fog_density = 1.0
-fog_aerial_perspective = 1.0
-fog_sky_affect = 0.0
-fog_depth_end = 512.0
-volumetric_fog_emission = Color(1, 1, 1, 1)
-volumetric_fog_emission_energy = 0.0
-volumetric_fog_anisotropy = 0.0
-volumetric_fog_length = 16.0
-volumetric_fog_sky_affect = 0.0
+[ext_resource type="PackedScene" uid="uid://duw6pg81rngdy" path="res://modules/gevp_extensions/views/debug_hud.tscn" id="321_nlobf"]
 
 [sub_resource type="Resource" id="Resource_eigr0"]
 script = ExtResource("8_d055u")
@@ -788,12 +726,71 @@ ObjectsTexture = [ExtResource("306_f4kuv"), ExtResource("307_3ye77"), ExtResourc
 script = ExtResource("5_mhw3e")
 Zones = [SubResource("Resource_b5n0v"), SubResource("Resource_bmbky"), SubResource("Resource_rbxhm"), SubResource("Resource_tscmc"), SubResource("Resource_1n5xe"), SubResource("Resource_xy0sd"), SubResource("Resource_3umvg"), SubResource("Resource_5k18g"), SubResource("Resource_y72ry"), SubResource("Resource_bpsnk"), SubResource("Resource_45m0c"), SubResource("Resource_6jmah"), SubResource("Resource_73bhg"), SubResource("Resource_khgve")]
 
+[sub_resource type="Curve" id="Curve_22ta8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.124352, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.752809), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wvtwl"]
+curve = SubResource("Curve_22ta8")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tcnw4"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0o7b5"]
+noise = SubResource("FastNoiseLite_tcnw4")
+seamless = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4sd1a"]
+noise = SubResource("FastNoiseLite_tcnw4")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nk60t"]
+shader = ExtResource("1_rpx2b")
+shader_parameter/cloud_shape_sampler = SubResource("NoiseTexture2D_4sd1a")
+shader_parameter/cloud_noise_sampler = SubResource("NoiseTexture2D_0o7b5")
+shader_parameter/cloud_curves = SubResource("CurveTexture_wvtwl")
+shader_parameter/clouds_samples = 32
+shader_parameter/shadow_sample = 4
+shader_parameter/clouds_density = 0.4
+shader_parameter/clouds_scale = 1.0
+shader_parameter/clouds_smoothness = 0.03
+shader_parameter/clouds_light_color = Color(1, 1, 1, 1)
+shader_parameter/clouds_shadow_intensity = 1.0
+shader_parameter/high_clouds_sampler = SubResource("NoiseTexture2D_4sd1a")
+shader_parameter/high_clouds_density = 0.2
+shader_parameter/top_color = Color(0.34902, 0.588235, 1, 1)
+shader_parameter/bottom_color = Color(0, 0.329412, 0.968627, 1)
+shader_parameter/sun_scatter = Color(0.298039, 0.298039, 0.298039, 1)
+shader_parameter/astro_tint = Color(0.905882, 0.788235, 0.627451, 1)
+shader_parameter/astro_scale = 9.0
+shader_parameter/astro_intensity = 3.0
+shader_parameter/stars_intensity = 0.0
+shader_parameter/shooting_stars_intensity = 0.0
+shader_parameter/shooting_star_tint = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_3see1"]
+sky_material = SubResource("ShaderMaterial_nk60t")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_u0wwe"]
+background_mode = 2
+sky = SubResource("Sky_3see1")
+tonemap_mode = 2
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(1, 1, 1, 1)
+fog_density = 1.0
+fog_aerial_perspective = 1.0
+fog_sky_affect = 0.0
+fog_depth_end = 512.0
+volumetric_fog_emission = Color(1, 1, 1, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_anisotropy = 0.0
+volumetric_fog_length = 16.0
+volumetric_fog_sky_affect = 0.0
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ge1f"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_nlobf"]
-albedo_color = Color(0.601223, 0.601223, 0.60122293, 1)
-
-[sub_resource type="Resource" id="Resource_nlobf"]
+[sub_resource type="Resource" id="Resource_qjbkh"]
 script = ExtResource("14_tcnw4")
 MatShaderType = 1
 mat_albedo_color_first = Color(0.6, 0.7, 0.65, 1)
@@ -821,7 +818,7 @@ mat_edge_fade = 0.25
 LodLod0Distance = 50.0
 _selectedShader = 1
 
-[sub_resource type="Curve3D" id="Curve3D_r5gex"]
+[sub_resource type="Curve3D" id="Curve3D_xb86x"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0, 0, 0.25, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 5),
@@ -850,15 +847,6 @@ albedo_color = Color(0.892571, 0.695265, 0, 1)
 [node name="Viewport" parent="." instance=ExtResource("107_b5n0v")]
 REFERENCE_CAMERA = NodePath("VehicleController/Camera3D")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport"]
-environment = SubResource("Environment_u0wwe")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Viewport/WorldEnvironment"]
-transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
-shadow_enabled = true
-directional_shadow_mode = 1
-directional_shadow_fade_start = 1.0
-
 [node name="Terrain" type="Node3D" parent="Viewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 script = ExtResource("2_f1jmu")
@@ -870,7 +858,16 @@ Objects = [SubResource("Resource_8y64q"), SubResource("Resource_bad0j"), SubReso
 MetaInfoLayers = []
 TerrainZones = SubResource("Resource_twxad")
 metadata/_custom_type_script = "uid://i5jcj7ukvoen"
-metadata/_edit_lock_ = true
+metadata/_edit_lock_ = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Viewport"]
+environment = SubResource("Environment_u0wwe")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Viewport/WorldEnvironment"]
+transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_mode = 1
+directional_shadow_fade_start = 1.0
 
 [node name="RoadManager" type="Node3D" parent="Viewport"]
 script = ExtResource("6_22ta8")
@@ -878,7 +875,7 @@ script = ExtResource("6_22ta8")
 [node name="Road_001" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 script = ExtResource("147_8rj1c")
-material_resource = ExtResource("7_wvtwl")
+material_resource = ExtResource("311_nlobf")
 use_lowpoly_preview = true
 physics_material = SubResource("PhysicsMaterial_5ge1f")
 draw_lanes_editor = true
@@ -961,7 +958,7 @@ prior_pt_init = NodePath("../RP_006")
 [node name="BridgeUnderside" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.1, 0)
 script = ExtResource("147_8rj1c")
-material_resource = SubResource("ORMMaterial3D_nlobf")
+material_resource = ExtResource("311_nlobf")
 use_lowpoly_preview = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
@@ -991,7 +988,7 @@ next_pt_init = NodePath("../RP_001")
 [node name="BridgeSides" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.1, 0)
 script = ExtResource("147_8rj1c")
-material_resource = SubResource("ORMMaterial3D_nlobf")
+material_resource = ExtResource("311_nlobf")
 use_lowpoly_preview = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
@@ -1024,9 +1021,9 @@ next_pt_init = NodePath("../RP_001")
 [node name="RiverManager" type="Node3D" parent="Viewport"]
 transform = Transform3D(-1.83588e-06, 0, 42, 0, 1, 0, -42, 0, -1.83588e-06, -100, -16, 25)
 script = ExtResource("12_22ta8")
-ShaderSettings = SubResource("Resource_nlobf")
+ShaderSettings = SubResource("Resource_qjbkh")
 PointWidths = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
-Curve = SubResource("Curve3D_r5gex")
+Curve = SubResource("Curve3D_xb86x")
 
 [node name="Blockout" type="Node3D" parent="Viewport"]
 
@@ -1109,6 +1106,7 @@ camera = NodePath("../Camera3D")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Viewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -15)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Viewport/RigidBody3D"]
 mesh = SubResource("SphereMesh_ewlpw")

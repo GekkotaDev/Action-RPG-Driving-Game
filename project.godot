@@ -41,6 +41,8 @@ SignalLens="*res://addons/signal_lens/autoload/signal_lens_autoload.gd"
 CsgToolkitAutoload="*res://addons/csg_toolkit/scripts/csg_toolkit_config.gd"
 FrameProviderDispatcher="*res://addons/R3.Godot/FrameProviderDispatcher.cs"
 ObservableTrackerRuntimeHook="*res://addons/R3.Godot/ObservableTrackerRuntimeHook.cs"
+AchievementManager="*res://addons/milestone/autoload/achievement_manager.gd"
+InputHelper="*res://addons/input_helper/input_helper.gd"
 
 [display]
 
@@ -55,7 +57,7 @@ project/assembly_name="Action RPG Driving Game"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/R3.Godot/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/deformablemesh/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/netfox.extras/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/raytraced_audio/plugin.cfg", "res://addons/road-generator/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/terrabrush/plugin.cfg", "res://addons/waterways_net/plugin.cfg")
+enabled=PackedStringArray("res://addons/R3.Godot/plugin.cfg", "res://addons/SphynxMotionBlurToolkit/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/deformablemesh/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/netfox.extras/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/raytraced_audio/plugin.cfg", "res://addons/road-generator/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/terrabrush/plugin.cfg", "res://addons/waterways_net/plugin.cfg")
 
 [file_customization]
 
@@ -153,6 +155,13 @@ vehicle_honk={
 
 buffering/agile_event_flushing=true
 
+[milestone]
+
+general/achievements_path="res://addons/milestone/demo/achievements/"
+debug/print_errors=true
+debug/print_output=true
+general/save_as_json=true
+
 [physics]
 
 common/physics_ticks_per_second=120
@@ -169,7 +178,9 @@ textures/canvas_textures/default_texture_filter=0
 global_illumination/gi/use_half_resolution=true
 textures/default_filters/use_nearest_mipmap_filter=true
 textures/default_filters/anisotropic_filtering_level=0
+camera/depth_of_field/depth_of_field_use_jitter=true
 anti_aliasing/screen_space_roughness_limiter/enabled=false
+scaling_3d/fsr_sharpness=2.0
 textures/default_filters/texture_mipmap_bias=-2.0
 textures/decals/filter=0
 textures/light_projectors/filter=0

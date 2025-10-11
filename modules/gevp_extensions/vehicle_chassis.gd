@@ -1,4 +1,4 @@
-extends Vehicle
+class_name VehiclePlatform extends Vehicle
 
 @export var camera: Camera3D
 @export var middlewares: Array[VehicleMiddleware]

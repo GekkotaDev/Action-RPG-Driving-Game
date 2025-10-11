@@ -1,17 +1,17 @@
-[gd_scene load_steps=38 format=4 uid="uid://c5jichmbbdws8"]
+[gd_scene load_steps=39 format=4 uid="uid://c5jichmbbdws8"]
 
 [ext_resource type="Texture2D" uid="uid://dum2acwvjnot6" path="res://assets/vehicles/cars/detroit_motors_limited/judge/models/colormap.png" id="1_suqwu"]
-[ext_resource type="Script" uid="uid://c1jay85tn50a2" path="res://modules/gevp_plus/middleware/middlewares/idle_middleware.gd" id="2_cyxdl"]
-[ext_resource type="Script" uid="uid://ekx0uoovoei0" path="res://modules/gevp_plus/vehicle_chassis.gd" id="2_xsrwh"]
-[ext_resource type="Script" uid="uid://dqgcpepuk2fc2" path="res://modules/gevp_plus/middleware/middlewares/camera_middleware.gd" id="3_hv7os"]
+[ext_resource type="Script" uid="uid://c1jay85tn50a2" path="res://modules/gevp_extensions/middleware/middlewares/idle_middleware.gd" id="2_cyxdl"]
+[ext_resource type="Script" uid="uid://ekx0uoovoei0" path="res://modules/gevp_extensions/vehicle_chassis.gd" id="2_xsrwh"]
+[ext_resource type="Script" uid="uid://dqgcpepuk2fc2" path="res://modules/gevp_extensions/middleware/middlewares/camera_middleware.gd" id="3_hv7os"]
 [ext_resource type="Script" uid="uid://dfybd0rp4nuao" path="res://addons/gevp/scripts/wheel.gd" id="3_td1jw"]
-[ext_resource type="Script" uid="uid://cjwkprba6c2ag" path="res://modules/gevp_plus/middleware/middlewares/wheelspin_middleware.gd" id="4_hv7os"]
-[ext_resource type="Script" uid="uid://c0onr4pkpuunr" path="res://modules/gevp_plus/middleware/middlewares/impact_middleware.gd" id="4_nr6yc"]
+[ext_resource type="Script" uid="uid://cjwkprba6c2ag" path="res://modules/gevp_extensions/middleware/middlewares/wheelspin_middleware.gd" id="4_hv7os"]
+[ext_resource type="Script" uid="uid://c0onr4pkpuunr" path="res://modules/gevp_extensions/middleware/middlewares/impact_middleware.gd" id="4_nr6yc"]
 [ext_resource type="PackedScene" uid="uid://b2hlchrj4h2b7" path="res://addons/gevp/scenes/engine_sound.tscn" id="4_xx2vt"]
 [ext_resource type="AudioStream" uid="uid://ddmmbmcs27hvg" path="res://assets/vehicles/cars/detroit_motors_limited/judge/sounds/5000.wav" id="5_745jl"]
 [ext_resource type="AudioStream" uid="uid://blyllnd7tej20" path="res://assets/vehicles/cars/detroit_motors_limited/judge/sounds/idle.wav" id="7_xx2vt"]
 [ext_resource type="AudioStream" uid="uid://cyl4oo3o57bfr" path="res://assets/vehicles/resources/audio/horns/horn_1.wav" id="8_745jl"]
-[ext_resource type="Script" uid="uid://eligj0ca5q6p" path="res://modules/gevp_plus/sounds/sound_horn.gd" id="9_cyxdl"]
+[ext_resource type="Script" uid="uid://eligj0ca5q6p" path="res://modules/gevp_extensions/sounds/sound_horn.gd" id="9_cyxdl"]
 [ext_resource type="AudioStream" uid="uid://djk2unecgu03m" path="res://assets/vehicles/resources/audio/environment/squeal.wav" id="12_65msh"]
 [ext_resource type="Script" uid="uid://cdhxtssp3srur" path="res://assets/vehicles/cars/detroit_motors_limited/judge/scripts/wheel_spin.gd" id="12_80kcv"]
 [ext_resource type="AudioStream" uid="uid://0ubaoxw72gi5" path="res://assets/vehicles/resources/audio/damage/crash_2.wav" id="13_65msh"]
@@ -30,6 +30,11 @@ metadata/_snap_enabled = true
 _limits = [60.0, 120.0, 0.0, 200.0]
 _data = [Vector2(0, 60), 0.0, 0.0, 0, 0, Vector2(200, 120), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="Curve" id="Curve_nr6yc"]
+_limits = [0.0, 1.0, 0.0, 160.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(80, 0), 0.0, 0.0, 0, 0, Vector2(160, 0.49618804), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7bmd"]
 resource_name = "colormap"
@@ -198,7 +203,7 @@ rings = 4
 
 [node name="VehicleRigidBody" type="RigidBody3D" node_paths=PackedStringArray("middlewares", "front_left_wheel", "front_right_wheel", "rear_left_wheel", "rear_right_wheel")]
 script = ExtResource("2_xsrwh")
-middlewares = [NodePath("Middlewares/IdleMiddleware"), NodePath("Middlewares/CameraMiddleware"), NodePath("Middlewares/WheelspinMiddleware")]
+middlewares = [NodePath("Middlewares/IdleMiddleware"), NodePath("Middlewares/CameraMiddleware"), NodePath("Middlewares/WheelspinMiddleware"), NodePath("Middlewares/ImpactMiddleware")]
 front_left_wheel = NodePath("WheelFrontLeft")
 front_right_wheel = NodePath("WheelFrontRight")
 rear_left_wheel = NodePath("WheelRearLeft")
@@ -222,6 +227,7 @@ braking_grip_multiplier = 2.0
 script = ExtResource("3_hv7os")
 dof_curve = SubResource("Curve_cyxdl")
 fov_curve = SubResource("Curve_80kcv")
+shake_curve = SubResource("Curve_nr6yc")
 
 [node name="IdleMiddleware" type="Node" parent="Middlewares" node_paths=PackedStringArray("idle_sound")]
 script = ExtResource("2_cyxdl")

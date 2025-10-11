@@ -27,10 +27,20 @@
       "source": "zip",
       "subfolder": "godot-game-settings-3.3.0/addons/ggs"
     },
+    "input_helper": {
+      "url": "https://github.com/nathanhoad/godot_input_helper/archive/refs/tags/v4.7.0.zip",
+      "source": "zip",
+      "subfolder": "godot_input_helper-4.7.0/addons/input_helper"
+    },
     "limboai": {
       "url": "https://github.com/limbonaut/limboai/releases/download/v1.5.0/limboai+v1.5.0.gdextension-4.4.zip",
       "source": "zip",
       "subfolder": "addons/limboai"
+    },
+    "milestone": {
+      "url": "https://github.com/jelolul/milestone/archive/refs/tags/v1.1.1.beta.zip",
+      "source": "zip",
+      "subfolder": "milestone-1.1.1.beta/addons/milestone"
     },
     "netfox": {
       "url": "https://github.com/foxssake/netfox/releases/download/v1.25.3/netfox.extras.v1.25.3.zip",

@@ -12,7 +12,7 @@ extends SubViewportContainer
 
 
 func _setup_camera():
-    viewport_camera.environment = followed_camera.environment
+    pass
 
 
 func _process(_delta: float) -> void:
@@ -26,9 +26,9 @@ func _process(_delta: float) -> void:
         viewport_camera.transform = followed_camera.transform
         viewport_camera.attributes = followed_camera.attributes
 
-
-    viewport_camera.fov = followed_camera.fov
-    viewport_camera.doppler_tracking = followed_camera.doppler_tracking
-    viewport_camera.projection = followed_camera.projection
-    viewport_camera.near = followed_camera.near
-    viewport_camera.far = followed_camera.far
+        viewport_camera.environment = followed_camera.environment
+        viewport_camera.fov = followed_camera.fov
+        viewport_camera.doppler_tracking = followed_camera.doppler_tracking
+        viewport_camera.projection = followed_camera.projection
+        viewport_camera.near = followed_camera.near
+        viewport_camera.far = followed_camera.far
