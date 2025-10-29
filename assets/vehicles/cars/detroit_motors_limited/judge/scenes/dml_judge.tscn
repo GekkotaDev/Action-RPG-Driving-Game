@@ -243,6 +243,7 @@ squeal_sound = NodePath("../../Sounds/SquealSound")
 
 [node name="BodyMesh3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, -1, 0, 0.15, -0.025)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_p4y3i")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ORMMaterial3D_hv7os")

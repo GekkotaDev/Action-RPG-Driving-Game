@@ -1,4 +1,4 @@
-[gd_scene load_steps=389 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=390 format=3 uid="uid://b37fnqq4a4l2r"]
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
@@ -310,6 +310,7 @@
 [ext_resource type="Material" uid="uid://cgdfg5it51ggx" path="res://assets/textures/road_texture/road_texture.material" id="311_nlobf"]
 [ext_resource type="Texture2D" uid="uid://ldv6lbrvi3mp" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_5.res" id="311_orxto"]
 [ext_resource type="Texture2D" uid="uid://dhed36j78nxnw" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_6.res" id="312_op0kt"]
+[ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="312_r5gex"]
 [ext_resource type="Texture2D" uid="uid://bq0e8t0p3uggy" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_7.res" id="313_7g3r2"]
 [ext_resource type="Texture2D" uid="uid://dikouhoxk76na" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_8.res" id="314_tl7fe"]
 [ext_resource type="Texture2D" uid="uid://d02i0qekm5t34" path="res://scenes/rosewood_county/RosewoodCounty/Object_-1_3_9.res" id="315_a2ji7"]
@@ -869,13 +870,16 @@ shadow_enabled = true
 directional_shadow_mode = 1
 directional_shadow_fade_start = 1.0
 
+[node name="LightmapGI" type="LightmapGI" parent="Viewport/WorldEnvironment"]
+
 [node name="RoadManager" type="Node3D" parent="Viewport"]
 script = ExtResource("6_22ta8")
+material_resource = ExtResource("311_nlobf")
 
 [node name="Road_001" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 script = ExtResource("147_8rj1c")
-material_resource = ExtResource("311_nlobf")
+material_resource = ExtResource("312_r5gex")
 use_lowpoly_preview = true
 physics_material = SubResource("PhysicsMaterial_5ge1f")
 draw_lanes_editor = true
@@ -958,7 +962,7 @@ prior_pt_init = NodePath("../RP_006")
 [node name="BridgeUnderside" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.1, 0)
 script = ExtResource("147_8rj1c")
-material_resource = ExtResource("311_nlobf")
+material_resource = ExtResource("312_r5gex")
 use_lowpoly_preview = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
@@ -988,7 +992,7 @@ next_pt_init = NodePath("../RP_001")
 [node name="BridgeSides" type="Node3D" parent="Viewport/RoadManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -0.1, 0)
 script = ExtResource("147_8rj1c")
-material_resource = ExtResource("311_nlobf")
+material_resource = ExtResource("312_r5gex")
 use_lowpoly_preview = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])

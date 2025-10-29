@@ -15,8 +15,10 @@ class Git:
     vcs_ref: str | None = None
 
 
+CI = os.getenv("CI_CD")
 PROJECT_DIR = pathlib.Path(os.path.dirname(__file__)).parent.parent.absolute()
-COPIER_CACHE = f"{PROJECT_DIR}/.copier"
+CACHE = f"{PROJECT_DIR}/.addons/copier"
+ADDONS = f"{PROJECT_DIR}/addons"
 
 
 DEPENDENCIES = {
@@ -56,13 +58,25 @@ DEPENDENCIES = {
 }
 
 
+addons_exists = False
+if pathlib.Path(ADDONS).exists():
+    with os.scandir(ADDONS) as directory:
+        (addons_exists := True) if any(directory) else None
+
+if (
+    not CI
+    and addons_exists
+    and Confirm.ask("Addons folder already exists. Delete for proper installation?")
+):
+    shutil.rmtree(ADDONS)
+
 subprocess.run(["dotnet", "godotenv", "addons", "install"], shell=True)
 
 
 for name, git in DEPENDENCIES.items():
     normalize = os.path.normpath
 
-    dependency = normalize(f"{COPIER_CACHE}/{name}")
+    dependency = normalize(f"{CACHE}/{name}")
     addon = normalize(f"{dependency}/{git.subdirectory}")
     target = normalize(f"{PROJECT_DIR}/addons/{name}")
 

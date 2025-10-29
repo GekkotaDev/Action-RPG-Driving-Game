@@ -55,7 +55,9 @@ TestResult.xml
 nunit-*.xml
 
 #? Python
+.cache
 .venv
+site
 
 #? Godot
 # Godot 4+ specific ignores
@@ -76,8 +78,12 @@ export_credentials.cfg
 data_*/
 mono_crash.*.json
 
-# Godot addons
-AmbientCG
-addons/*
+# Addons
 !addons/.editorconfig
 !addons/editor_layout_hotkeys
+.addons
+AmbientCG
+addons/*
+
+# GDUnit4
+reports
