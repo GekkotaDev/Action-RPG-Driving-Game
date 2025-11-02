@@ -2,9 +2,12 @@ from dataclasses import dataclass
 import os
 import pathlib
 import shutil
+import stat
 import subprocess
+from typing import Callable, Any
 
 import copier
+from rich import print
 from rich.prompt import Confirm
 
 
@@ -22,10 +25,6 @@ ADDONS = f"{PROJECT_DIR}/addons"
 
 
 DEPENDENCIES = {
-    "ambientcg": Git(
-        repo="gh:VenitStudios/AmbientCG",
-        subdirectory="addons/ambientcg",
-    ),
     "deformablemesh": Git(
         repo="gh:cloudofoz/godot-deformablemesh",
         subdirectory="addons/deformablemesh",
@@ -34,13 +33,13 @@ DEPENDENCIES = {
         repo="gh:DAShoe1/Godot-Easy-Vehicle-Physics",
         subdirectory="addons/gevp",
     ),
+    "traudio": Git(
+        repo="gh:RodZill4/TRAudio",
+        subdirectory="addons/traudio",
+    ),
     "R3.Godot": Git(
         repo="gh:Cysharp/R3",
         subdirectory="src/R3.Godot/addons/R3.Godot",
-    ),
-    "raytraced_audio": Git(
-        repo="gh:WhoStoleMyCoffee/raytraced-audio",
-        subdirectory="addons/raytraced_audio",
     ),
     "shaderV": Git(
         repo="gh:arkology/ShaderV",
@@ -58,19 +57,45 @@ DEPENDENCIES = {
 }
 
 
+def on_rmtree_exc(func: Callable[..., Any], path: str, _: Any):
+    """
+    Error handler for ``shutil.rmtree``.
+
+    If the error is due to an access error (read only file)
+    it attempts to add write permission and then retries.
+
+    If the error is for another reason it re-raises the error.
+
+    Usage : ``shutil.rmtree(path, onerror=onerror)``
+    """
+    # Is the error an access error?
+    if not os.access(path, os.W_OK):
+        os.chmod(path, stat.S_IWUSR)
+        func(path)
+    else:
+        raise
+
+
 addons_exists = False
 if pathlib.Path(ADDONS).exists():
     with os.scandir(ADDONS) as directory:
-        (addons_exists := True) if any(directory) else None
+        if any(directory):
+            addons_exists = True
 
 if (
     not CI
     and addons_exists
     and Confirm.ask("Addons folder already exists. Delete for proper installation?")
 ):
-    shutil.rmtree(ADDONS)
+    shutil.rmtree(
+        ADDONS,
+        onexc=on_rmtree_exc,
+    )
 
-subprocess.run(["dotnet", "godotenv", "addons", "install"], shell=True)
+if not CI:
+    subprocess.run(["dotnet", "godotenv", "addons", "install"], shell=True)
+else:
+    print("")
 
 
 for name, git in DEPENDENCIES.items():
@@ -86,7 +111,13 @@ for name, git in DEPENDENCIES.items():
         copier.run_copy(git.repo, dependency, vcs_ref=git.vcs_ref)
 
     try:
-        subprocess.run(["mklink", "/j", target, addon], shell=True, capture_output=True)
+        if os.name == "nt":
+            subprocess.run(
+                ["mklink", "/j", target, addon], shell=True, capture_output=True
+            )
+        else:
+            os.symlink(addon, target)
+
     except PermissionError:
         if pathlib.Path(target).exists():
             shutil.rmtree(target)

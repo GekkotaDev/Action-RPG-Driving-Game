@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TRDataBase" load_steps=4 format=3 uid="uid://bax4100qxvkgu"]
+
+[ext_resource type="Script" uid="uid://b4d3syeh3jltv" path="res://addons/traudio/database/trdatabase.gd" id="1_uxsmj"]
+[ext_resource type="Script" uid="uid://x3x6682ktlsq" path="res://addons/traudio/database/trsound_item.gd" id="2_7uvqg"]
+
+[sub_resource type="Resource" id="Resource_rx3gr"]
+script = ExtResource("2_7uvqg")
+
+[resource]
+script = ExtResource("1_uxsmj")
+sounds = SubResource("Resource_rx3gr")

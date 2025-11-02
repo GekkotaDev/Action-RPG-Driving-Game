@@ -17,6 +17,11 @@ article.md-post:has(p) p {
   text-justify: auto;
 }
 
+article.md-typeset:has(p) p {
+  text-align: justify;
+  text-justify: auto;
+}
+
 div .mermaid {
   text-align: center;
 }

@@ -9,13 +9,18 @@
 {
   "$schema": "https://chickensoft.games/schemas/addons.schema.json",
   // "path": "addons", // default
-  // "cache": ".addons", // default
+  "cache": ".addons/godotenv", // default
   "addons": {
     //* Zip releases
     "csg_toolkit": {
       "url": "https://github.com/IIFabixn/CSG_Toolkit/archive/refs/tags/1.6.1.zip",
       "source": "zip",
       "subfolder": "CSG_Toolkit-1.6.1/addons/csg_toolkit"
+    },
+    "dialogue_manager": {
+      "url": "https://github.com/nathanhoad/godot_dialogue_manager/archive/refs/tags/v3.8.1.zip",
+      "source": "zip",
+      "subfolder": "godot_dialogue_manager-3.8.1/addons/dialogue_manager"
     },
     "gdUnit4": {
       "url": "https://github.com/MikeSchulze/gdUnit4/archive/refs/tags/v6.0.0.zip",
@@ -62,11 +67,6 @@
       "source": "zip",
       "subfolder": "netfox.noray.v1.25.3/addons/netfox.noray"
     },
-    "orchestrator": {
-      "url": "https://github.com/CraterCrash/godot-orchestrator/releases/download/v2.1.3.stable/godot-orchestrator-v2.1.3-stable-plugin.zip",
-      "source": "zip",
-      "subfolder": "addons/orchestrator"
-    },
     "quest_system": {
       "url": "https://github.com/shomykohai/quest-system/archive/refs/tags/2.0.1.4_4.zip",
       "source": "zip",
@@ -91,6 +91,11 @@
       "url": "https://github.com/yannlemos/Signal-Lens/releases/download/v1.4.1/signal_lens.zip",
       "source": "zip",
       "subfolder": "signal_lens"
+    },
+    "sound_manager": {
+      "url": "https://github.com/nathanhoad/godot_sound_manager/archive/refs/tags/v2.6.2.zip",
+      "source": "zip",
+      "subfolder": "godot_sound_manager-2.6.2/addons/sound_manager"
     },
     "terrabrush": {
       "url": "https://github.com/spimort/TerraBrush/archive/refs/tags/0.13.1Alpha.zip",

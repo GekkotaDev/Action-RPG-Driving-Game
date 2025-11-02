@@ -51,6 +51,7 @@ jobs:
       uv_version: ${{ inputs.uv_version }}
 
   build-windows-x86:
+    needs: [pre-test]
     name: Windows x86 Export
     runs-on: ubuntu-24.04
     container:
@@ -79,6 +80,7 @@ jobs:
           path: windows_x86.zip
 
   build-windows-arm:
+    needs: [pre-test]
     name: Windows ARM Export
     runs-on: ubuntu-24.04
     container:
@@ -107,6 +109,7 @@ jobs:
           path: windows_arm.zip
 
   build-linux-x86:
+    needs: [pre-test]
     name: Linux x86 Export
     runs-on: ubuntu-24.04
     container:
@@ -135,6 +138,7 @@ jobs:
           path: linux_x86.zip
 
   build-linux-pi:
+    needs: [pre-test]
     name: Linux Pi Export
     runs-on: ubuntu-24.04
     container:
@@ -208,6 +212,10 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%d-%m')"
+      - name: Get current time
+        id: time
+        run: echo "::set-output name=time::$(date + '%H:%M:%S')"
+
       - name: Checkout code
         uses: actions/checkout@v3
         with:
@@ -251,7 +259,14 @@ jobs:
           tag_name: ${{ steps.date.outputs.date }}.${{ github.run_id }}
           release_name: Build ${{ steps.date.outputs.date }}.${{ github.run_id }}
           body: |
-            Releases for build `${{ steps.date.outputs.date }}.${{ github.run_id }}`
+            Metadata        | Value 
+            ----------------|---------------------------------------------------------------
+            Build Timestamp | ${{ steps.date.outputs.date }} ${{ steps.date.outputs.time }} 
+            Build ID        | `${{ steps.date.outputs.date }}.${{ github.run_id }}`
+
+            ## What's Updated? 🔍
+
+            *TBP (To Be Provided)…*
           draft: false
 
       - name: Upload Linux x86 Release Asset

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://befv7bfyhrsdw"
-path="res://.godot/imported/ZillaSlab-Bold.ttf-44dbe6d8a817d7ac7cb8bef96ab03525.fontdata"
+path="res://.godot/imported/ZillaSlab-Bold.ttf-708804d21561b71c5c5b657ac72e5c7e.fontdata"
 
 [deps]
 
-source_file="res://views/typefaces/zilla_slab/ZillaSlab-Bold.ttf"
-dest_files=["res://.godot/imported/ZillaSlab-Bold.ttf-44dbe6d8a817d7ac7cb8bef96ab03525.fontdata"]
+source_file="res://resources/typefaces/zilla_slab/ZillaSlab-Bold.ttf"
+dest_files=["res://.godot/imported/ZillaSlab-Bold.ttf-708804d21561b71c5c5b657ac72e5c7e.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true

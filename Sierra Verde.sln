@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Action RPG Driving Game", "Action RPG Driving Game.csproj", "{668FA6E6-D1E7-49C5-BB20-6FFE8E3B23D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sierra Verde", "Sierra Verde.csproj", "{668FA6E6-D1E7-49C5-BB20-6FFE8E3B23D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

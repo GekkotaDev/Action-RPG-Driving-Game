@@ -1,0 +1,82 @@
+[orchestration type="OScript" load_steps=7 format=3 uid="uid://1nn3dy5v7hgw"]
+
+[obj type="OScriptFunction" id="OScriptFunction_xos72"]
+guid = "EF72C8EE-8604-45B0-90B7-8B55C0AB794A"
+method = {
+"name": &"Prompt",
+"args": [{
+"name": &"NewParam",
+"type": 24,
+"class_name": &"DialogStory"
+}]
+}
+user_defined = true
+id = 3
+
+[obj type="OScriptGraph" id="OScriptGraph_5v76y"]
+graph_name = &"EventGraph"
+offset = Vector2(-317.385498046875, -73.760009765625)
+zoom = 0.9090908765792847
+flags = 8
+nodes = Array[int]([4, 5])
+
+[obj type="OScriptGraph" id="OScriptGraph_lqf3r"]
+graph_name = &"Prompt"
+offset = Vector2(-44, -329)
+flags = 22
+nodes = Array[int]([3])
+functions = Array[int]([3])
+
+[obj type="OScriptNodeFunctionEntry" id="OScriptNodeFunctionEntry_ro8wl"]
+function_id = "EF72C8EE-8604-45B0-90B7-8B55C0AB794A"
+id = 3
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}, {
+"pin_name": &"NewParam",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "DialogStory"
+}])
+
+[obj type="OScriptNodeComposeFrom" id="OScriptNodeComposeFrom_ti2wq"]
+id = 4
+position = Vector2(80, 300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"object",
+"type": 24,
+"flags": 2,
+"dv": null
+}, {
+"pin_name": &"method",
+"type": 21,
+"flags": 2,
+"dv": &"Prompt"
+}, {
+"pin_name": &"value",
+"type": 25,
+"dir": 1,
+"flags": 2
+}])
+
+[obj type="OScriptNodeSelf" id="OScriptNodeSelf_xpu2u"]
+id = 5
+position = Vector2(-180, 300)
+pin_data = Array[Dictionary]([{
+"pin_name": &"self",
+"type": 24,
+"dir": 1,
+"flags": 2,
+"target_class": "Node3D",
+"dv": null
+}])
+
+[resource]
+base_type = &"Node3D"
+functions = Array[OScriptFunction]([SubResource("OScriptFunction_xos72")])
+connections = Array[int]([5, 0, 4, 0])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeFunctionEntry_ro8wl"), SubResource("OScriptNodeComposeFrom_ti2wq"), SubResource("OScriptNodeSelf_xpu2u")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_5v76y"), SubResource("OScriptGraph_lqf3r")])

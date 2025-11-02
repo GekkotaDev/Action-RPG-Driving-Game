@@ -12,12 +12,24 @@
             "editor.wordWrap": "bounded",
             "editor.wordWrapColumn": 90
         },
+
         "editor.insertSpaces": true,
         "editor.tabSize": 4,
+
+        "explorer.fileNesting.enabled": true,
+        "explorer.fileNesting.expand": false,
+        "explorer.fileNesting.patterns": {
+              "addons.jsonc": "*.csproj, *.sln",
+              "project.godot": "export_presets.cfg, icon.svg",
+              "pyproject.toml": ".python-version, mkdocs.yml, uv.lock",
+              "*.tres": "${capture}.gd",
+              "*.tscn": "${capture}.gd",
+        },
         "files.exclude": {
             "**/*.import": true,
             "**/*.uid": true
         },
+
         "godotTools.editorPath.godot4": "D:\\Program Files\\Godots\\versions\\Godot_v4_4_1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
         "yaml.customTags": [
             "!ENV sequence",
