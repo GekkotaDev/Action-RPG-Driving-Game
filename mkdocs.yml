@@ -2,7 +2,6 @@ site_description: Lorem ipsum dolor sit amet
 site_name: Sierra Verde Documentation
 site_url : https://gekkotadev.github.io/sierra-verde
 
-
 extra_css:
   - stylesheets/index.css
   - https://unpkg.com/katex@0/dist/katex.min.css
