@@ -47,10 +47,10 @@ FrameProviderDispatcher="*res://addons/R3.Godot/FrameProviderDispatcher.cs"
 ObservableTrackerRuntimeHook="*res://addons/R3.Godot/ObservableTrackerRuntimeHook.cs"
 InputHelper="*res://addons/input_helper/input_helper.gd"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
-SmokeTest="*res://globals/smoke_test.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 AchievementManager="*res://addons/milestone/autoload/achievement_manager.gd"
 TRAudio="*res://addons/traudio/traudio.gd"
+DialogStoriesDatabaseAutoload="*res://globals/dialog_stories_database.tscn"
 
 [dialogue_manager]
 
@@ -69,7 +69,7 @@ project/assembly_name="Sierra Verde"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/R3.Godot/plugin.cfg", "res://addons/SphynxMotionBlurToolkit/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/deformablemesh/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/netfox.extras/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/road-generator/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/terrabrush/plugin.cfg", "res://addons/traudio/plugin.cfg", "res://addons/waterways_net/plugin.cfg")
+enabled=PackedStringArray("res://addons/SphynxMotionBlurToolkit/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/deformablemesh/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/ggs/plugin.cfg", "res://addons/input_helper/plugin.cfg", "res://addons/milestone/plugin.cfg", "res://addons/netfox.extras/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg", "res://addons/netfox/plugin.cfg", "res://addons/quest_system/plugin.cfg", "res://addons/quick_layout_changer/plugin.cfg", "res://addons/road-generator/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/signal_lens/plugin.cfg", "res://addons/sound_manager/plugin.cfg", "res://addons/terrabrush/plugin.cfg", "res://addons/traudio/plugin.cfg", "res://addons/waterways_net/plugin.cfg")
 
 [file_customization]
 

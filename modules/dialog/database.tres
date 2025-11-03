@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="DialogCollectionsDatabase" load_steps=3 format=3 uid="uid://dpbhrd7xkhpj5"]
-
-[ext_resource type="Script" uid="uid://b20u2umrntcgs" path="res://modules/dialog/story.gd" id="1_tke8q"]
-[ext_resource type="Script" uid="uid://8yorcl11vfiv" path="res://modules/dialog/database.gd" id="2_5frkc"]
-
-[resource]
-script = ExtResource("2_5frkc")

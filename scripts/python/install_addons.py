@@ -37,10 +37,6 @@ DEPENDENCIES = {
         repo="gh:RodZill4/TRAudio",
         subdirectory="addons/traudio",
     ),
-    "R3.Godot": Git(
-        repo="gh:Cysharp/R3",
-        subdirectory="src/R3.Godot/addons/R3.Godot",
-    ),
     "shaderV": Git(
         repo="gh:arkology/ShaderV",
         subdirectory="addons/shaderV",
