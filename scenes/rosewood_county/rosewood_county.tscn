@@ -1,4 +1,4 @@
-[gd_scene load_steps=390 format=3 uid="uid://b37fnqq4a4l2r"]
+[gd_scene load_steps=388 format=3 uid="uid://b37fnqq4a4l2r"]
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_rpx2b"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_f1jmu"]
@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://b85tlq8wcklbo" path="res://addons/waterways_net/Textures/water_normal_bump.png" id="13_wvtwl"]
 [ext_resource type="Script" uid="uid://cgf61yxk46wa4" path="res://addons/terrabrush/Scripts/EditorResources/ObjectDefinitionResource.cs" id="14_bad0j"]
 [ext_resource type="PackedScene" uid="uid://d3l2dgp8vdsj4" path="res://assets/trees/tree_blocks_dark.glb" id="14_pom4q"]
-[ext_resource type="Script" uid="uid://b5ftfyp5hqomv" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
+[ext_resource type="Script" uid="uid://eqsh0doyvekm" path="res://addons/waterways_net/Data/RiverShaderSettings.cs" id="14_tcnw4"]
 [ext_resource type="Script" uid="uid://comabiqrwe5u0" path="res://addons/terrabrush/Scripts/EditorResources/ObjectResource.cs" id="15_yi44v"]
 [ext_resource type="Texture2D" uid="uid://7fry2b6255x3" path="res://scenes/rosewood_county/RosewoodCounty/Foliage_0_0_0.res" id="16_rm76u"]
 [ext_resource type="PackedScene" uid="uid://dc78nolah8i4q" path="res://assets/trees/tree_cone_dark.glb" id="17_1bb2y"]
@@ -34,14 +34,14 @@
 [ext_resource type="Texture2D" uid="uid://djseiplbjf47s" path="res://scenes/rosewood_county/RosewoodCounty/Object_0_0_1.res" id="23_uwv0q"]
 [ext_resource type="PackedScene" uid="uid://d0xlgokiqp03i" path="res://assets/trees/tree_detailed_dark.glb" id="23_yjk3y"]
 [ext_resource type="Material" uid="uid://curd3vnflpk3c" path="res://assets/textures/bricks/bricks.tres" id="24_f2gk3"]
-[ext_resource type="Script" uid="uid://c2jkpsuouxtbo" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
+[ext_resource type="Script" uid="uid://b7a5oqdsx71dd" path="res://addons/gevp/scripts/vehicle_controllergd.gd" id="25_tye1i"]
 [ext_resource type="Texture2D" uid="uid://vhovnldiwlew" path="res://assets/textures/dirt_loam/dirt_loam_albedo.png" id="25_v856g"]
 [ext_resource type="PackedScene" uid="uid://xq484acfcx6o" path="res://assets/trees/tree_fat.glb" id="25_yuohp"]
 [ext_resource type="PackedScene" uid="uid://bnahsbbr28pqp" path="res://assets/trees/tree_fat_darkh.glb" id="26_5ycgg"]
 [ext_resource type="Texture2D" uid="uid://xlcchivopb1t" path="res://assets/textures/dirt_loam/dirt_loam_heightmap.png" id="26_68ado"]
 [ext_resource type="PackedScene" uid="uid://xne5qir4cixh" path="res://assets/trees/tree_pineDefaultA.glb" id="26_trg5o"]
 [ext_resource type="PackedScene" uid="uid://61ugflxua6uv" path="res://assets/trees/tree_palm.glb" id="26_y2kel"]
-[ext_resource type="Script" uid="uid://byl7vs5o8oaca" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
+[ext_resource type="Script" uid="uid://b5aebkcsbair1" path="res://addons/gevp/scripts/camera.gd" id="27_dyjwu"]
 [ext_resource type="PackedScene" uid="uid://ctvxwa0incj28" path="res://assets/trees/tree_pineDefaultB.glb" id="27_lyced"]
 [ext_resource type="PackedScene" uid="uid://pfvcvyxvl2dg" path="res://assets/trees/tree_palmBend.glb" id="27_smlow"]
 [ext_resource type="PackedScene" uid="uid://beh15rhsn7knt" path="res://assets/trees/tree_pineGroundA.glb" id="28_4h4l1"]
@@ -320,8 +320,6 @@
 [ext_resource type="Texture2D" uid="uid://c6u41u33cjwc4" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_-1_3_0.res" id="319_mqa8l"]
 [ext_resource type="PackedScene" uid="uid://c5jichmbbdws8" path="res://assets/vehicles/cars/detroit_motors_limited/judge/scenes/dml_judge.tscn" id="319_pfggy"]
 [ext_resource type="Texture2D" uid="uid://bte7phk0wmy17" path="res://scenes/rosewood_county/RosewoodCounty/Splatmap_-1_3_1.res" id="320_0ptwu"]
-[ext_resource type="PackedScene" uid="uid://ctgyvf10b000y" path="res://views/screens/pause_menu/pause_menu.tscn" id="320_pfggy"]
-[ext_resource type="PackedScene" uid="uid://duw6pg81rngdy" path="res://modules/gevp_extensions/views/debug_hud.tscn" id="321_nlobf"]
 
 [sub_resource type="Resource" id="Resource_eigr0"]
 script = ExtResource("8_d055u")
@@ -791,7 +789,7 @@ volumetric_fog_sky_affect = 0.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ge1f"]
 
-[sub_resource type="Resource" id="Resource_qjbkh"]
+[sub_resource type="Resource" id="Resource_pfggy"]
 script = ExtResource("14_tcnw4")
 MatShaderType = 1
 mat_albedo_color_first = Color(0.6, 0.7, 0.65, 1)
@@ -819,7 +817,7 @@ mat_edge_fade = 0.25
 LodLod0Distance = 50.0
 _selectedShader = 1
 
-[sub_resource type="Curve3D" id="Curve3D_xb86x"]
+[sub_resource type="Curve3D" id="Curve3D_nlobf"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, -0.25, 0, 0, 0.25, 0, 0, 0, 0, 0, -0.25, 0, 0, 0.25, 0, 0, 1, 0, 0, 0.25, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 5),
@@ -1025,9 +1023,9 @@ next_pt_init = NodePath("../RP_001")
 [node name="RiverManager" type="Node3D" parent="Viewport"]
 transform = Transform3D(-1.83588e-06, 0, 42, 0, 1, 0, -42, 0, -1.83588e-06, -100, -16, 25)
 script = ExtResource("12_22ta8")
-ShaderSettings = SubResource("Resource_qjbkh")
+ShaderSettings = SubResource("Resource_pfggy")
 PointWidths = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
-Curve = SubResource("Curve3D_xb86x")
+Curve = SubResource("Curve3D_nlobf")
 
 [node name="Blockout" type="Node3D" parent="Viewport"]
 
@@ -1102,7 +1100,7 @@ attributes = SubResource("CameraAttributesPractical_qjbkh")
 current = true
 fov = 100.0
 script = ExtResource("27_dyjwu")
-follow_distance = 4
+follow_distance = 6
 follow_this = NodePath("../DmlJudge")
 
 [node name="DmlJudge" parent="Viewport/VehicleController" node_paths=PackedStringArray("camera") instance=ExtResource("319_pfggy")]
@@ -1123,9 +1121,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 89)
 mesh = SubResource("TorusMesh_wvtwl")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_tcnw4")
-
-[node name="PauseMenu" parent="." instance=ExtResource("320_pfggy")]
-visible = false
-
-[node name="DebugHud" parent="." node_paths=PackedStringArray("vehicle") instance=ExtResource("321_nlobf")]
-vehicle = NodePath("../Viewport/VehicleController/DmlJudge")
