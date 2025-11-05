@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://5ii5mv7h5djw"]
+[gd_scene load_steps=7 format=3 uid="uid://wk883m5way2o"]
 
-[ext_resource type="Script" uid="uid://dd7ndea633gug" path="res://assets/world_viewport/world_viewport.gd" id="1_7fnp6"]
-[ext_resource type="Shader" uid="uid://6jly3xt3ssln" path="res://assets/shaders/edge_detection.gdshader" id="2_7fnp6"]
-[ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/world_viewport/edge_detection.gdshader" id="3_5iquc"]
+[ext_resource type="Shader" uid="uid://6jly3xt3ssln" path="res://assets/shaders/edge_detection.gdshader" id="1_74bxr"]
+[ext_resource type="Script" uid="uid://bwj62ae4wd0ax" path="res://assets/viewports/edged_viewport/edged_viewport.gd" id="2_4xkki"]
+[ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/viewports/world_viewport/edge_detection.gdshader" id="3_dp1gc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lndhg"]
 render_priority = 0
-shader = ExtResource("2_7fnp6")
+shader = ExtResource("1_74bxr")
 shader_parameter/shadows_enabled = true
 shader_parameter/highlights_enabled = true
 shader_parameter/shadow_strength = 0.4
@@ -20,7 +20,7 @@ size = Vector2(2, 2)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q0x13"]
 render_priority = 0
-shader = ExtResource("3_5iquc")
+shader = ExtResource("3_dp1gc")
 shader_parameter/lightIntensity = 1.25
 shader_parameter/lineAlpha = 0.7
 shader_parameter/useLighting = true
@@ -39,7 +39,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 stretch = true
 stretch_shrink = 4
-script = ExtResource("1_7fnp6")
+script = ExtResource("2_4xkki")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
@@ -54,7 +54,6 @@ doppler_tracking = 2
 
 [node name="EdgeDetectionShader" type="MeshInstance3D" parent="SubViewport/ViewportCamera"]
 transform = Transform3D(0.999988, 0.00408909, -0.00253917, -0.00408341, 0.999989, 0.00223752, 0.00254828, -0.00222713, 0.999994, 0, 0, 0)
-visible = false
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_o7owe")
 skeleton = NodePath("")

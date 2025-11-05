@@ -104,7 +104,7 @@
 [ext_resource type="Texture2D" uid="uid://cc3fb1mpkkved" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_6.res" id="104_ngh15"]
 [ext_resource type="Texture2D" uid="uid://bsq3dq7x53b1w" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_7.res" id="105_88bq3"]
 [ext_resource type="Texture2D" uid="uid://bes5w8h74dblw" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_8.res" id="106_yfllw"]
-[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/world_viewport/world_viewport.tscn" id="107_b5n0v"]
+[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/viewports/world_viewport/world_viewport.tscn" id="107_b5n0v"]
 [ext_resource type="Texture2D" uid="uid://dp84jfjb1rrr0" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_9.res" id="107_i4184"]
 [ext_resource type="Texture2D" uid="uid://dki0d3wp3wmm8" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_10.res" id="108_y62uy"]
 [ext_resource type="Texture2D" uid="uid://blekhat0ql3kd" path="res://scenes/rosewood_county/RosewoodCounty/Object_1_0_11.res" id="109_kc0tb"]
