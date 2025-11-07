@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ders0b6jvob5k"]
+
+[node name="DynamicSky" type="Node3D"]
