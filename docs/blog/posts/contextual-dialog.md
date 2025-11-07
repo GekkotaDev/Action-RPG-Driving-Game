@@ -38,6 +38,9 @@ classDiagram
 To get the dialog rendered in the first place there exists the method `.get_next_dialogue_line` which returns an empty dictionary when the dialog has been finished but that by itself wouldn't be enough. This necessitates more to the subsystem that roughly follows this statechart.
 
 ```mermaid
+---
+title: Figure 2. Dialog state chart
+---
 stateDiagram-v2
     [*] --> Prompt
 

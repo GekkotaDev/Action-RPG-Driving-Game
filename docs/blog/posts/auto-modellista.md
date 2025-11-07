@@ -22,6 +22,10 @@ Originally the plan was to use Blender but it would've been far too much of an o
 
 So what's the plan now? One would normally think Blender would be the only free option remaining with the rest being paid software. Fortunately, there's already free to use, free/libre and open source tools that serve as smaller in scope alternatives to some of Blender's functionality; that's where the tools Blockbench and Material Maker come in, and soon even PixiEditor can be included
 
+![Blockbench](/images/10.55%20PM%20Blockbench%202487.png)
+![Material Maker](/images/10.56%20PM%20material_maker%202488.jpg)
+![PixiEditor](/images/10.58%20PM%20vivaldi%202489.png)
+
 To give some context to these tools Blockbench focuses on the modelling and painting aspect of Blender while Material Maker focuses more on the texturing side (and even has the same node based editor). PixiEditor on the other hand is one that I've just recently rediscovered and seems to be the perfect toolkit for 2D graphics aside from my original need in finding a pixel art program for programmers.
 
 So far the work done with Blockbench can be observed in the one new vehicle that has been modelled from scratch while Material Maker's output had already been present with the grass seen in the game (though admittedly a revamp of the texture would've been nice). A disappointing conclusion but having learnt these skills can be said to be a longer term investment in the game and in my own employment prospects.
