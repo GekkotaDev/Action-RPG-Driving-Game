@@ -1,8 +1,8 @@
 ---
-date: 2000-01-01
+date: 2025-11-07
 authors: [gekkotadev]
 categories:
-  - General
+  - Programming
 ---
 
 [Dialogic]: https://github.com/dialogic-godot/dialogic

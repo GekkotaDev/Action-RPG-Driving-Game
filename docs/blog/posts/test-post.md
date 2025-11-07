@@ -3,7 +3,6 @@ date: 2025-10-08
 authors: [gekkotadev]
 categories:
   - General
-draft: true
 ---
 
 # Test Post (This Week's Progress)
@@ -28,3 +27,8 @@ Despite having these features implemented I'm not quite content with what to sho
 - Camera vibrations relative not to the player's speed but to their velocity taking into account that not only can camera vibrations be used to simulate mechanical vibrations at high speed but also effects such as crashes.
 
 As of this time of writing, I plan on setting up [automated workflows](https://github.com/features/actions) (CI/CD) and kanban based progress tracking ([Github Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)), *perhaps* setting up templates for [Github Issues](https://github.com/features/issues) to formalize bug reporting — in other words structured and unvague reports — and to set up [Github Discussions](https://docs.github.com/en/discussions) to address a rather self-destructive flaw of Facebook Messenger where information is easily lost with the total lack of organized discussions. It is ideal information does not get lost (assuming everyone is on-board with this workflow otherwise we'll just have to continue with a data lossy workflow).
+
+## UPDATE (2025-11-07)
+
+- Instead of using Blender I've opted to using a combination of Blockbench and Material Maker (for textures; think albedos, normal maps, bump maps, etc.)
+- I still haven't set up the kanban board quite properly yet.

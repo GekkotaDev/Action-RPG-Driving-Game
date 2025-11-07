@@ -2,7 +2,8 @@
 date: 2000-01-01
 authors: [gekkotadev]
 categories:
-  - General
+  - Design
+draft: true
 ---
 
 # Landscape Navigator

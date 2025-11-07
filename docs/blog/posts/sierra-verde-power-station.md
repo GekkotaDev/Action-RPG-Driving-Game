@@ -2,7 +2,9 @@
 date: 2000-01-01
 authors: [gekkotadev]
 categories:
-  - General
+  - Programming
+title: Sierra Verde Power Station
+draft: true
 ---
 
 # ~~Battersea~~ Sierra Verde Power Station
