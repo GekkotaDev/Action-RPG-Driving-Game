@@ -22,6 +22,8 @@ The dialog system itself is delegated to a third party library called [Dialogue 
 
 [@aarthificial]'s video titled [Dynamic Conversations] has the answer that I would be looking for and had been cited within one of the group's documents, in particular the idea that the context is stored as a separate data structure independent of the game. This has the benefit where in-game dialog is not as tightly coupled to the game state, instead querying the dialog context through some form of proxy (or in other words, an implementation of the [facade pattern]).
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1LlF5p5Od6A?si=UKOZckigqZ9gdo7V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Here the data structure that represents this proxy are internally called stories which contain a collection of facts which themselves describe data that the dialog depends on. The dialog spoken by the characters will depend on the values of the facts within the stories provided to the dialog. This would entirely be moot however if the dialog can't be rendered in game.
 
 ```mermaid
