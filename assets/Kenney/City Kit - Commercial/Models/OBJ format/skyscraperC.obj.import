@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bra7fysbn8o5p"
+path="res://.godot/imported/skyscraperC.obj-afacdcb86855ae3602c91332e35585a5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/skyscraperC.obj-afacdcb86855ae3602c91332e35585a5.mesh"]
+
+source_file="res://assets/Kenney/City Kit - Commercial/Models/OBJ format/skyscraperC.obj"
+dest_files=["res://.godot/imported/skyscraperC.obj-afacdcb86855ae3602c91332e35585a5.mesh", "res://.godot/imported/skyscraperC.obj-afacdcb86855ae3602c91332e35585a5.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

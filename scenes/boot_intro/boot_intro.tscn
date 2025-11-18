@@ -1,0 +1,176 @@
+[gd_scene load_steps=9 format=3 uid="uid://ct4ey0snni0pk"]
+
+[ext_resource type="Script" uid="uid://dft4tviocwuaj" path="res://scenes/boot_intro/boot_intro.gd" id="1_ty45v"]
+[ext_resource type="Texture2D" uid="uid://c5wdgr35wgymm" path="res://scenes/boot_intro/original-large.png" id="2_ty45v"]
+[ext_resource type="FontFile" uid="uid://2ua2uncwxwnl" path="res://resources/typefaces/DepartureMono-Regular.otf" id="3_dc1ur"]
+[ext_resource type="Texture2D" uid="uid://i3jmg4qo331j" path="res://scenes/boot_intro/made-with-godot-light.png" id="3_nl00c"]
+
+[sub_resource type="Animation" id="Animation_ty45v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Author:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x44ik"]
+resource_name = "boot_splash"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 3, 3.5, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 2, 2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5, 4, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Author:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ww8p2"]
+_data = {
+&"RESET": SubResource("Animation_ty45v"),
+&"boot_splash": SubResource("Animation_x44ik")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ruuk3"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="BootIntro" type="Control" node_paths=PackedStringArray("splash_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ty45v")
+splash_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ww8p2")
+}
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ruuk3")
+
+[node name="Logo" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -42.0
+offset_right = 32.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(32, 42)
+
+[node name="Logo" type="TextureRect" parent="Logo"]
+layout_mode = 2
+texture = ExtResource("2_ty45v")
+stretch_mode = 5
+
+[node name="Label" type="TextureRect" parent="Logo"]
+layout_mode = 2
+texture = ExtResource("3_nl00c")
+stretch_mode = 5
+
+[node name="Author" type="VBoxContainer" parent="."]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -33.0
+offset_right = 84.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameByLabel" type="Label" parent="Author"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_dc1ur")
+theme_override_font_sizes/font_size = 24
+text = "a game by"
+
+[node name="AuthorLabel" type="Label" parent="Author"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_dc1ur")
+theme_override_font_sizes/font_size = 24
+text = "@gekkotadev"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_boot_intro_finish"]

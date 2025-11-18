@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://d04wd0y4ej4f"]
 
-[ext_resource type="FontFile" uid="uid://bmghykd6ypik4" path="res://views/typefaces/zilla_slab/ZillaSlab-Regular.ttf" id="1_lpowv"]
+[ext_resource type="FontFile" uid="uid://bmghykd6ypik4" path="res://resources/typefaces/zilla_slab/ZillaSlab-Regular.ttf" id="1_lpowv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gq2p"]
 content_margin_left = 24.0

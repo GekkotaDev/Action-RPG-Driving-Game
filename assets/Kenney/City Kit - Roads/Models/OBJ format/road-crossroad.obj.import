@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlvsrds035cou"
+path="res://.godot/imported/road-crossroad.obj-7bd4c70666b0216035b0f94b88696a9f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road-crossroad.obj-7bd4c70666b0216035b0f94b88696a9f.mesh"]
+
+source_file="res://assets/Kenney/City Kit - Roads/Models/OBJ format/road-crossroad.obj"
+dest_files=["res://.godot/imported/road-crossroad.obj-7bd4c70666b0216035b0f94b88696a9f.mesh", "res://.godot/imported/road-crossroad.obj-7bd4c70666b0216035b0f94b88696a9f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

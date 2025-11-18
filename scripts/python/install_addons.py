@@ -33,22 +33,26 @@ DEPENDENCIES = {
         repo="gh:DAShoe1/Godot-Easy-Vehicle-Physics",
         subdirectory="addons/gevp",
     ),
-    "traudio": Git(
-        repo="gh:RodZill4/TRAudio",
-        subdirectory="addons/traudio",
-    ),
-    "shaderV": Git(
-        repo="gh:arkology/ShaderV",
-        subdirectory="addons/shaderV",
+    "keychain": Git(
+        repo="gh:Orama-Interactive/Keychain",
+        subdirectory="addons/keychain",
     ),
     "quick_layout_changer": Git(
         repo="gh:mathrick/godot-quick-layout-changer",
         subdirectory="addons/quick_layout_changer",
     ),
+    "shaderV": Git(
+        repo="gh:arkology/ShaderV",
+        subdirectory="addons/shaderV",
+    ),
     "SphynxMotionBlurToolkit": Git(
         repo="gh:sphynx-owner/JFA_driven_motion_blur_addon",
         subdirectory="addons/SphynxMotionBlurToolkit",
         vcs_ref="4.5",
+    ),
+    "traudio": Git(
+        repo="gh:RodZill4/TRAudio",
+        subdirectory="addons/traudio",
     ),
 }
 

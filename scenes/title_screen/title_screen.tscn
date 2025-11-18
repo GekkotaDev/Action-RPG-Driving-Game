@@ -1,53 +1,57 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxrmpplsp8vbu"]
+[gd_scene load_steps=5 format=3 uid="uid://daitmigexv75n"]
 
-[ext_resource type="PackedScene" uid="uid://5ii5mv7h5djw" path="res://assets/viewports/world_viewport/world_viewport.tscn" id="1_5df70"]
-[ext_resource type="Script" uid="uid://kykjpft5c0e" path="res://scenes/title_screen/controls/play_button/play_button.gd" id="2_vuv2h"]
+[ext_resource type="Script" uid="uid://cd7xojghs8q88" path="res://nodes/router_node.gd" id="1_d6x3v"]
+[ext_resource type="Texture2D" uid="uid://cjhix8hno6b6r" path="res://scenes/title_screen/backdrop.png" id="2_d6x3v"]
+[ext_resource type="Texture2D" uid="uid://ss41ybbwufbx" path="res://scenes/title_screen/logomark.png" id="3_5uxxq"]
+[ext_resource type="Theme" uid="uid://d04wd0y4ej4f" path="res://resources/themes/theme.tres" id="4_cxcmr"]
 
-[sub_resource type="Environment" id="Environment_5df70"]
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vuv2h"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_5df70"]
-
-[node name="TitleScreen" type="Node3D"]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_5df70")
-camera_attributes = SubResource("CameraAttributesPractical_vuv2h")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-
-[node name="Viewport" parent="." instance=ExtResource("1_5df70")]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Viewport"]
-transform = Transform3D(0.707107, 0, 0.707107, 0.5, 0.707107, -0.5, -0.5, 0.707107, 0.5, 0, 0, -3)
-mesh = SubResource("PrismMesh_5df70")
-
-[node name="Control" type="Control" parent="."]
+[node name="TitleScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_d6x3v")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+[node name="BackgroundTexture" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -23.5
-offset_top = -15.5
-offset_right = 23.5
-offset_bottom = 15.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d6x3v")
+expand_mode = 2
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Control/HFlowContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -340.5
+offset_right = 340.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LogomarkTexture" type="TextureRect" parent="Control/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "PLAY"
-script = ExtResource("2_vuv2h")
+texture = ExtResource("3_5uxxq")
+
+[node name="Control" type="Control" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_cxcmr")
+text = "PRESS ANY BUTTON"

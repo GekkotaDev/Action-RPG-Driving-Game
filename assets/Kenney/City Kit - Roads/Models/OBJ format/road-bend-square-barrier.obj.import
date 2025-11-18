@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7h6wh6eqjsg8"
+path="res://.godot/imported/road-bend-square-barrier.obj-e9ba275e03f290f59bb125d5dcee1712.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road-bend-square-barrier.obj-e9ba275e03f290f59bb125d5dcee1712.mesh"]
+
+source_file="res://assets/Kenney/City Kit - Roads/Models/OBJ format/road-bend-square-barrier.obj"
+dest_files=["res://.godot/imported/road-bend-square-barrier.obj-e9ba275e03f290f59bb125d5dcee1712.mesh", "res://.godot/imported/road-bend-square-barrier.obj-e9ba275e03f290f59bb125d5dcee1712.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

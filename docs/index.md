@@ -1,21 +1,56 @@
-# Welcome to MkDocs
+# Sierra Verde Developer Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For documentation on the code itself, refer to the source files. No tool that I'm aware of exists yet for converting GDScript documentation comments to either JSON or Markdown.
 
-## Commands
+## File System Layout
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+This tree serves as a quick reference to how this is structured in the file system. Specific details can be found at the respective page.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-### Bar
-
-[Page](./foo.md)
+```
+res://
+├─  .github
+├─  .vscode
+├─  addons
+├─  assets
+├─  docs
+│   ├─  [page].md
+│   ├─  blog
+│   │   ├─  posts
+│   │   ├─  .authors.yml
+│   │   └─  index.md
+│   │
+│   ├─  images
+│   ├─  javascripts
+│   └─  stylesheets
+│
+├─  ggs
+│   ├─  game_settings
+│   └─  plugin_settings.tres
+│
+├─  globals
+├─  models
+│   ├─  dialog
+│   └─  saves
+│
+├─  modules
+├─  nodes
+├─  resources
+├─  scenes
+├─  screens
+├─  scripts
+├─  tests
+├─  tools
+├─  views
+├─  .editorconfig
+├─  .gitignore
+├─  addons.jsonc
+├─  licenses.json
+├─  project.godot
+│   └─  export_presets.cfg
+│
+├─  pyproject.toml
+│   └─ mkdocs.yml
+├─  README.md
+├─  Sierra Verde.csproj
+└─  traudio_db.tres
+```
