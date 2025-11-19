@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://mpu8056ggc0w"]
+[gd_scene load_steps=40 format=3 uid="uid://mpu8056ggc0w"]
 
 [ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/viewports/world_viewport/edge_detection.gdshader" id="1_3hei7"]
 [ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_k7tj7"]
@@ -11,10 +11,16 @@
 [ext_resource type="Script" uid="uid://dfkfgg47rr183" path="res://addons/road-generator/nodes/road_point.gd" id="9_1msoc"]
 [ext_resource type="ArrayMesh" uid="uid://bkd6tn5j7hw1q" path="res://assets/Kenney/City Kit - Commercial/Models/OBJ format/large_buildingF.obj" id="10_rn24q"]
 [ext_resource type="ArrayMesh" uid="uid://cv6q5qu36o4ga" path="res://assets/Kenney/City Kit - Commercial/Models/OBJ format/large_buildingA.obj" id="11_gffuq"]
+[ext_resource type="Texture2D" uid="uid://ddp3nyrotcavb" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/Textures/grass.png" id="12_l8430"]
 [ext_resource type="ArrayMesh" uid="uid://cim3bvghpp750" path="res://assets/Kenney/City Kit - Commercial/Models/OBJ format/large_buildingG.obj" id="12_v3ail"]
 [ext_resource type="ArrayMesh" uid="uid://b2wv2nb2t53aq" path="res://assets/Kenney/City Kit - Suburban/Models/OBJ format/building-type-b.obj" id="13_gffuq"]
 [ext_resource type="ArrayMesh" uid="uid://bi3hvia0q7c3t" path="res://assets/Kenney/City Kit - Suburban/Models/OBJ format/building-type-c.obj" id="14_v3ail"]
 [ext_resource type="ArrayMesh" uid="uid://xupqh1mvvwmk" path="res://assets/Kenney/Modular Buildings/Models/OBJ format/detail-ac-b.obj" id="15_m6crt"]
+[ext_resource type="ArrayMesh" uid="uid://dt8v88p58onj1" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/road-asphalt-pavement.obj" id="17_jksds"]
+[ext_resource type="Texture2D" uid="uid://b35ct4iealhni" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/Textures/tiles.png" id="18_fj3cp"]
+[ext_resource type="ArrayMesh" uid="uid://b7jrk817jotmi" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/tree-shrub.obj" id="19_e7u06"]
+[ext_resource type="ArrayMesh" uid="uid://3ypih70e0fxj" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/tree-large.obj" id="20_20oly"]
+[ext_resource type="Texture2D" uid="uid://bsoeoriourkgh" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/Textures/treeA.png" id="21_q6o06"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_c3prm"]
 flip_faces = true
@@ -101,6 +107,29 @@ volumetric_fog_emission_energy = 0.0
 volumetric_fog_anisotropy = 0.0
 volumetric_fog_length = 16.0
 volumetric_fog_sky_affect = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yugqs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ij4oa"]
+albedo_texture = ExtResource("18_fj3cp")
+uv1_scale = Vector3(8, 8, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjmps"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e5gk"]
+transparency = 1
+depth_draw_mode = 1
+albedo_texture = ExtResource("21_q6o06")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ghj4i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wx3yj"]
+transparency = 1
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_texture = ExtResource("21_q6o06")
+texture_filter = 0
 
 [node name="SkySpringsCity" type="Node3D"]
 
@@ -229,6 +258,12 @@ mesh = ExtResource("10_rn24q")
 transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -3, 0, -22)
 mesh = ExtResource("11_gffuq")
 
+[node name="Decal" type="Decal" parent="LargeBuildingA"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+texture_albedo = ExtResource("12_l8430")
+texture_normal = ExtResource("12_l8430")
+modulate = Color(1.7808378e-06, 0.7551182, 0.3512056, 1)
+
 [node name="LargeBuildingG" type="MeshInstance3D" parent="."]
 transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 43, 0, -25)
 mesh = ExtResource("12_v3ail")
@@ -244,3 +279,35 @@ mesh = ExtResource("14_v3ail")
 [node name="DetailAcB" type="MeshInstance3D" parent="."]
 transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -3, 26, -23)
 mesh = ExtResource("15_m6crt")
+
+[node name="RoadAsphaltPavement" type="MeshInstance3D" parent="."]
+transform = Transform3D(35.2, 0, 0, 0, 16, 0, 0, 0, 35.2, -26, 0.1, -17)
+mesh = ExtResource("17_jksds")
+surface_material_override/0 = SubResource("StandardMaterial3D_yugqs")
+surface_material_override/1 = SubResource("StandardMaterial3D_ij4oa")
+
+[node name="TreeShrub" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 14)
+mesh = ExtResource("19_e7u06")
+
+[node name="TreeLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 15)
+mesh = ExtResource("20_20oly")
+surface_material_override/0 = SubResource("StandardMaterial3D_pjmps")
+surface_material_override/1 = SubResource("StandardMaterial3D_4e5gk")
+
+[node name="TreeShrub2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 15)
+mesh = ExtResource("19_e7u06")
+surface_material_override/0 = SubResource("StandardMaterial3D_pjmps")
+surface_material_override/1 = SubResource("StandardMaterial3D_4e5gk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4, -3.496911e-07, 1.5285484e-14, 0, -1.7484555e-07, -4, 3.496911e-07, -4, 1.7484555e-07, 0, 4, 0)
+mesh = SubResource("PlaneMesh_ghj4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_wx3yj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.3841856e-07, -3.9999995, 1.7484554e-07, 0, -1.7484555e-07, -4, 3.9999995, 2.3841856e-07, -1.0658141e-14, 0, 4, 0)
+mesh = SubResource("PlaneMesh_ghj4i")
+surface_material_override/0 = SubResource("StandardMaterial3D_wx3yj")

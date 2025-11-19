@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5odl3vjgfd1y"
+path="res://.godot/imported/road-dirt-corner-outer.obj-3f1642484d2a97698929935fc20003d1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road-dirt-corner-outer.obj-3f1642484d2a97698929935fc20003d1.mesh"]
+
+source_file="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/road-dirt-corner-outer.obj"
+dest_files=["res://.godot/imported/road-dirt-corner-outer.obj-3f1642484d2a97698929935fc20003d1.mesh", "res://.godot/imported/road-dirt-corner-outer.obj-3f1642484d2a97698929935fc20003d1.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

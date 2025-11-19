@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwomu453h75v8"
+path="res://.godot/imported/cliff-side.obj-9dc6ed3f5e43ffe8374804390555fa65.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cliff-side.obj-9dc6ed3f5e43ffe8374804390555fa65.mesh"]
+
+source_file="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/cliff-side.obj"
+dest_files=["res://.godot/imported/cliff-side.obj-9dc6ed3f5e43ffe8374804390555fa65.mesh", "res://.godot/imported/cliff-side.obj-9dc6ed3f5e43ffe8374804390555fa65.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
