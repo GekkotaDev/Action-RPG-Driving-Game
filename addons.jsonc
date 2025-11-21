@@ -32,6 +32,11 @@
       "source": "zip",
       "subfolder": "addons/custom_theme_overrides"
     },
+    "dialogic": {
+      "url": "https://github.com/dialogic-godot/dialogic/archive/refs/tags/2.0-alpha-18.zip",
+      "source": "zip",
+      "subfolder": "dialogic-2.0-alpha-18/addons/dialogic"
+    },
     "dialogue_manager": {
       "url": "https://github.com/nathanhoad/godot_dialogue_manager/archive/refs/tags/v3.8.1.zip",
       "source": "zip",
