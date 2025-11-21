@@ -1,13 +1,13 @@
-[gd_scene load_steps=40 format=3 uid="uid://mpu8056ggc0w"]
+[gd_scene load_steps=24 format=3 uid="uid://mpu8056ggc0w"]
 
 [ext_resource type="Shader" uid="uid://tstbo6mjsxrf" path="res://assets/viewports/world_viewport/edge_detection.gdshader" id="1_3hei7"]
-[ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="2_k7tj7"]
-[ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="3_k7tj7"]
-[ext_resource type="Texture2D" uid="uid://c3q0k5kmch3d1" path="res://scenes/locations/sky_springs_city/SkySpringsCity/Heightmap_0_0.res" id="3_rn8gd"]
-[ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="4_3hei7"]
-[ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="5_7mxtk"]
+[ext_resource type="Script" uid="uid://c551q81ygcwkr" path="res://addons/zylann.hterrain/hterrain.gd" id="1_cmnks"]
+[ext_resource type="PackedScene" uid="uid://bhe0on3invxsn" path="res://assets/sky/dynamic_sky_3d.tscn" id="1_l8430"]
+[ext_resource type="Resource" uid="uid://b8n7mn1irosp3" path="res://scenes/locations/sky_springs_city/SkySpringsCity/data.hterrain" id="2_csu36"]
+[ext_resource type="Script" uid="uid://bnivhchllo3kl" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_csu36"]
 [ext_resource type="Script" uid="uid://bbahb0bjns7me" path="res://addons/road-generator/nodes/road_manager.gd" id="7_c3prm"]
 [ext_resource type="Script" uid="uid://bfxq2aa3gpdad" path="res://addons/road-generator/nodes/road_container.gd" id="8_c3prm"]
+[ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="8_l8430"]
 [ext_resource type="Script" uid="uid://dfkfgg47rr183" path="res://addons/road-generator/nodes/road_point.gd" id="9_1msoc"]
 [ext_resource type="ArrayMesh" uid="uid://bkd6tn5j7hw1q" path="res://assets/Kenney/City Kit - Commercial/Models/OBJ format/large_buildingF.obj" id="10_rn24q"]
 [ext_resource type="ArrayMesh" uid="uid://cv6q5qu36o4ga" path="res://assets/Kenney/City Kit - Commercial/Models/OBJ format/large_buildingA.obj" id="11_gffuq"]
@@ -18,9 +18,11 @@
 [ext_resource type="ArrayMesh" uid="uid://xupqh1mvvwmk" path="res://assets/Kenney/Modular Buildings/Models/OBJ format/detail-ac-b.obj" id="15_m6crt"]
 [ext_resource type="ArrayMesh" uid="uid://dt8v88p58onj1" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/road-asphalt-pavement.obj" id="17_jksds"]
 [ext_resource type="Texture2D" uid="uid://b35ct4iealhni" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/Textures/tiles.png" id="18_fj3cp"]
-[ext_resource type="ArrayMesh" uid="uid://b7jrk817jotmi" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/tree-shrub.obj" id="19_e7u06"]
-[ext_resource type="ArrayMesh" uid="uid://3ypih70e0fxj" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/tree-large.obj" id="20_20oly"]
-[ext_resource type="Texture2D" uid="uid://bsoeoriourkgh" path="res://assets/Kenney/Retro Urban Kit/Models/OBJ format/Textures/treeA.png" id="21_q6o06"]
+
+[sub_resource type="Resource" id="Resource_xbskg"]
+script = ExtResource("3_csu36")
+mode = 0
+textures = [[], []]
 
 [sub_resource type="QuadMesh" id="QuadMesh_c3prm"]
 flip_faces = true
@@ -35,103 +37,15 @@ shader_parameter/useLighting = true
 shader_parameter/lineHighlight = 0.2
 shader_parameter/lineShadow = 1.0
 
-[sub_resource type="Resource" id="Resource_gffuq"]
-script = ExtResource("4_3hei7")
-HeightMapTexture = ExtResource("3_rn8gd")
-SplatmapsTexture = []
-FoliagesTexture = []
-ObjectsTexture = []
-
-[sub_resource type="Resource" id="Resource_v3ail"]
-script = ExtResource("5_7mxtk")
-Zones = [SubResource("Resource_gffuq")]
-
-[sub_resource type="Curve" id="Curve_hlf2h"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.124352, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.752809), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_m6crt"]
-curve = SubResource("Curve_hlf2h")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_irs6p"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cmnks"]
-noise = SubResource("FastNoiseLite_irs6p")
-seamless = true
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_csu36"]
-noise = SubResource("FastNoiseLite_irs6p")
-seamless = true
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_32kgi"]
-shader = ExtResource("3_k7tj7")
-shader_parameter/cloud_shape_sampler = SubResource("NoiseTexture2D_csu36")
-shader_parameter/cloud_noise_sampler = SubResource("NoiseTexture2D_cmnks")
-shader_parameter/cloud_curves = SubResource("CurveTexture_m6crt")
-shader_parameter/clouds_samples = 32
-shader_parameter/shadow_sample = 4
-shader_parameter/clouds_density = 0.4
-shader_parameter/clouds_scale = 1.0
-shader_parameter/clouds_smoothness = 0.03
-shader_parameter/clouds_light_color = Color(1, 1, 1, 1)
-shader_parameter/clouds_shadow_intensity = 1.0
-shader_parameter/high_clouds_sampler = SubResource("NoiseTexture2D_csu36")
-shader_parameter/high_clouds_density = 0.2
-shader_parameter/top_color = Color(0.34902, 0.588235, 1, 1)
-shader_parameter/bottom_color = Color(0, 0.329412, 0.968627, 1)
-shader_parameter/sun_scatter = Color(0.298039, 0.298039, 0.298039, 1)
-shader_parameter/astro_tint = Color(0.905882, 0.788235, 0.627451, 1)
-shader_parameter/astro_scale = 9.0
-shader_parameter/astro_intensity = 3.0
-shader_parameter/stars_intensity = 0.0
-shader_parameter/shooting_stars_intensity = 0.0
-shader_parameter/shooting_star_tint = Color(0, 0, 0, 1)
-
-[sub_resource type="Sky" id="Sky_xbskg"]
-sky_material = SubResource("ShaderMaterial_32kgi")
-radiance_size = 0
-
-[sub_resource type="Environment" id="Environment_gxvu4"]
-background_mode = 2
-sky = SubResource("Sky_xbskg")
-tonemap_mode = 2
-fog_enabled = true
-fog_mode = 1
-fog_light_color = Color(1, 1, 1, 1)
-fog_density = 1.0
-fog_aerial_perspective = 1.0
-fog_sky_affect = 0.0
-fog_depth_end = 512.0
-volumetric_fog_emission = Color(1, 1, 1, 1)
-volumetric_fog_emission_energy = 0.0
-volumetric_fog_anisotropy = 0.0
-volumetric_fog_length = 16.0
-volumetric_fog_sky_affect = 0.0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yugqs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ij4oa"]
 albedo_texture = ExtResource("18_fj3cp")
 uv1_scale = Vector3(8, 8, 8)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjmps"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4e5gk"]
-transparency = 1
-depth_draw_mode = 1
-albedo_texture = ExtResource("21_q6o06")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ghj4i"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wx3yj"]
-transparency = 1
-cull_mode = 2
-diffuse_mode = 3
-specular_mode = 1
-albedo_texture = ExtResource("21_q6o06")
-texture_filter = 0
-
 [node name="SkySpringsCity" type="Node3D"]
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 
 [node name="WorldViewportContainer" type="SubViewportContainer" parent="."]
 anchors_preset = 15
@@ -147,6 +61,31 @@ handle_input_locally = false
 size = Vector2i(320, 180)
 render_target_update_mode = 4
 
+[node name="HTerrain" type="Node3D" parent="WorldViewportContainer/WorldSubViewport"]
+script = ExtResource("1_cmnks")
+_terrain_data = ExtResource("2_csu36")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+physics_material = null
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_xbskg")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = false
+shader_params/u_tile_reduction = Vector4(0, 0, 0, 0)
+shader_params/u_specular = 0.5
+metadata/_custom_type_script = "uid://c551q81ygcwkr"
+
+[node name="DynamicSky3D" parent="WorldViewportContainer/WorldSubViewport" instance=ExtResource("1_l8430")]
+
+[node name="LightmapGI" type="LightmapGI" parent="WorldViewportContainer/WorldSubViewport/DynamicSky3D"]
+
 [node name="ViewportCamera" type="Camera3D" parent="WorldViewportContainer/WorldSubViewport"]
 top_level = true
 v_offset = 1.0
@@ -160,30 +99,14 @@ mesh = SubResource("QuadMesh_c3prm")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_1msoc")
 
-[node name="TerraBrush" type="Node3D" parent="WorldViewportContainer/WorldSubViewport"]
-script = ExtResource("2_k7tj7")
-DataPath = "res://scenes/locations/sky_springs_city/SkySpringsCity"
-TerrainZones = SubResource("Resource_v3ail")
-metadata/_custom_type_script = "uid://i5jcj7ukvoen"
-metadata/_edit_lock_ = false
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="WorldViewportContainer/WorldSubViewport"]
-environment = SubResource("Environment_gxvu4")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldViewportContainer/WorldSubViewport/WorldEnvironment"]
-transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
-shadow_enabled = true
-directional_shadow_mode = 1
-directional_shadow_fade_start = 1.0
-
-[node name="LightmapGI" type="LightmapGI" parent="WorldViewportContainer/WorldSubViewport/WorldEnvironment"]
-
 [node name="RoadManager" type="Node3D" parent="WorldViewportContainer/WorldSubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 0, 98)
 script = ExtResource("7_c3prm")
 metadata/_custom_type_script = "uid://bbahb0bjns7me"
 
 [node name="Road_001" type="Node3D" parent="WorldViewportContainer/WorldSubViewport/RoadManager"]
 script = ExtResource("8_c3prm")
+material_resource = ExtResource("8_l8430")
 use_lowpoly_preview = true
 edge_containers = Array[NodePath]([NodePath(""), NodePath("")])
 edge_rp_targets = Array[NodePath]([NodePath(""), NodePath("")])
@@ -251,63 +174,38 @@ text = "aaaaaaa"
 metadata/_edit_use_anchors_ = true
 
 [node name="LargeBuildingF" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 18)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 106, 0, 117)
 mesh = ExtResource("10_rn24q")
 
 [node name="LargeBuildingA" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -3, 0, -22)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 103, 0, 77)
 mesh = ExtResource("11_gffuq")
 
 [node name="Decal" type="Decal" parent="LargeBuildingA"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+size = Vector3(2.1, 2, 1.5)
 texture_albedo = ExtResource("12_l8430")
 texture_normal = ExtResource("12_l8430")
 modulate = Color(1.7808378e-06, 0.7551182, 0.3512056, 1)
 
 [node name="LargeBuildingG" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 43, 0, -25)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 149, 0, 74)
 mesh = ExtResource("12_v3ail")
 
 [node name="BuildingTypeB" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 35, 0, 29)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 141, 0, 128)
 mesh = ExtResource("13_gffuq")
 
 [node name="BuildingTypeC" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 60, 0, 28)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 166, 0, 127)
 mesh = ExtResource("14_v3ail")
 
 [node name="DetailAcB" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -3, 26, -23)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 103, 26, 76)
 mesh = ExtResource("15_m6crt")
 
 [node name="RoadAsphaltPavement" type="MeshInstance3D" parent="."]
-transform = Transform3D(35.2, 0, 0, 0, 16, 0, 0, 0, 35.2, -26, 0.1, -17)
+transform = Transform3D(35.2, 0, 0, 0, 16, 0, 0, 0, 35.2, 80, 0.1, 82)
 mesh = ExtResource("17_jksds")
 surface_material_override/0 = SubResource("StandardMaterial3D_yugqs")
 surface_material_override/1 = SubResource("StandardMaterial3D_ij4oa")
-
-[node name="TreeShrub" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 14)
-mesh = ExtResource("19_e7u06")
-
-[node name="TreeLarge" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 15)
-mesh = ExtResource("20_20oly")
-surface_material_override/0 = SubResource("StandardMaterial3D_pjmps")
-surface_material_override/1 = SubResource("StandardMaterial3D_4e5gk")
-
-[node name="TreeShrub2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 15)
-mesh = ExtResource("19_e7u06")
-surface_material_override/0 = SubResource("StandardMaterial3D_pjmps")
-surface_material_override/1 = SubResource("StandardMaterial3D_4e5gk")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4, -3.496911e-07, 1.5285484e-14, 0, -1.7484555e-07, -4, 3.496911e-07, -4, 1.7484555e-07, 0, 4, 0)
-mesh = SubResource("PlaneMesh_ghj4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_wx3yj")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.3841856e-07, -3.9999995, 1.7484554e-07, 0, -1.7484555e-07, -4, 3.9999995, 2.3841856e-07, -1.0658141e-14, 0, 4, 0)
-mesh = SubResource("PlaneMesh_ghj4i")
-surface_material_override/0 = SubResource("StandardMaterial3D_wx3yj")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://bhe0on3invxsn"]
 
 [ext_resource type="Shader" uid="uid://nqp73piqpktm" path="res://assets/shaders/sky.gdshader" id="1_hbptd"]
-[ext_resource type="Script" uid="uid://btyfffskjrqch" path="res://nodes/dynamic_sky/dynamic_sky_3d.gd" id="1_jic3o"]
+[ext_resource type="Script" uid="uid://ddile0vgp0m0n" path="res://assets/sky/dynamic_sky_3d.gd" id="1_uvp7i"]
 
 [sub_resource type="Animation" id="Animation_gg3hf"]
 length = 0.001
@@ -249,7 +249,7 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0, 180, 360, 540, 720),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.4509184, -0.060302623, 2.769732), Vector3(-0.2526806, -1.4471934, -2.0344431), Vector3(1.4509189, 0.06029791, -0.3718648), Vector3(0.05347092, 1.4634535, 1.6593591), Vector3(-1.4509189, -0.0602986, 2.7697284)]
+"values": [Vector3(-1.5707964, -1.5707964, 1.5707964), Vector3(-0.26179907, -1.5707964, 1.5707964), Vector3(1.5707964, -1.5707964, 1.5707964), Vector3(2.8797932, -1.5707964, 1.5707964), Vector3(4.712389, -1.5707964, 1.5707964)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gch8w"]
@@ -320,8 +320,10 @@ volumetric_fog_anisotropy = 0.0
 volumetric_fog_length = 16.0
 volumetric_fog_sky_affect = 0.0
 
-[node name="DynamicSky" type="Node3D"]
-script = ExtResource("1_jic3o")
+[node name="DynamicSky3D" type="Node3D" node_paths=PackedStringArray("_timeline")]
+script = ExtResource("1_uvp7i")
+enabled = false
+_timeline = NodePath("AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -332,9 +334,7 @@ libraries = {
 environment = SubResource("Environment_xfb4l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(-0.8660257, -0.43301257, 0.24999991, 0.2770373, 0.00067727454, 0.96085906, -0.41623333, 0.9013878, 0.11937408, 0, 0, 0)
+transform = Transform3D(-0.8660255, -0.43301252, 0.24999987, 0.27703723, 0.0006772745, 0.9608589, -0.41623324, 0.9013877, 0.11937406, 0, 0, 0)
 shadow_enabled = true
 directional_shadow_mode = 1
 directional_shadow_fade_start = 1.0
-
-[node name="LightmapGI" type="LightmapGI" parent="WorldEnvironment"]

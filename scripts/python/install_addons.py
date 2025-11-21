@@ -54,6 +54,10 @@ DEPENDENCIES = {
         repo="gh:RodZill4/TRAudio",
         subdirectory="addons/traudio",
     ),
+    "zylann.hterrain": Git(
+        repo="gh:Zylann/godot_heightmap_plugin",
+        subdirectory="addons/zylann.hterrain",
+    ),
 }
 
 
